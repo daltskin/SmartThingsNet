@@ -6,7 +6,7 @@
     <AssemblyName>SmartThingsNet</AssemblyName>
     <PackageId>SmartThingsNet</PackageId>
     <OutputType>Library</OutputType>
-    <Authors>Jamie Dalton</Authors>
+    <Authors>JamieD</Authors>
     <Company></Company>
     <AssemblyTitle>SmartThingsNet</AssemblyTitle>
     <Description>SmartThingsNet C# client SDK</Description>

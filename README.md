@@ -1,5 +1,7 @@
 # SmartThingsNet - C# library for the SmartThings API
 
+![.NET Core](https://github.com/daltskin/SmartThingsNet/workflows/.NET%20Core/badge.svg)
+
 # Overview
 
 The SmartThings API supports [REST](https://en.wikipedia.org/wiki/Representational_state_transfer), resources are protected with [OAuth 2.0 Bearer Tokens](https://tools.ietf.org/html/rfc6750#section-2.1), and all responses are sent as [JSON](http://www.json.org/).
@@ -25,94 +27,6 @@ Scopes are generally in the form `permission:entity-type:entity-id`.
 **An `*` used for the `entity-id` specifies that the permission may be applied to all entities that the token type has access to, or may be replaced with a specific ID.**
 
 For more information about authrization and permissions, please see the [Authorization and permissions guide](https://smartthings.developer.samsung.com/develop/guides/smartapps/auth-and-permissions.html).
-
-# Errors
-
-The SmartThings API uses conventional HTTP response codes to indicate the success or failure of a request.
-In general, a `2XX` response code indicates success, a `4XX` response code indicates an error given the inputs for the request, and a `5XX` response code indicates a failure on the SmartThings platform.
-
-API errors will contain a JSON response body with more information about the error:
-
-```json
-{
-  \"requestId\": \"031fec1a-f19f-470a-a7da-710569082846\"
-  \"error\": {
-    \"code\": \"ConstraintViolationError\",
-    \"message\": \"Validation errors occurred while process your request.\",
-    \"details\": [
-      { \"code\": \"PatternError\", \"target\": \"latitude\", \"message\": \"Invalid format.\" },
-      { \"code\": \"SizeError\", \"target\": \"name\", \"message\": \"Too small.\" },
-      { \"code\": \"SizeError\", \"target\": \"description\", \"message\": \"Too big.\" }
-    ]
-  }
-}
-```
-
-## Error Response Body
-
-The error response attributes are:
-
-| Property | Type | Required | Description |
-| - -- | - -- | - -- | - -- |
-| requestId | String | No | A request identifier that can be used to correlate an error to additional logging on the SmartThings servers.
-| error | Error | **Yes** | The Error object, documented below.
-
-## Error Object
-
-The Error object contains the following attributes:
-
-| Property | Type | Required | Description |
-| - -- | - -- | - -- | - -- |
-| code | String | **Yes** | A SmartThings-defined error code that serves as a more specific indicator of the error than the HTTP error code specified in the response. See [SmartThings Error Codes](#section/Errors/SmartThings-Error-Codes) for more information.
-| message | String | **Yes** | A description of the error, intended to aid developers in debugging of error responses.
-| target | String | No | The target of the particular error. For example, it could be the name of the property that caused the error.
-| details | Error[] | No | An array of Error objects that typically represent distinct, related errors that occurred during the request. As an optional attribute, this may be null or an empty array.
-
-## Standard HTTP Error Codes
-
-The following table lists the most common HTTP error response:
-
-| Code | Name | Description |
-| - -- | - -- | - -- |
-| 400 | Bad Request | The client has issued an invalid request. This is commonly used to specify validation errors in a request payload.
-| 401 | Unauthorized | Authorization for the API is required, but the request has not been authenticated.
-| 403 | Forbidden | The request has been authenticated but does not have appropriate permissions, or a requested resource is not found.
-| 404 | Not Found | Specifies the requested path does not exist.
-| 406 | Not Acceptable | The client has requested a MIME type via the Accept header for a value not supported by the server.
-| 415 | Unsupported Media Type | The client has defined a contentType header that is not supported by the server.
-| 422 | Unprocessable Entity | The client has made a valid request, but the server cannot process it. This is often used for APIs for which certain limits have been exceeded.
-| 429 | Too Many Requests | The client has exceeded the number of requests allowed for a given time window.
-| 500 | Internal Server Error | An unexpected error on the SmartThings servers has occurred. These errors should be rare.
-| 501 | Not Implemented | The client request was valid and understood by the server, but the requested feature has yet to be implemented. These errors should be rare.
-
-## SmartThings Error Codes
-
-SmartThings specifies several standard custom error codes.
-These provide more information than the standard HTTP error response codes.
-The following table lists the standard SmartThings error codes and their description:
-
-| Code | Typical HTTP Status Codes | Description |
-| - -- | - -- | - -- |
-| PatternError | 400, 422 | The client has provided input that does not match the expected pattern.
-| ConstraintViolationError | 422 | The client has provided input that has violated one or more constraints.
-| NotNullError | 422 | The client has provided a null input for a field that is required to be non-null.
-| NullError | 422 | The client has provided an input for a field that is required to be null.
-| NotEmptyError | 422 | The client has provided an empty input for a field that is required to be non-empty.
-| SizeError | 400, 422 | The client has provided a value that does not meet size restrictions.
-| Unexpected Error | 500 | A non-recoverable error condition has occurred. Indicates a problem occurred on the SmartThings server that is no fault of the client.
-| UnprocessableEntityError | 422 | The client has sent a malformed request body.
-| TooManyRequestError | 429 | The client issued too many requests too quickly.
-| LimitError | 422 | The client has exceeded certain limits an API enforces.
-| UnsupportedOperationError | 400, 422 | The client has issued a request to a feature that currently isn't supported by the SmartThings platform. These should be rare.
-
-## Custom Error Codes
-
-An API may define its own error codes where appropriate.
-These custom error codes are documented as part of that specific API's documentation.
-
-# Warnings
-The SmartThings API issues warning messages via standard HTTP Warning headers. These messages do not represent a request failure, but provide additional information that the requester might want to act upon.
-For instance a warning will be issued if you are using an old API version.
 
 # API Versions
 
