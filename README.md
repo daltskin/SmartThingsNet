@@ -2,8 +2,6 @@
 
 # Overview
 
-This is the reference documentation for the SmartThings API.
-
 The SmartThings API supports [REST](https://en.wikipedia.org/wiki/Representational_state_transfer), resources are protected with [OAuth 2.0 Bearer Tokens](https://tools.ietf.org/html/rfc6750#section-2.1), and all responses are sent as [JSON](http://www.json.org/).
 
 # Authentication
