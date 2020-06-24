@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>SmartThingsNet</AssemblyName>
+    <PackageId>SmartThingsNet</PackageId>
+    <OutputType>Library</OutputType>
+    <Authors>Jamie Dalton</Authors>
+    <Company></Company>
+    <AssemblyTitle>SmartThingsNet</AssemblyTitle>
+    <Description>SmartThingsNet C# client SDK</Description>
+    <Copyright>No Copyright</Copyright>
+    <RootNamespace>SmartThingsNet</RootNamespace>
+    <Version>1.0.0</Version>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\SmartThingsNet.xml</DocumentationFile>
+    <RepositoryUrl>https://github.com/daltskin/SmartThingsNet.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>SmartThings C# pre-release</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JsonSubTypes" Version="1.5.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="RestSharp" Version="106.10.1" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
+  </ItemGroup>
+
+</Project>
