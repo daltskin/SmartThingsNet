@@ -42,6 +42,6 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: Package
-      run: dotnet pack --configuration Release --no-build -o ./SmartThingsNet.${{ env.GitVersion_SemVer }}.nupkg -p:PackageVersion=${{ env.GitVersion_SemVer}}
+      run: dotnet pack --configuration Release --no-build -p:PackageVersion=${{ env.GitVersion_SemVer}}
     - name: Publish
-      run: dotnet nuget push *.nupkg -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}} --skip-duplicate
+      run: dotnet nuget push **/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}} --skip-duplicate
