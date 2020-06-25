@@ -48,3 +48,7 @@ jobs:
         # Filepath of the project to be packaged, relative to root of repository
         PROJECT_FILE_PATH: src/SmartThingsNet.csproj
         NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+
+    - name: DotNet Publish
+      run: dotnet publish --configuration release /p:AssemblyVersion=${{ steps.gitversion.outputs.assemblySemFileVer }} /p:FileVersion=${{ steps.gitversion.outputs.assemblySemFileVer }} /p:InformationalVersion=${{ steps.gitversion.assemblySemFileVer }}
+ 
