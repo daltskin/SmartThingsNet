@@ -38,7 +38,7 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --configuration Release --no-restore /p:AssemblyVersion=${{ $GitVersion_SemVer }} /p:FileVersion=${{ $GitVersion_SemVer }} /p:InformationalVersion=${{ $GitVersion_SemVer }}
+      run: dotnet build --configuration Release --no-restore /p:AssemblyVersion=$GitVersion_SemVer /p:FileVersion= $GitVersion_SemVer /p:InformationalVersion= $GitVersion_SemVer 
     - name: Test
       run: dotnet test --no-restore --verbosity normal
 
@@ -47,7 +47,7 @@ jobs:
       with:
         # Filepath of the project to be packaged, relative to root of repository
         PROJECT_FILE_PATH: src/SmartThingsNet.csproj
-        VERSION_REGEX: <Version>{$GitVersion_SemVer}<\/Version>  
+        VERSION_REGEX: <Version>$GitVersion_SemVer<\/Version>  
         NUGET_KEY: ${{secrets.NUGET_API_KEY}}
 
 
