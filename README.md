@@ -45,23 +45,23 @@ The `_links` object contains the items returned, and links to the next and previ
 
 ```json
 {
-  \"items\": [
+  "items": [
     {
-      \"locationId\": \"6b3d1909-1e1c-43ec-adc2-5f941de4fbf9\",
-      \"name\": \"Home\"
+      "locationId": "6b3d1909-1e1c-43ec-adc2-5f941de4fbf9",
+      "name": "Home"
     },
     {
-      \"locationId\": \"6b3d1909-1e1c-43ec-adc2-5f94d6g4fbf9\",
-      \"name\": \"Work\"
+      "locationId": "6b3d1909-1e1c-43ec-adc2-5f94d6g4fbf9",
+      "name": "Work"
     }
     ....
   ],
-  \"_links\": {
-    \"next\": {
-      \"href\": \"https://api.smartthings.com/v1/locations?page=3\"
+  "_links": {
+    "next": {
+      "href": "https://api.smartthings.com/v1/locations?page=3"
     },
-    \"previous\": {
-      \"href\": \"https://api.smartthings.com/v1/locations?page=1\"
+    "previous": {
+      "href": "https://api.smartthings.com/v1/locations?page=1"
     }
   }
 }
