@@ -47,6 +47,7 @@ jobs:
       with:
         # Filepath of the project to be packaged, relative to root of repository
         PROJECT_FILE_PATH: src/SmartThingsNet.csproj
+        PACKAGE_NAME: SmartThingsNet.${{ env.GitVersion_SemVer }}.nupkg
         VERSION_STATIC: ${{ env.GitVersion_SemVer }}
         NUGET_KEY: ${{secrets.NUGET_API_KEY}}
 
