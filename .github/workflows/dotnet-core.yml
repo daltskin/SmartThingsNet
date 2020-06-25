@@ -37,11 +37,11 @@ jobs:
     
     - name: Install dependencies
       run: dotnet restore
-    - name: Build {{$GitVersion_SemVer}}
+    - name: Build ${{ env.GitVersion_SemVer }}
       run: dotnet build --configuration Release --no-restore /p:AssemblyVersion=${{ env.GitVersion_SemVer }} /p:FileVersion=${{ env.GitVersion_SemVer }} /p:InformationalVersion=${{ env.GitVersion_SemVer }}
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: Package
-      run: dotnet pack --configuration Release --no-build -p:PackageVersion=${{ env.GitVersion_SemVer}}
+      run: dotnet pack --configuration Release --no-build -p:PackageVersion=${{ env.GitVersion_SemVer}} --no-symbols
     - name: Publish
       run: dotnet nuget push **/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}} --skip-duplicate
