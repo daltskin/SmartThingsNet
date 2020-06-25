@@ -24,11 +24,10 @@ jobs:
       with:
           versionSpec: '5.2.x'
     
-    - name: Use GitVersion
-      id: gitversion # step id used as reference for output values
-      uses: gittools/actions/gitversion/execute@v0.9.2
-        useConfigFile: true
-        configFilePath: 'GitVersion.yml'
+    - name: GitVersion
+      uses: docker://gittools/gitversion:5.2.5-linux-ubuntu-16.04-netcoreapp2.1
+      with:
+        args: /github/workspace /nofetch /output buildserver
     - run: |
         echo "Major: ${{ steps.gitversion.outputs.major }}"
         echo "Minor: ${{ steps.gitversion.outputs.minor }}"
