@@ -28,6 +28,9 @@ jobs:
       uses: docker://gittools/gitversion:5.2.5-linux-ubuntu-16.04-netcoreapp2.1
       with:
         args: /github/workspace /nofetch /output buildserver
+
+    - name: luisAppVersion env
+      run: echo "::set-env name=luisAppVersion::$GitVersion_SemVer"     
     
     - uses: actions/checkout@v2
     - name: Setup .NET Core
