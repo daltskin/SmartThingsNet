@@ -28,11 +28,6 @@ jobs:
       uses: docker://gittools/gitversion:5.2.5-linux-ubuntu-16.04-netcoreapp2.1
       with:
         args: /github/workspace /nofetch /output buildserver
-    - run: |
-        echo "Major: ${{ steps.gitversion.outputs.major }}"
-        echo "Minor: ${{ steps.gitversion.outputs.minor }}"
-        echo "Patch: ${{ steps.gitversion.outputs.patch }}"
-        echo "SemVer: ${{ steps.gitversion.outputs.semVer }}"
     
     - uses: actions/checkout@v2
     - name: Setup .NET Core
