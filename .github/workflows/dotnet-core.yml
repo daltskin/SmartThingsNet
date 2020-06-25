@@ -44,4 +44,4 @@ jobs:
     - name: Package
       run: dotnet pack --configuration Release --no-build -p:PackageVersion=${{ env.GitVersion_SemVer}}
     - name: Publish
-      run: dotnet nuget push **/*.nupkg -s https://api.nuget.org/v3/index.json -n -k ${{secrets.NUGET_API_KEY}} --skip-duplicate
+      run: dotnet nuget push **/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}} --skip-duplicate
