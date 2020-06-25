@@ -19,9 +19,9 @@ jobs:
         dotnet-version: 3.1.101
     
     - name: Install GitVersion
-      uses: gittools/actions/gitversion/setup@v0.9
+      uses: docker://gittools/gitversion:5.2.5-linux-ubuntu-16.04-netcoreapp2.1
       with:
-        versionSpec: '5.1.x'
+        args: /github/workspace /nofetch /output buildserver
     
     - name: Use GitVersion
       id: gitversion # step id used as reference for output values
