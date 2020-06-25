@@ -41,14 +41,7 @@ jobs:
       run: dotnet build --configuration Release --no-restore /p:AssemblyVersion=${{ env.GitVersion_SemVer }} /p:FileVersion=${{ env.GitVersion_SemVer }} /p:InformationalVersion=${{ env.GitVersion_SemVer }}
     - name: Test
       run: dotnet test --no-restore --verbosity normal
-
-    - name: Publish NuGet
-      uses: brandedoutcast/publish-nuget@v2.5.2
-      with:
-        # Filepath of the project to be packaged, relative to root of repository
-        PROJECT_FILE_PATH: src/SmartThingsNet.csproj
-        PACKAGE_NAME: SmartThingsNet.${{ env.GitVersion_SemVer }}.nupkg
-        VERSION_STATIC: ${{ env.GitVersion_SemVer }}
-        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
-
-
+    - name: Package
+      run: dotnet pack --configuration Release --no-build
+    - name: Publish
+      run: dotnet nuget push *.nupkg -s ${this.nugetSource}/v3/index.json -k ${{secrets.NUGET_API_KEY}} --skip-duplicate
