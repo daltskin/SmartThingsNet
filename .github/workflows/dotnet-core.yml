@@ -1,13 +1,17 @@
 name: .NET Core
+
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+
 jobs:
   build:
-runs-on: ubuntu-latest
-steps:
+
+    runs-on: ubuntu-latest
+
+    steps:
     - uses: actions/checkout@v1
       
     - name: Checkout
@@ -24,7 +28,8 @@ steps:
       uses: docker://gittools/gitversion:5.2.5-linux-ubuntu-16.04-netcoreapp2.1
       with:
         args: /github/workspace /nofetch /output buildserver
-- uses: actions/checkout@v2
+
+    - uses: actions/checkout@v2
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
