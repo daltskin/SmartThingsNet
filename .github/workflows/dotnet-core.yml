@@ -47,5 +47,5 @@ jobs:
 #      run: dotnet nuget push **/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}} --skip-duplicate
    
     - name: Publish to github
-      run: dotnet nuget push SmartThingsNet/bin/Release/SmartThingsNet.${{ env.GitVersion_SemVer}}.nupkg --source "github" -k {{ secrets.GITHUB_TOKEN }} --skip-duplicate --no-symbols
+      run: dotnet nuget push SmartThingsNet/bin/Release/SmartThingsNet.${{ env.GitVersion_SemVer}}.nupkg --source "github" -k {{ secrets.GITHUB_TOKEN }} --skip-duplicate --no-symbols true
       working-directory: src
