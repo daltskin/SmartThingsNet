@@ -47,5 +47,6 @@ jobs:
 #      run: dotnet nuget push **/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}} --skip-duplicate
    
     - name: Publish to github
-      run: dotnet nuget push **/*.nupkg --source https://nuget.pkg.github.com/daltskin/index.json -k ${{ secrets.GITHUB_TOKEN }} --skip-duplicate --no-symbols true
+      run: |
+        until dotnet nuget push **/*.nupkg --source https://nuget.pkg.github.com/daltskin/index.json -k ${{ secrets.GITHUB_TOKEN }} --skip-duplicate --no-symbols true; do echo "Retrying.."; sleep 1; done
       working-directory: src
