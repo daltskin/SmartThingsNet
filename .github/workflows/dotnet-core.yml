@@ -48,5 +48,5 @@ jobs:
    
     - name: Publish to github
       run: |
-        until dotnet nuget push **/*.nupkg -source github -k ${{ secrets.GITHUB_TOKEN }} --skip-duplicate --no-symbols true; do echo "Retrying.."; sleep 1; done
+        until dotnet nuget push **/*.nupkg --source github -k ${{ secrets.GITHUB_TOKEN }} --skip-duplicate --no-symbols true; do echo "Retrying.."; sleep 1; done
       working-directory: src
