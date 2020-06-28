@@ -48,3 +48,4 @@ jobs:
    
     - name: Publish to github
       run: dotnet nuget push **/*.nupkg --source "github" -k ${{secrets.NUGET_API_KEY}}
+      working-directory: src
