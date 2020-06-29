@@ -34,9 +34,6 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.*   
-#        source-url: https://nuget.pkg.github.com/daltskin/index.json
-#      env:
-#        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
     
     - name: Install dependencies
       run: dotnet restore
@@ -48,16 +45,6 @@ jobs:
     #- name: Publish
 #      run: dotnet nuget push **/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}} --skip-duplicate
    
-    - name: list some key files   
-      run: pwd
-
-    - name: list some key files   
-      run: ls -lrt
-
-    - name: list some key files   
-      run: ls -lrt
-      working-directory: src
-   
     - name: Setup nuget config
       run: sed -i 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' nuget.config
       working-directory: src
@@ -65,16 +52,15 @@ jobs:
     - name: Package
       run: dotnet pack --configuration Release --no-build -p:PackageVersion=${{ env.GitVersion_SemVer}}
     
-    #- name: Publish to github
-    #  run: dotnet nuget push **/*.nupkg --source github -k ${{ secrets.GITHUB_TOKEN }} --skip-duplicate --no-symbols true
-    #  working-directory: src
+    - name: Publish to github
+      run: dotnet nuget push **/*.nupkg --source github --skip-duplicate --no-symbols true
+      working-directory: src
 
-
-    - name: list some key files   
-      run: ls -lrt
-      working-directory: src/bin/Release
+    #- name: list some key files   
+    #  run: ls -lrt
+    #  working-directory: src/bin/Release
    
       
-    - name: Publish to github
-      run: dotnet nuget push SmartThingsNet.${{ env.GitVersion_SemVer}}.nupkg --source "github" --skip-duplicate --no-symbols true
-      working-directory: src/bin/Release
+    #- name: Publish to github
+    #  run: dotnet nuget push SmartThingsNet.${{ env.GitVersion_SemVer}}.nupkg --source "github" --skip-duplicate --no-symbols true
+    #  working-directory: src/bin/Release
