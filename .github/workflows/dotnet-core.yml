@@ -49,13 +49,9 @@ jobs:
     - name: Package
       run: dotnet pack --configuration Release --no-build -p:PackageVersion=${{ env.GitVersion_SemVer}}
     
-    #- name: Publish to github
-    #  run: dotnet nuget push **/*.nupkg --source github --skip-duplicate --no-symbols true
-    #  working-directory: src
-
     - name: Publish to github
-      run: dotnet nuget push SmartThingsNet.${{ env.GitVersion_SemVer}}.nupkg --source "github" --skip-duplicate --no-symbols true
-      working-directory: src/bin/Release
+      run: dotnet nuget push **/*.nupkg --source github --skip-duplicate --no-symbols true
+      working-directory: src
       
     - name: Publish to nuget
       run: dotnet nuget push **/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}} --skip-duplicate
