@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CreateOrUpdateWebhookSmartAppRequest
+# SmartThingsNet.Model.CreateOrUpdateWebhookSmartAppRequest
 Details related to a Webhook Smart App implementation.  This model should only be specified for apps of type WEBHOOK_SMART_APP. 
 ## Properties
 

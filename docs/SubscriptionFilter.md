@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SubscriptionFilter
+# SmartThingsNet.Model.SubscriptionFilter
 ## Properties
 
 Name | Type | Description | Notes

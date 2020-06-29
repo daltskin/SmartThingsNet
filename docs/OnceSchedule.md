@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.OnceSchedule
+# SmartThingsNet.Model.OnceSchedule
 ## Properties
 
 Name | Type | Description | Notes

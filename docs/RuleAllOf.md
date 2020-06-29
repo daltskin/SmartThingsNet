@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.RuleAllOf
+# SmartThingsNet.Model.RuleAllOf
 ## Properties
 
 Name | Type | Description | Notes

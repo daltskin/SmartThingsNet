@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.RuleMetadata
+# SmartThingsNet.Model.RuleMetadata
 Defines a rule with its associated meta data.
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeviceComponent
+# SmartThingsNet.Model.DeviceComponent
 ## Properties
 
 Name | Type | Description | Notes

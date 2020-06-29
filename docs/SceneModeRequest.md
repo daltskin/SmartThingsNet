@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SceneModeRequest
+# SmartThingsNet.Model.SceneModeRequest
 The mode to be activated by the Scene
 ## Properties
 

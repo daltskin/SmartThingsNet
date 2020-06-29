@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.PermissionConfig
+# SmartThingsNet.Model.PermissionConfig
 Required permissions for the installed app.
 ## Properties
 

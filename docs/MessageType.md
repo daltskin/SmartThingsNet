@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.MessageType
+# SmartThingsNet.Model.MessageType
 The expected message format to be sent.
 ## Properties
 

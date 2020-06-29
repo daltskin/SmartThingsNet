@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DthDeviceDetails
+# SmartThingsNet.Model.DthDeviceDetails
 ## Properties
 
 Name | Type | Description | Notes

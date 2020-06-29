@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.OperandAggregationMode
+# SmartThingsNet.Model.OperandAggregationMode
 ## Properties
 
 Name | Type | Description | Notes

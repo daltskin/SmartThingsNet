@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.InstalledAppLifecycleEvent
+# SmartThingsNet.Model.InstalledAppLifecycleEvent
 An Installed App Lifecycle Event.
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.ScheduleRequest
+# SmartThingsNet.Model.ScheduleRequest
 ## Properties
 
 Name | Type | Description | Notes

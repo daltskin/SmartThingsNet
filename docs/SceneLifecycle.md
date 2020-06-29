@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SceneLifecycle
+# SmartThingsNet.Model.SceneLifecycle
 The scene lifecycle. The lifecycle will be one of: * CREATE - Invoked when a scene is created. * UPDATE - Invoked when a scene is updated. * DELETE - Invoked when a scene is deleted. 
 ## Properties
 

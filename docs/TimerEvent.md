@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TimerEvent
+# SmartThingsNet.Model.TimerEvent
 An event that is caused by a schedule for this app being fired.
 ## Properties
 

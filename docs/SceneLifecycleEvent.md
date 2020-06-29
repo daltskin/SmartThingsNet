@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SceneLifecycleEvent
+# SmartThingsNet.Model.SceneLifecycleEvent
 A scene lifecycle event.
 ## Properties
 

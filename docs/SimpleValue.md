@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SimpleValue
+# SmartThingsNet.Model.SimpleValue
 A simple value.
 ## Properties
 

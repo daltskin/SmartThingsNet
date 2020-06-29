@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.UpdateAppRequest
+# SmartThingsNet.Model.UpdateAppRequest
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.HubHealthDetail
+# SmartThingsNet.Model.HubHealthDetail
 Details of a subscription of souce type HUB_HEALTH
 ## Properties
 

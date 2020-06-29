@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TimeReference
+# SmartThingsNet.Model.TimeReference
 ## Properties
 
 Name | Type | Description | Notes

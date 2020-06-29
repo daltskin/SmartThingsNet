@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.InstalledAppLifecycleError
+# SmartThingsNet.Model.InstalledAppLifecycleError
 ## Properties
 
 Name | Type | Description | Notes

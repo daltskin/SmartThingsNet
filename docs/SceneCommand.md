@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SceneCommand
+# SmartThingsNet.Model.SceneCommand
 A component capability command
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeviceSubscriptionDetail
+# SmartThingsNet.Model.DeviceSubscriptionDetail
 Details of a subscription of source type DEVICE. The combination of subscribed values must be unique per installed app.
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeviceEvent
+# SmartThingsNet.Model.DeviceEvent
 An event on a device that matched a subscription for this app.
 ## Properties
 

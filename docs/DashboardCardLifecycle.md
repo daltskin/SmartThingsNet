@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DashboardCardLifecycle
+# SmartThingsNet.Model.DashboardCardLifecycle
 ## Properties
 
 Name | Type | Description | Notes

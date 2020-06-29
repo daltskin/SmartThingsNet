@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.ModeSubscriptionDetail
+# SmartThingsNet.Model.ModeSubscriptionDetail
 Details of a subscription of source type MODE. This will subscribe to all mode changes for the given location. The installed app can then act on the resulting mode change event accordingly.
 ## Properties
 

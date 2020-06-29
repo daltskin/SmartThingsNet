@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.PagedRooms
+# SmartThingsNet.Model.PagedRooms
 Represents a single page of Rooms available in a Location.
 ## Properties
 

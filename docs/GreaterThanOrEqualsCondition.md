@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.GreaterThanOrEqualsCondition
+# SmartThingsNet.Model.GreaterThanOrEqualsCondition
 ## Properties
 
 Name | Type | Description | Notes

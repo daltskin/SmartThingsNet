@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.IsaResults
+# SmartThingsNet.Model.IsaResults
 ## Properties
 
 Name | Type | Description | Notes

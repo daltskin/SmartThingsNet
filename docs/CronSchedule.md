@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CronSchedule
+# SmartThingsNet.Model.CronSchedule
 ## Properties
 
 Name | Type | Description | Notes

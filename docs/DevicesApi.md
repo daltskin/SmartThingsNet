@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.DevicesApi
+# SmartThingsNet.Api.DevicesApi
 
 All URIs are relative to *https://api.smartthings.com/v1*
 
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 <a name="createdeviceevents"></a>
 # **CreateDeviceEvents**
-> Object CreateDeviceEvents (string authorization, string deviceId, DeviceEventsRequest deviceEventRequest)
+> Object CreateDeviceEvents (string deviceId, DeviceEventsRequest deviceEventRequest)
 
 Create Device Events.
 
@@ -28,9 +28,9 @@ Create events for a device. When a device is managed by a SmartApp then it is re
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -44,14 +44,14 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DevicesApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var deviceId = deviceId_example;  // string | the device ID
             var deviceEventRequest = new DeviceEventsRequest(); // DeviceEventsRequest | 
 
             try
             {
                 // Create Device Events.
-                Object result = apiInstance.CreateDeviceEvents(authorization, deviceId, deviceEventRequest);
+                Object result = apiInstance.CreateDeviceEvents(deviceId, deviceEventRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 
 <a name="deletedevice"></a>
 # **DeleteDevice**
-> Object DeleteDevice (string authorization, string deviceId)
+> Object DeleteDevice (string deviceId)
 
 Delete a Device.
 
@@ -111,9 +111,9 @@ Delete a device by device id. If the token is for a SmartApp that created the de
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -127,13 +127,13 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DevicesApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var deviceId = deviceId_example;  // string | the device ID
 
             try
             {
                 // Delete a Device.
-                Object result = apiInstance.DeleteDevice(authorization, deviceId);
+                Object result = apiInstance.DeleteDevice(deviceId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 
 <a name="executedevicecommands"></a>
 # **ExecuteDeviceCommands**
-> Object ExecuteDeviceCommands (string authorization, string deviceId, DeviceCommandsRequest executeCapabilityCommand)
+> Object ExecuteDeviceCommands (string deviceId, DeviceCommandsRequest executeCapabilityCommand)
 
 Execute commands on device.
 
@@ -191,9 +191,9 @@ Execute commands on a device.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -207,14 +207,14 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DevicesApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var deviceId = deviceId_example;  // string | the device ID
             var executeCapabilityCommand = new DeviceCommandsRequest(); // DeviceCommandsRequest | 
 
             try
             {
                 // Execute commands on device.
-                Object result = apiInstance.ExecuteDeviceCommands(authorization, deviceId, executeCapabilityCommand);
+                Object result = apiInstance.ExecuteDeviceCommands(deviceId, executeCapabilityCommand);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -264,7 +264,7 @@ Name | Type | Description  | Notes
 
 <a name="getdevice"></a>
 # **GetDevice**
-> Device GetDevice (string authorization, string deviceId)
+> Device GetDevice (string deviceId)
 
 Get a device's description.
 
@@ -274,9 +274,9 @@ Get a device's description.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -290,13 +290,13 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DevicesApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var deviceId = deviceId_example;  // string | the device ID
 
             try
             {
                 // Get a device's description.
-                Device result = apiInstance.GetDevice(authorization, deviceId);
+                Device result = apiInstance.GetDevice(deviceId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -344,7 +344,7 @@ Name | Type | Description  | Notes
 
 <a name="getdevicecomponentstatus"></a>
 # **GetDeviceComponentStatus**
-> Dictionary&lt;string, Dictionary&gt; GetDeviceComponentStatus (string authorization, string deviceId, string componentId)
+> Dictionary&lt;string, Dictionary&gt; GetDeviceComponentStatus (string deviceId, string componentId)
 
 Get a device component's status.
 
@@ -354,9 +354,9 @@ Get the status of all attributes of a the component. The results may be filtered
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -370,14 +370,14 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DevicesApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var deviceId = deviceId_example;  // string | the device ID
             var componentId = componentId_example;  // string | The name of the component.
 
             try
             {
                 // Get a device component's status.
-                Dictionary<string, Dictionary> result = apiInstance.GetDeviceComponentStatus(authorization, deviceId, componentId);
+                Dictionary<string, Dictionary> result = apiInstance.GetDeviceComponentStatus(deviceId, componentId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -426,7 +426,7 @@ Name | Type | Description  | Notes
 
 <a name="getdevicestatus"></a>
 # **GetDeviceStatus**
-> DeviceStatus GetDeviceStatus (string authorization, string deviceId)
+> DeviceStatus GetDeviceStatus (string deviceId)
 
 Get the full status of a device.
 
@@ -436,9 +436,9 @@ Get the current status of all of a device's component's attributes. The results 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -452,13 +452,13 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DevicesApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var deviceId = deviceId_example;  // string | the device ID
 
             try
             {
                 // Get the full status of a device.
-                DeviceStatus result = apiInstance.GetDeviceStatus(authorization, deviceId);
+                DeviceStatus result = apiInstance.GetDeviceStatus(deviceId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -506,7 +506,7 @@ Name | Type | Description  | Notes
 
 <a name="getdevicestatusbycapability"></a>
 # **GetDeviceStatusByCapability**
-> Dictionary&lt;string, AttributeState&gt; GetDeviceStatusByCapability (string authorization, string deviceId, string componentId, string capabilityId)
+> Dictionary&lt;string, AttributeState&gt; GetDeviceStatusByCapability (string deviceId, string componentId, string capabilityId)
 
 Get a capability's status.
 
@@ -516,9 +516,9 @@ Get the current status of a device component's capability. If the token is for a
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -532,7 +532,7 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DevicesApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var deviceId = deviceId_example;  // string | the device ID
             var componentId = componentId_example;  // string | The name of the component.
             var capabilityId = capabilityId_example;  // string | The ID of the capability
@@ -540,7 +540,7 @@ namespace Example
             try
             {
                 // Get a capability's status.
-                Dictionary<string, AttributeState> result = apiInstance.GetDeviceStatusByCapability(authorization, deviceId, componentId, capabilityId);
+                Dictionary<string, AttributeState> result = apiInstance.GetDeviceStatusByCapability(deviceId, componentId, capabilityId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -590,7 +590,7 @@ Name | Type | Description  | Notes
 
 <a name="getdevices"></a>
 # **GetDevices**
-> PagedDevices GetDevices (string authorization, List<string> capability = null, List<string> locationId = null, List<string> deviceId = null, string capabilitiesMode = null)
+> PagedDevices GetDevices (List<string> capability = null, List<string> locationId = null, List<string> deviceId = null, string capabilitiesMode = null)
 
 List devices.
 
@@ -600,9 +600,9 @@ Get a list of devices.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -616,7 +616,7 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DevicesApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var capability = new List<string>(); // List<string> | The device capabilities to filter the results by. The capabilities are treated as an \"and\" so all capabilities must be present.  (optional) 
             var locationId = new List<string>(); // List<string> | The device locations to filter the results by.  (optional) 
             var deviceId = new List<string>(); // List<string> | The device ids to filter the results by.  (optional) 
@@ -625,7 +625,7 @@ namespace Example
             try
             {
                 // List devices.
-                PagedDevices result = apiInstance.GetDevices(authorization, capability, locationId, deviceId, capabilitiesMode);
+                PagedDevices result = apiInstance.GetDevices(capability, locationId, deviceId, capabilitiesMode);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -676,7 +676,7 @@ Name | Type | Description  | Notes
 
 <a name="installdevice"></a>
 # **InstallDevice**
-> Device InstallDevice (string authorization, DeviceInstallRequest installationRequest)
+> Device InstallDevice (DeviceInstallRequest installationRequest)
 
 Install a Device.
 
@@ -686,9 +686,9 @@ Install a device. This is only available for SmartApp managed devices. The Smart
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -702,13 +702,13 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DevicesApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var installationRequest = new DeviceInstallRequest(); // DeviceInstallRequest | Installation Request
 
             try
             {
                 // Install a Device.
-                Device result = apiInstance.InstallDevice(authorization, installationRequest);
+                Device result = apiInstance.InstallDevice(installationRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -757,7 +757,7 @@ Name | Type | Description  | Notes
 
 <a name="updatedevice"></a>
 # **UpdateDevice**
-> Device UpdateDevice (string authorization, string deviceId, UpdateDeviceRequest updateDeviceRequest)
+> Device UpdateDevice (string deviceId, UpdateDeviceRequest updateDeviceRequest)
 
 Update a device.
 
@@ -767,9 +767,9 @@ Update the properties of a device. If the token is for a SmartApp that created t
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -783,14 +783,14 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DevicesApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var deviceId = deviceId_example;  // string | the device ID
             var updateDeviceRequest = new UpdateDeviceRequest(); // UpdateDeviceRequest | 
 
             try
             {
                 // Update a device.
-                Device result = apiInstance.UpdateDevice(authorization, deviceId, updateDeviceRequest);
+                Device result = apiInstance.UpdateDevice(deviceId, updateDeviceRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)

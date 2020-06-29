@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeviceLifecycleDetail
+# SmartThingsNet.Model.DeviceLifecycleDetail
 Details of a subscription of source type DEVICE_LIFECYCLE. Only one of deviceIds or locationId should be supplied.
 ## Properties
 

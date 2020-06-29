@@ -16,7 +16,7 @@
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\SmartThingsNet.xml</DocumentationFile>
     <RepositoryUrl>https://github.com/daltskin/SmartThingsNet.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>SmartThings C# pre-release</PackageReleaseNotes>
+    <PackageReleaseNotes>SmartThingsNet dotnet client SDK pre-release</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

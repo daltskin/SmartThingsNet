@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.ScenesApi
+# SmartThingsNet.Api.ScenesApi
 
 All URIs are relative to *https://api.smartthings.com/v1*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="executescene"></a>
 # **ExecuteScene**
-> StandardSuccessResponse ExecuteScene (string authorization, string sceneId, string locationId = null)
+> StandardSuccessResponse ExecuteScene (string sceneId, string locationId = null)
 
 Execute Scene
 
@@ -20,9 +20,9 @@ Execute a Scene by id for the logged in user and given locationId
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -36,14 +36,14 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ScenesApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var sceneId = sceneId_example;  // string | The ID of the Scene.
             var locationId = locationId_example;  // string | The location of a scene. (optional) 
 
             try
             {
                 // Execute Scene
-                StandardSuccessResponse result = apiInstance.ExecuteScene(authorization, sceneId, locationId);
+                StandardSuccessResponse result = apiInstance.ExecuteScene(sceneId, locationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 <a name="listscenes"></a>
 # **ListScenes**
-> ScenePagedResult ListScenes (string authorization, string locationId = null)
+> ScenePagedResult ListScenes (string locationId = null)
 
 List Scenes
 
@@ -101,9 +101,9 @@ Fetch a list of Scenes for the logged in user filtered by locationIds. If no loc
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -117,13 +117,13 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new ScenesApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var locationId = locationId_example;  // string | The location of a scene. (optional) 
 
             try
             {
                 // List Scenes
-                ScenePagedResult result = apiInstance.ListScenes(authorization, locationId);
+                ScenePagedResult result = apiInstance.ListScenes(locationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)

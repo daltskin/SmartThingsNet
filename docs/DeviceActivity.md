@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeviceActivity
+# SmartThingsNet.Model.DeviceActivity
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CapabilityCommand
+# SmartThingsNet.Model.CapabilityCommand
 ## Properties
 
 Name | Type | Description | Notes

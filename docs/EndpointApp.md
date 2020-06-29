@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.EndpointApp
+# SmartThingsNet.Model.EndpointApp
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.LocationsApi
+# SmartThingsNet.Api.LocationsApi
 
 All URIs are relative to *https://api.smartthings.com/v1*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="createlocation"></a>
 # **CreateLocation**
-> Location CreateLocation (string authorization, CreateLocationRequest createLocationRequest)
+> Location CreateLocation (CreateLocationRequest createLocationRequest)
 
 Create a Location.
 
@@ -23,9 +23,9 @@ Create a Location for a user. We will try and create the Location geographically
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -39,13 +39,13 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var createLocationRequest = new CreateLocationRequest(); // CreateLocationRequest | 
 
             try
             {
                 // Create a Location.
-                Location result = apiInstance.CreateLocation(authorization, createLocationRequest);
+                Location result = apiInstance.CreateLocation(createLocationRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 <a name="deletelocation"></a>
 # **DeleteLocation**
-> Object DeleteLocation (string authorization, string locationId)
+> Object DeleteLocation (string locationId)
 
 Delete a Location.
 
@@ -104,9 +104,9 @@ Delete a Location from a user's account.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -120,13 +120,13 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var locationId = locationId_example;  // string | The ID of the location.
 
             try
             {
                 // Delete a Location.
-                Object result = apiInstance.DeleteLocation(authorization, locationId);
+                Object result = apiInstance.DeleteLocation(locationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 <a name="getlocation"></a>
 # **GetLocation**
-> Location GetLocation (string authorization, string locationId)
+> Location GetLocation (string locationId)
 
 Get a Location.
 
@@ -184,9 +184,9 @@ Get a specific Location from a user's account.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -200,13 +200,13 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var locationId = locationId_example;  // string | The ID of the location.
 
             try
             {
                 // Get a Location.
-                Location result = apiInstance.GetLocation(authorization, locationId);
+                Location result = apiInstance.GetLocation(locationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -264,9 +264,9 @@ List all Locations currently available in a user account.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -280,7 +280,7 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
 
             try
             {
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 
 <a name="updatelocation"></a>
 # **UpdateLocation**
-> Location UpdateLocation (string authorization, string locationId, UpdateLocationRequest updateLocationRequest)
+> Location UpdateLocation (string locationId, UpdateLocationRequest updateLocationRequest)
 
 Update a Location.
 
@@ -341,9 +341,9 @@ All the fields in the request body are optional. Only the specified fields will 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -357,14 +357,14 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new LocationsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var locationId = locationId_example;  // string | The ID of the location.
             var updateLocationRequest = new UpdateLocationRequest(); // UpdateLocationRequest | 
 
             try
             {
                 // Update a Location.
-                Location result = apiInstance.UpdateLocation(authorization, locationId, updateLocationRequest);
+                Location result = apiInstance.UpdateLocation(locationId, updateLocationRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)

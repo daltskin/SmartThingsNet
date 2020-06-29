@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.InstalledappsApi
+# SmartThingsNet.Api.InstalledappsApi
 
 All URIs are relative to *https://api.smartthings.com/v1*
 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="createinstalledappevents"></a>
 # **CreateInstalledAppEvents**
-> Object CreateInstalledAppEvents (string authorization, string installedAppId, CreateInstalledAppEventsRequest createInstalledAppEventsRequest)
+> Object CreateInstalledAppEvents (string installedAppId, CreateInstalledAppEventsRequest createInstalledAppEventsRequest)
 
 Create Installed App events.
 
@@ -24,9 +24,9 @@ Create events for an installed app.  This API allows Apps to create events to tr
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -40,14 +40,14 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new InstalledappsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var installedAppId = installedAppId_example;  // string | The ID of the installed application.
             var createInstalledAppEventsRequest = new CreateInstalledAppEventsRequest(); // CreateInstalledAppEventsRequest | 
 
             try
             {
                 // Create Installed App events.
-                Object result = apiInstance.CreateInstalledAppEvents(authorization, installedAppId, createInstalledAppEventsRequest);
+                Object result = apiInstance.CreateInstalledAppEvents(installedAppId, createInstalledAppEventsRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 
 <a name="deleteinstallation"></a>
 # **DeleteInstallation**
-> DeleteInstalledAppResponse DeleteInstallation (string authorization, string installedAppId)
+> DeleteInstalledAppResponse DeleteInstallation (string installedAppId)
 
 Delete an installed app.
 
@@ -107,9 +107,9 @@ Delete an Installed App.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -123,13 +123,13 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new InstalledappsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var installedAppId = installedAppId_example;  // string | The ID of the installed application.
 
             try
             {
                 // Delete an installed app.
-                DeleteInstalledAppResponse result = apiInstance.DeleteInstallation(authorization, installedAppId);
+                DeleteInstalledAppResponse result = apiInstance.DeleteInstallation(installedAppId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 
 <a name="getinstallation"></a>
 # **GetInstallation**
-> InstalledApp GetInstallation (string authorization, string installedAppId)
+> InstalledApp GetInstallation (string installedAppId)
 
 Get an installed app.
 
@@ -187,9 +187,9 @@ Fetch a single installed application.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -203,13 +203,13 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new InstalledappsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var installedAppId = installedAppId_example;  // string | The ID of the installed application.
 
             try
             {
                 // Get an installed app.
-                InstalledApp result = apiInstance.GetInstallation(authorization, installedAppId);
+                InstalledApp result = apiInstance.GetInstallation(installedAppId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 
 <a name="getinstallationconfig"></a>
 # **GetInstallationConfig**
-> InstallConfigurationDetail GetInstallationConfig (string authorization, string installedAppId, Guid configurationId)
+> InstallConfigurationDetail GetInstallationConfig (string installedAppId, Guid configurationId)
 
 Get an installed app configuration.
 
@@ -267,9 +267,9 @@ Fetch a detailed install configuration model containing actual config entries / 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -283,14 +283,14 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new InstalledappsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var installedAppId = installedAppId_example;  // string | The ID of the installed application.
             var configurationId = new Guid(); // Guid | The ID of the install configuration.
 
             try
             {
                 // Get an installed app configuration.
-                InstallConfigurationDetail result = apiInstance.GetInstallationConfig(authorization, installedAppId, configurationId);
+                InstallConfigurationDetail result = apiInstance.GetInstallationConfig(installedAppId, configurationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -339,7 +339,7 @@ Name | Type | Description  | Notes
 
 <a name="listinstallationconfig"></a>
 # **ListInstallationConfig**
-> PagedInstallConfigurations ListInstallationConfig (string authorization, string installedAppId, string configurationStatus = null)
+> PagedInstallConfigurations ListInstallationConfig (string installedAppId, string configurationStatus = null)
 
 List an installed app's configurations.
 
@@ -349,9 +349,9 @@ List all configurations potentially filtered by status for an installed app.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -365,14 +365,14 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new InstalledappsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var installedAppId = installedAppId_example;  // string | The ID of the installed application.
             var configurationStatus = configurationStatus_example;  // string | Filter for configuration status. (optional) 
 
             try
             {
                 // List an installed app's configurations.
-                PagedInstallConfigurations result = apiInstance.ListInstallationConfig(authorization, installedAppId, configurationStatus);
+                PagedInstallConfigurations result = apiInstance.ListInstallationConfig(installedAppId, configurationStatus);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -421,7 +421,7 @@ Name | Type | Description  | Notes
 
 <a name="listinstallations"></a>
 # **ListInstallations**
-> PagedInstalledApps ListInstallations (string authorization, string locationId = null, string installedAppStatus = null, string installedAppType = null, string tag = null, string appId = null, string modeId = null, string deviceId = null)
+> PagedInstalledApps ListInstallations (string locationId = null, string installedAppStatus = null, string installedAppType = null, string tag = null, string appId = null, string modeId = null, string deviceId = null)
 
 List installed apps.
 
@@ -431,9 +431,9 @@ List all installed applications within the specified locations. If no locations 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -447,7 +447,7 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new InstalledappsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var locationId = locationId_example;  // string | The ID of the location that both the installed smart app and source are associated with. (optional) 
             var installedAppStatus = installedAppStatus_example;  // string | State of the Installed App. (optional) 
             var installedAppType = installedAppType_example;  // string | Denotes the type of installed app. (optional) 
@@ -459,7 +459,7 @@ namespace Example
             try
             {
                 // List installed apps.
-                PagedInstalledApps result = apiInstance.ListInstallations(authorization, locationId, installedAppStatus, installedAppType, tag, appId, modeId, deviceId);
+                PagedInstalledApps result = apiInstance.ListInstallations(locationId, installedAppStatus, installedAppType, tag, appId, modeId, deviceId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SmartAppEventRequest
+# SmartThingsNet.Model.SmartAppEventRequest
 ## Properties
 
 Name | Type | Description | Notes

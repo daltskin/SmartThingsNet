@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.PredefinedMessage
+# SmartThingsNet.Model.PredefinedMessage
 Predefined message options. Variables from `localeVariables` matching the locale of the Message will be assigned first, then `defaultVariables`. 
 ## Properties
 

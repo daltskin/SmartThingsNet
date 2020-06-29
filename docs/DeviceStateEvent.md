@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeviceStateEvent
+# SmartThingsNet.Model.DeviceStateEvent
 ## Properties
 
 Name | Type | Description | Notes

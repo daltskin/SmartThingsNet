@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeviceResults
+# SmartThingsNet.Model.DeviceResults
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.ScenePagedResult
+# SmartThingsNet.Model.ScenePagedResult
 ## Properties
 
 Name | Type | Description | Notes

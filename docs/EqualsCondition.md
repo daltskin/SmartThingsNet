@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.EqualsCondition
+# SmartThingsNet.Model.EqualsCondition
 ## Properties
 
 Name | Type | Description | Notes

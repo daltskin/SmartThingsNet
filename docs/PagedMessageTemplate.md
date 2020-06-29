@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.PagedMessageTemplate
+# SmartThingsNet.Model.PagedMessageTemplate
 A simplified Message model which is retured during a list operation.
 ## Properties
 

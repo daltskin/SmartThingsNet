@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SceneLifecycleDetail
+# SmartThingsNet.Model.SceneLifecycleDetail
 Details of a subscription of source type SCENE_LIFECYCLE.
 ## Properties
 

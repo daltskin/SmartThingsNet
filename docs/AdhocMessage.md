@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AdhocMessage
+# SmartThingsNet.Model.AdhocMessage
 An adhoc message contains a list of message templates representing the same message in different locales. The system will serve the template with the locale that best matches the Recipient's language preferences. If the user's language preferences do not correlate to any message templates, the template defined by the `fallbackLocale` will be used. Variables from the template matching the locale of the Message will be assigned first, then `defaultVariables`. 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CreateOrUpdateLambdaSmartAppRequest
+# SmartThingsNet.Model.CreateOrUpdateLambdaSmartAppRequest
 Details related to a Lambda Smart App implementation.  This model should only be specified for apps of type LAMBDA_SMART_APP. 
 ## Properties
 

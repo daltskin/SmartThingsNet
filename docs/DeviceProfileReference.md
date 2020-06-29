@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeviceProfileReference
+# SmartThingsNet.Model.DeviceProfileReference
 ## Properties
 
 Name | Type | Description | Notes

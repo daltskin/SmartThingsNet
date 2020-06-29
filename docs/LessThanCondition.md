@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.LessThanCondition
+# SmartThingsNet.Model.LessThanCondition
 ## Properties
 
 Name | Type | Description | Notes

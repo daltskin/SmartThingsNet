@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DayOfWeek
+# SmartThingsNet.Model.DayOfWeek
 ## Properties
 
 Name | Type | Description | Notes

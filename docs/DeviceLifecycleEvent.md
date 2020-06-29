@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeviceLifecycleEvent
+# SmartThingsNet.Model.DeviceLifecycleEvent
 A device lifecycle event.
 ## Properties
 

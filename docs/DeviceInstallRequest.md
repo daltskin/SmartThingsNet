@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeviceInstallRequest
+# SmartThingsNet.Model.DeviceInstallRequest
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AttributePropertiesUnit
+# SmartThingsNet.Model.AttributePropertiesUnit
 ## Properties
 
 Name | Type | Description | Notes

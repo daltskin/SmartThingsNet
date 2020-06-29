@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.ViperDeviceDetails
+# SmartThingsNet.Model.ViperDeviceDetails
 ## Properties
 
 Name | Type | Description | Notes

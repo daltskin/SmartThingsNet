@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.ComponentTranslations
+# SmartThingsNet.Model.ComponentTranslations
 A map of i18n translations.
 ## Properties
 

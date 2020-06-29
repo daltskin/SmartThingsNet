@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.BetweenCondition
+# SmartThingsNet.Model.BetweenCondition
 ## Properties
 
 Name | Type | Description | Notes

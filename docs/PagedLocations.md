@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.PagedLocations
+# SmartThingsNet.Model.PagedLocations
 Represents a single page of Locations available in a user account.
 ## Properties
 

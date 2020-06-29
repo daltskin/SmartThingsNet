@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.GenerateAppOAuthRequest
+# SmartThingsNet.Model.GenerateAppOAuthRequest
 ## Properties
 
 Name | Type | Description | Notes

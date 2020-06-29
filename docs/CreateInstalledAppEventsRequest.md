@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CreateInstalledAppEventsRequest
+# SmartThingsNet.Model.CreateInstalledAppEventsRequest
 ## Properties
 
 Name | Type | Description | Notes

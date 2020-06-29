@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CreateRoomRequest
+# SmartThingsNet.Model.CreateRoomRequest
 ## Properties
 
 Name | Type | Description | Notes

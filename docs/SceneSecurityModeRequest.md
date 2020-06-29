@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SceneSecurityModeRequest
+# SmartThingsNet.Model.SceneSecurityModeRequest
 The security mode to be activated by the Scene
 ## Properties
 

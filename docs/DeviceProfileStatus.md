@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeviceProfileStatus
+# SmartThingsNet.Model.DeviceProfileStatus
 The lifecycle status of a device profile. 'DEVELOPMENT' - Device profile can be modified. The profile is only available to the developer and can only be used with a self-published app. 'PUBLISHED' - Device profile can be shared with other users, but cannot be modified. 
 ## Properties
 

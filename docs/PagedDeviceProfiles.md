@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.PagedDeviceProfiles
+# SmartThingsNet.Model.PagedDeviceProfiles
 ## Properties
 
 Name | Type | Description | Notes

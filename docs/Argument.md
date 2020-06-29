@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.Argument
+# SmartThingsNet.Model.Argument
 ## Properties
 
 Name | Type | Description | Notes

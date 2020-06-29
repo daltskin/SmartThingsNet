@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeviceOperand
+# SmartThingsNet.Model.DeviceOperand
 ## Properties
 
 Name | Type | Description | Notes

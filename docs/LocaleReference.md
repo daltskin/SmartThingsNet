@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.LocaleReference
+# SmartThingsNet.Model.LocaleReference
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.ModeConfig
+# SmartThingsNet.Model.ModeConfig
 A mode configuration.
 ## Properties
 

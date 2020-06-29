@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.PagedLocation
+# SmartThingsNet.Model.PagedLocation
 A slimmed down represenation of the Location model.
 ## Properties
 

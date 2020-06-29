@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SceneCapability
+# SmartThingsNet.Model.SceneCapability
 A device component capability
 ## Properties
 

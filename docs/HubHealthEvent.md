@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.HubHealthEvent
+# SmartThingsNet.Model.HubHealthEvent
 An event that represents a change in the health of a hub.
 ## Properties
 

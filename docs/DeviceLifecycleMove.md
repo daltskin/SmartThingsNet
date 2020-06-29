@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeviceLifecycleMove
+# SmartThingsNet.Model.DeviceLifecycleMove
 Move device lifecycle. 
 ## Properties
 

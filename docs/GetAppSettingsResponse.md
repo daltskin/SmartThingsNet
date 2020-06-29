@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.GetAppSettingsResponse
+# SmartThingsNet.Model.GetAppSettingsResponse
 Settings for a given app
 ## Properties
 

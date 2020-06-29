@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SubscriptionSource
+# SmartThingsNet.Model.SubscriptionSource
 The type of the event that is being subscribed to.
 ## Properties
 

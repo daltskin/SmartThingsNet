@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SceneArgument
+# SmartThingsNet.Model.SceneArgument
 A capability command argument
 ## Properties
 

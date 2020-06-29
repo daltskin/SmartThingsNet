@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SceneComponent
+# SmartThingsNet.Model.SceneComponent
 A component of the scene device
 ## Properties
 

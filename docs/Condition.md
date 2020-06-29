@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.Condition
+# SmartThingsNet.Model.Condition
 ## Properties
 
 Name | Type | Description | Notes

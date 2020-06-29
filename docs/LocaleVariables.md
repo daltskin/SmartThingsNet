@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.LocaleVariables
+# SmartThingsNet.Model.LocaleVariables
 Message template variables associated with a certain locale.
 ## Properties
 

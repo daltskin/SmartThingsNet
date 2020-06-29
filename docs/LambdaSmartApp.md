@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.LambdaSmartApp
+# SmartThingsNet.Model.LambdaSmartApp
 Details related to a Lambda Smart App implementation.  This model will only be available for apps of type LAMBDA_SMART_APP. 
 ## Properties
 

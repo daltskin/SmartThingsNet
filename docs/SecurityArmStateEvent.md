@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SecurityArmStateEvent
+# SmartThingsNet.Model.SecurityArmStateEvent
 An event that represents a change in the arm state of a security system. 
 ## Properties
 
