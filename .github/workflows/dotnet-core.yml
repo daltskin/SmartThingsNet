@@ -53,7 +53,7 @@ jobs:
       run: dotnet pack --configuration Release --no-build -p:PackageVersion=${{ env.GitVersion_SemVer}}
     
     - name: Publish to github
-      run: dotnet nuget push **/*.nupkg --source github --skip-duplicate --no-symbols true
+      run: dotnet nuget push **/*.nupkg --source github -k ${{ secrets.GITHUB_TOKEN }} --skip-duplicate --no-symbols true
       working-directory: src
 
     #- name: list some key files   
