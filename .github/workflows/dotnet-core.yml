@@ -44,8 +44,7 @@ jobs:
       run: dotnet build --configuration Release --no-restore /p:AssemblyVersion=${{ env.GitVersion_SemVer }} /p:FileVersion=${{ env.GitVersion_SemVer }} /p:InformationalVersion=${{ env.GitVersion_SemVer }}
     - name: Test
       run: dotnet test --no-restore --verbosity normal
-    - name: Package
-      run: dotnet pack --configuration Release --no-build -p:PackageVersion=${{ env.GitVersion_SemVer}}
+
     #- name: Publish
 #      run: dotnet nuget push **/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}} --skip-duplicate
    
@@ -62,6 +61,9 @@ jobs:
     - name: Setup nuget config
       run: sed -i 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' nuget.config
       working-directory: src
+
+    - name: Package
+      run: dotnet pack --configuration Release --no-build -p:PackageVersion=${{ env.GitVersion_SemVer}}
     
     #- name: Publish to github
     #  run: dotnet nuget push **/*.nupkg --source github -k ${{ secrets.GITHUB_TOKEN }} --skip-duplicate --no-symbols true
