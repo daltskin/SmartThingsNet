@@ -51,7 +51,7 @@ jobs:
    
     - name: Setup nuget config
       run: sed 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' .nuget.config > nuget.config   
-      working-directory: SmartThingsNet/SmartThingsNet/src/SmartThingsNet
+      working-directory: SmartThingsNet/src/SmartThingsNet
     
     #- name: Publish to github
     #  run: dotnet nuget push **/*.nupkg --source github -k ${{ secrets.GITHUB_TOKEN }} --skip-duplicate --no-symbols true
@@ -59,4 +59,4 @@ jobs:
       
     - name: Publish to github
       run: dotnet nuget push SmartThingsNet.${{ env.GitVersion_SemVer}}.nupkg --source "github" --skip-duplicate --no-symbols true
-      working-directory: SmartThingsNet/SmartThingsNet/src/SmartThingsNet/bin/Release
+      working-directory: SmartThingsNet/src/SmartThingsNet/bin/Release
