@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.RuleRequest
+# SmartThingsNet.Model.RuleRequest
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SceneDevice
+# SmartThingsNet.Model.SceneDevice
 ## Properties
 
 Name | Type | Description | Notes

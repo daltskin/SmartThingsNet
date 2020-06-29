@@ -1,6 +1,6 @@
-# SmartThingsNet - C# library for the SmartThings API
+# SmartThingsNet - dotnet library for the SmartThings API
 
-![.NET Core](https://github.com/daltskin/SmartThingsNet/workflows/.NET%20Core/badge.svg)
+![.NET Core](https://github.com/daltskin/SmartThingsNet/workflows/.NET%20Core/badge.svg)![Github Package](https://img.shields.io/github/v/release/daltskin/smartthingsnet)![Nuget](https://img.shields.io/nuget/v/smartthingsnet)
 
 # Overview
 

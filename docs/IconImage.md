@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.IconImage
+# SmartThingsNet.Model.IconImage
 A default icon image for the app.
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeviceCommandsEvent
+# SmartThingsNet.Model.DeviceCommandsEvent
 An event that contains commands for devices that were created by this app.
 ## Properties
 

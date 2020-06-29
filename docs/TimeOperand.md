@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TimeOperand
+# SmartThingsNet.Model.TimeOperand
 ## Properties
 
 Name | Type | Description | Notes

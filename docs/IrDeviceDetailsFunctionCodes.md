@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.IrDeviceDetailsFunctionCodes
+# SmartThingsNet.Model.IrDeviceDetailsFunctionCodes
 List of IR function codes
 ## Properties
 

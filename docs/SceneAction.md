@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SceneAction
+# SmartThingsNet.Model.SceneAction
 Possible scene actions, mutually exclusive
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AppTargetStatus
+# SmartThingsNet.Model.AppTargetStatus
 The registration status of a target url.
 ## Properties
 

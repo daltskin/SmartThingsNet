@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SecurityArmStateDetail
+# SmartThingsNet.Model.SecurityArmStateDetail
 Details of a subscription of souce type SECURITY_ARM_STATE
 ## Properties
 

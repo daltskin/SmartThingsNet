@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeviceStatus
+# SmartThingsNet.Model.DeviceStatus
 The status of a Device.
 ## Properties
 

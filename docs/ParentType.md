@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.ParentType
+# SmartThingsNet.Model.ParentType
 The source of the rule
 ## Properties
 

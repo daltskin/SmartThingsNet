@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.PagedInstallConfigurations
+# SmartThingsNet.Model.PagedInstallConfigurations
 Represents a single page of InstallConfiguration models available for an InstalledApp.
 ## Properties
 

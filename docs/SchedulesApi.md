@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.SchedulesApi
+# SmartThingsNet.Api.SchedulesApi
 
 All URIs are relative to *https://api.smartthings.com/v1*
 
@@ -23,9 +23,9 @@ Create a schedule for an installed app. The installed app must be in the locatio
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -40,7 +40,7 @@ namespace Example
 
             var apiInstance = new SchedulesApi(config);
             var installedAppId = installedAppId_example;  // string | The ID of the installed application.
-            var authorization = authorization_example;  // string | OAuth token
+
             var request = new ScheduleRequest(); // ScheduleRequest | The schedule to be created. (optional) 
 
             try
@@ -106,9 +106,9 @@ Delete a specific schedule for the installed app.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -124,7 +124,7 @@ namespace Example
             var apiInstance = new SchedulesApi(config);
             var installedAppId = installedAppId_example;  // string | The ID of the installed application.
             var scheduleName = scheduleName_example;  // string | The name of the schedule
-            var authorization = authorization_example;  // string | OAuth token
+
 
             try
             {
@@ -188,9 +188,9 @@ Delete all schedules for the installed app.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -205,7 +205,7 @@ namespace Example
 
             var apiInstance = new SchedulesApi(config);
             var installedAppId = installedAppId_example;  // string | The ID of the installed application.
-            var authorization = authorization_example;  // string | OAuth token
+
 
             try
             {
@@ -268,9 +268,9 @@ Get a specific schedule for the installed app.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -286,7 +286,7 @@ namespace Example
             var apiInstance = new SchedulesApi(config);
             var installedAppId = installedAppId_example;  // string | The ID of the installed application.
             var scheduleName = scheduleName_example;  // string | The name of the schedule
-            var authorization = authorization_example;  // string | OAuth token
+
 
             try
             {
@@ -350,9 +350,9 @@ List the schedules for the installed app.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -367,7 +367,7 @@ namespace Example
 
             var apiInstance = new SchedulesApi(config);
             var installedAppId = installedAppId_example;  // string | The ID of the installed application.
-            var authorization = authorization_example;  // string | OAuth token
+
 
             try
             {

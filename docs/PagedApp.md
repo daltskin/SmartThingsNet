@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.PagedApp
+# SmartThingsNet.Model.PagedApp
 ## Properties
 
 Name | Type | Description | Notes

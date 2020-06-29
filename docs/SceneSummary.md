@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SceneSummary
+# SmartThingsNet.Model.SceneSummary
 ## Properties
 
 Name | Type | Description | Notes

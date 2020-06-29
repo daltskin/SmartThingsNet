@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.SubscriptionsApi
+# SmartThingsNet.Api.SubscriptionsApi
 
 All URIs are relative to *https://api.smartthings.com/v1*
 
@@ -23,9 +23,9 @@ Delete all subscriptions for the installed app.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -37,7 +37,7 @@ namespace Example
             config.BasePath = "https://api.smartthings.com/v1";
             var apiInstance = new SubscriptionsApi(config);
             var installedAppId = installedAppId_example;  // string | The ID of the installed application.
-            var authorization = authorization_example;  // string | OAuth token
+
             var deviceId = deviceId_example;  // string | Limit deletion to subscriptions for a particular device. (optional) 
             var modeId = modeId_example;  // string | Limit deletion to subscriptions for a particular mode or deletes parent if last mode (optional) 
 
@@ -104,9 +104,9 @@ Delete a specific subscription for the installed app.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -119,7 +119,7 @@ namespace Example
             var apiInstance = new SubscriptionsApi(config);
             var installedAppId = installedAppId_example;  // string | The ID of the installed application.
             var subscriptionId = subscriptionId_example;  // string | The ID of the subscription
-            var authorization = authorization_example;  // string | OAuth token
+
 
             try
             {
@@ -183,9 +183,9 @@ Get a specific subscription for the installed app.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -198,7 +198,7 @@ namespace Example
             var apiInstance = new SubscriptionsApi(config);
             var installedAppId = installedAppId_example;  // string | The ID of the installed application.
             var subscriptionId = subscriptionId_example;  // string | The ID of the subscription
-            var authorization = authorization_example;  // string | OAuth token
+
 
             try
             {
@@ -262,9 +262,9 @@ List the subscriptions for the installed app.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -276,7 +276,7 @@ namespace Example
             config.BasePath = "https://api.smartthings.com/v1";
             var apiInstance = new SubscriptionsApi(config);
             var installedAppId = installedAppId_example;  // string | The ID of the installed application.
-            var authorization = authorization_example;  // string | OAuth token
+
 
             try
             {
@@ -339,9 +339,9 @@ Create a subscription to a type of event from the specified source. Both the sou
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -356,7 +356,7 @@ namespace Example
 
             var apiInstance = new SubscriptionsApi(config);
             var installedAppId = installedAppId_example;  // string | The ID of the installed application.
-            var authorization = authorization_example;  // string | OAuth token
+
             var request = new SubscriptionRequest(); // SubscriptionRequest | The Subscription to be created. (optional) 
 
             try

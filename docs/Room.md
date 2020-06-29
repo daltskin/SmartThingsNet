@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.Room
+# SmartThingsNet.Model.Room
 ## Properties
 
 Name | Type | Description | Notes

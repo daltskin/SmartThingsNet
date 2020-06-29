@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.Mode
+# SmartThingsNet.Model.Mode
 ## Properties
 
 Name | Type | Description | Notes

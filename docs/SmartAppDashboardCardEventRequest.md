@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SmartAppDashboardCardEventRequest
+# SmartThingsNet.Model.SmartAppDashboardCardEventRequest
 An event used to trigger a client action on a SmartApp dashboard card. 
 ## Properties
 

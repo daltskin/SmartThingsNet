@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SubscriptionDelete
+# SmartThingsNet.Model.SubscriptionDelete
 The number of deleted subscriptions
 ## Properties
 

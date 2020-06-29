@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AdhocMessageTemplate
+# SmartThingsNet.Model.AdhocMessageTemplate
 A message template definition, representing a message in a specific locale and it's variables.
 ## Properties
 

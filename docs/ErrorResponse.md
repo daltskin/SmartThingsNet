@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.ErrorResponse
+# SmartThingsNet.Model.ErrorResponse
 ## Properties
 
 Name | Type | Description | Notes

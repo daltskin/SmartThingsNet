@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.ExecutionResult
+# SmartThingsNet.Model.ExecutionResult
 ## Properties
 
 Name | Type | Description | Notes

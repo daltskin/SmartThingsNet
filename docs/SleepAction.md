@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SleepAction
+# SmartThingsNet.Model.SleepAction
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.MessageConfig
+# SmartThingsNet.Model.MessageConfig
 A message configuration.
 ## Properties
 

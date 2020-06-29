@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CapabilityAttributeEnumCommands
+# SmartThingsNet.Model.CapabilityAttributeEnumCommands
 ## Properties
 
 Name | Type | Description | Notes

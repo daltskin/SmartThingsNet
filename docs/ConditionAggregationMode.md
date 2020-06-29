@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.ConditionAggregationMode
+# SmartThingsNet.Model.ConditionAggregationMode
 ## Properties
 
 Name | Type | Description | Notes

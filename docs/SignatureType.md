@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SignatureType
+# SmartThingsNet.Model.SignatureType
 The http signature type used for authorizing event delivery. APP_RSA generates an RSA key pair that will be used to verify requests from SmartThings. ST_PADLOCK requires verifcation through SmartThings public certificate. 
 ## Properties
 

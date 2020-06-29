@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SceneRequest
+# SmartThingsNet.Model.SceneRequest
 JSON body for creating or updating a Scene
 ## Properties
 

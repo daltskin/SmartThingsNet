@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CommandAction
+# SmartThingsNet.Model.CommandAction
 ## Properties
 
 Name | Type | Description | Notes

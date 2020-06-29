@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SubscriptionRequest
+# SmartThingsNet.Model.SubscriptionRequest
 ## Properties
 
 Name | Type | Description | Notes

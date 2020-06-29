@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.PagedSubscriptions
+# SmartThingsNet.Model.PagedSubscriptions
 An array of subscriptions
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.StandardSuccessResponse
+# SmartThingsNet.Model.StandardSuccessResponse
 {\"status\": \"success\"}
 ## Properties
 

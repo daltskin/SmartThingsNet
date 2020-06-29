@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.MessageTemplate
+# SmartThingsNet.Model.MessageTemplate
 A message template definition, representing a message in a specific locale.
 ## Properties
 

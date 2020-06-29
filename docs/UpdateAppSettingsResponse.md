@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.UpdateAppSettingsResponse
+# SmartThingsNet.Model.UpdateAppSettingsResponse
 Settings for a given app
 ## Properties
 

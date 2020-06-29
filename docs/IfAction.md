@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.IfAction
+# SmartThingsNet.Model.IfAction
 ## Properties
 
 Name | Type | Description | Notes

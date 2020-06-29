@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.PagedSchedules
+# SmartThingsNet.Model.PagedSchedules
 An array of schedules
 ## Properties
 

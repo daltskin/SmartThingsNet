@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AppType
+# SmartThingsNet.Model.AppType
 Denotes the type of app.
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeviceConfig
+# SmartThingsNet.Model.DeviceConfig
 A device and component configuration with any required permissions.
 ## Properties
 

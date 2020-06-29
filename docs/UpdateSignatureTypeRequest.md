@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.UpdateSignatureTypeRequest
+# SmartThingsNet.Model.UpdateSignatureTypeRequest
 A request object used to switch the signing mechanism for authorizing SmartApp callbacks.
 ## Properties
 

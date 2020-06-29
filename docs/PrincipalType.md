@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.PrincipalType
+# SmartThingsNet.Model.PrincipalType
 Denotes the principal type to be used with the app.  Default is LOCATION.
 ## Properties
 

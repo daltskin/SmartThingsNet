@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CreateDeviceProfileRequest
+# SmartThingsNet.Model.CreateDeviceProfileRequest
 ## Properties
 
 Name | Type | Description | Notes

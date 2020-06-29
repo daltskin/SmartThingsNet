@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.InstallConfiguration
+# SmartThingsNet.Model.InstallConfiguration
 An configuration instance of an Installed App.
 ## Properties
 

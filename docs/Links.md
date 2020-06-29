@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.Links
+# SmartThingsNet.Model.Links
 ## Properties
 
 Name | Type | Description | Notes

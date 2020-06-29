@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.RuleExecutionResponse
+# SmartThingsNet.Model.RuleExecutionResponse
 The result of a rule execution
 ## Properties
 

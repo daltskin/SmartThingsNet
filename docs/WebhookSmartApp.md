@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.WebhookSmartApp
+# SmartThingsNet.Model.WebhookSmartApp
 Details related to a Webhook Smart App implementation.  This model will only be available for apps of type WEBHOOK_SMART_APP. 
 ## Properties
 

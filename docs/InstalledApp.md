@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.InstalledApp
+# SmartThingsNet.Model.InstalledApp
 ## Properties
 
 Name | Type | Description | Notes

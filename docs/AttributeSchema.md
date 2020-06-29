@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AttributeSchema
+# SmartThingsNet.Model.AttributeSchema
 [JSON schema](http://json-schema.org/specification-links.html#draft-4) for the attribute. 
 ## Properties
 

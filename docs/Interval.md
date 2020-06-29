@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.Interval
+# SmartThingsNet.Model.Interval
 ## Properties
 
 Name | Type | Description | Notes

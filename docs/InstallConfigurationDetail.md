@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.InstallConfigurationDetail
+# SmartThingsNet.Model.InstallConfigurationDetail
 Encompasses both a configuration value, and any required permissions that maybe needed.
 ## Properties
 

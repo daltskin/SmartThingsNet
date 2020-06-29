@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.LocationAttribute
+# SmartThingsNet.Model.LocationAttribute
 ## Properties
 
 Name | Type | Description | Notes

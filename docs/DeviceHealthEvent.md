@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeviceHealthEvent
+# SmartThingsNet.Model.DeviceHealthEvent
 An event that represents a change in the health of the a device.
 ## Properties
 

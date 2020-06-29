@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeviceCommandsEventCommand
+# SmartThingsNet.Model.DeviceCommandsEventCommand
 ## Properties
 
 Name | Type | Description | Notes

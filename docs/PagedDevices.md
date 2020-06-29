@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.PagedDevices
+# SmartThingsNet.Model.PagedDevices
 A paginated array of devices.
 ## Properties
 

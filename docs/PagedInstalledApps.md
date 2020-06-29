@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.PagedInstalledApps
+# SmartThingsNet.Model.PagedInstalledApps
 Represents a single page of InstalledApps available in a user account.
 ## Properties
 

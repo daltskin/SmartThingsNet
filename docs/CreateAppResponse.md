@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CreateAppResponse
+# SmartThingsNet.Model.CreateAppResponse
 A response object containing the newly created App and OAuth client details.
 ## Properties
 

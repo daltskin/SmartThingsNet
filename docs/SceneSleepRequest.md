@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SceneSleepRequest
+# SmartThingsNet.Model.SceneSleepRequest
 Sleep a particular sequence
 ## Properties
 

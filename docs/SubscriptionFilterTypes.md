@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SubscriptionFilterTypes
+# SmartThingsNet.Model.SubscriptionFilterTypes
 The type of filter
 ## Properties
 

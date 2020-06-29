@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SceneDeviceGroupRequest
+# SmartThingsNet.Model.SceneDeviceGroupRequest
 JSON structure for a device group when creating a Scene
 ## Properties
 

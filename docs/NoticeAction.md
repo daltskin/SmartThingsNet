@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.NoticeAction
+# SmartThingsNet.Model.NoticeAction
 An action the user can take to resolve a notice
 ## Properties
 

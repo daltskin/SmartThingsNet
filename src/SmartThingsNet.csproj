@@ -9,14 +9,14 @@
     <Authors>JamieD</Authors>
     <Company></Company>
     <AssemblyTitle>SmartThingsNet</AssemblyTitle>
-    <Description>SmartThingsNet C# client SDK</Description>
+    <Description>SmartThingsNet dotnet client SDK</Description>
     <Copyright>No Copyright</Copyright>
     <RootNamespace>SmartThingsNet</RootNamespace>
     <Version>1.0.0</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\SmartThingsNet.xml</DocumentationFile>
     <RepositoryUrl>https://github.com/daltskin/SmartThingsNet.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>SmartThings C# pre-release</PackageReleaseNotes>
+    <PackageReleaseNotes>SmartThingsNet dotnet client SDK pre-release</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

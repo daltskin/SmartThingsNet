@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.RoomsApi
+# SmartThingsNet.Api.RoomsApi
 
 All URIs are relative to *https://api.smartthings.com/v1*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="createroom"></a>
 # **CreateRoom**
-> Room CreateRoom (string authorization, string locationId, CreateRoomRequest createRoomRequest)
+> Room CreateRoom (string locationId, CreateRoomRequest createRoomRequest)
 
 Create a Room.
 
@@ -23,9 +23,9 @@ Create a Room for the Location.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -39,14 +39,14 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RoomsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var locationId = locationId_example;  // string | The ID of the location.
             var createRoomRequest = new CreateRoomRequest(); // CreateRoomRequest | 
 
             try
             {
                 // Create a Room.
-                Room result = apiInstance.CreateRoom(authorization, locationId, createRoomRequest);
+                Room result = apiInstance.CreateRoom(locationId, createRoomRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 <a name="deleteroom"></a>
 # **DeleteRoom**
-> Object DeleteRoom (string authorization, string locationId, string roomId)
+> Object DeleteRoom (string locationId, string roomId)
 
 Delete a Room.
 
@@ -106,9 +106,9 @@ Delete a Room from a location.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -122,14 +122,14 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RoomsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var locationId = locationId_example;  // string | The ID of the location.
             var roomId = roomId_example;  // string | The ID of the room.
 
             try
             {
                 // Delete a Room.
-                Object result = apiInstance.DeleteRoom(authorization, locationId, roomId);
+                Object result = apiInstance.DeleteRoom(locationId, roomId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 <a name="getroom"></a>
 # **GetRoom**
-> Room GetRoom (string authorization, string locationId, string roomId)
+> Room GetRoom (string locationId, string roomId)
 
 Get a Room.
 
@@ -188,9 +188,9 @@ Get a specific Room.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -204,14 +204,14 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RoomsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var locationId = locationId_example;  // string | The ID of the location.
             var roomId = roomId_example;  // string | The ID of the room.
 
             try
             {
                 // Get a Room.
-                Room result = apiInstance.GetRoom(authorization, locationId, roomId);
+                Room result = apiInstance.GetRoom(locationId, roomId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -260,7 +260,7 @@ Name | Type | Description  | Notes
 
 <a name="listrooms"></a>
 # **ListRooms**
-> PagedRooms ListRooms (string authorization, string locationId)
+> PagedRooms ListRooms (string locationId)
 
 List Rooms.
 
@@ -270,9 +270,9 @@ List all Rooms currently available in a Location.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -286,13 +286,13 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RoomsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var locationId = locationId_example;  // string | The ID of the location.
 
             try
             {
                 // List Rooms.
-                PagedRooms result = apiInstance.ListRooms(authorization, locationId);
+                PagedRooms result = apiInstance.ListRooms(locationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -339,7 +339,7 @@ Name | Type | Description  | Notes
 
 <a name="updateroom"></a>
 # **UpdateRoom**
-> Room UpdateRoom (string authorization, string locationId, string roomId, UpdateRoomRequest updateRoomRequest)
+> Room UpdateRoom (string locationId, string roomId, UpdateRoomRequest updateRoomRequest)
 
 Update a Room.
 
@@ -349,9 +349,9 @@ All the fields in the request body are optional. Only the specified fields will 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -365,7 +365,7 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RoomsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var locationId = locationId_example;  // string | The ID of the location.
             var roomId = roomId_example;  // string | The ID of the room.
             var updateRoomRequest = new UpdateRoomRequest(); // UpdateRoomRequest | 
@@ -373,7 +373,7 @@ namespace Example
             try
             {
                 // Update a Room.
-                Room result = apiInstance.UpdateRoom(authorization, locationId, roomId, updateRoomRequest);
+                Room result = apiInstance.UpdateRoom(locationId, roomId, updateRoomRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)

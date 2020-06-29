@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.ConfigEntry
+# SmartThingsNet.Model.ConfigEntry
 A configuration value type and the correspodning configuration.
 ## Properties
 

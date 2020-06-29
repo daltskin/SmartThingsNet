@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.StringConfig
+# SmartThingsNet.Model.StringConfig
 A simple string configuration.
 ## Properties
 

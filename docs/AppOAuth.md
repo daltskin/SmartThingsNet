@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AppOAuth
+# SmartThingsNet.Model.AppOAuth
 ## Properties
 
 Name | Type | Description | Notes

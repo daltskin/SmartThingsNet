@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.Owner
+# SmartThingsNet.Model.Owner
 A typed model which provides information around ownership of a specific domain.
 ## Properties
 

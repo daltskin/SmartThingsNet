@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CreateLocationRequest
+# SmartThingsNet.Model.CreateLocationRequest
 ## Properties
 
 Name | Type | Description | Notes

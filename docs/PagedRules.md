@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.PagedRules
+# SmartThingsNet.Model.PagedRules
 An array of rules
 ## Properties
 

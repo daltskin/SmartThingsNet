@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.PagedApps
+# SmartThingsNet.Model.PagedApps
 Represents a single page of Apps available in an account.
 ## Properties
 

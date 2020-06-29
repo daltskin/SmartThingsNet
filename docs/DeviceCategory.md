@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeviceCategory
+# SmartThingsNet.Model.DeviceCategory
 A case-sensitive string from the pre-defined list of valid categories [/devicecategories](#/operation/listCategories).
 ## Properties
 

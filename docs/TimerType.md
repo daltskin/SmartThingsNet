@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TimerType
+# SmartThingsNet.Model.TimerType
 The type of TIMER_EVENT.
 ## Properties
 

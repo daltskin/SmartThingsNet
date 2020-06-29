@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.InstalledAppLifecycle
+# SmartThingsNet.Model.InstalledAppLifecycle
 The installed app lifecycle. The lifecycle will be one of: * CREATE - Invoked when an application is created. * INSTALL - Invoked when an application is installed. * UPDATE - Invoked when an application is updated. * DELETE - Invoked when an application is deleted. * OTHER - 
 ## Properties
 

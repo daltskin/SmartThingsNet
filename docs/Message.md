@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.Message
+# SmartThingsNet.Model.Message
 A Message contains a list of message templates representing the same message in different locales. The system will serve the template with the locale that best matches the Recipient's language preferences. If the user's language preferences do not correlate to any message templates, the template defined by the `fallbackLocale` will be used. 
 ## Properties
 

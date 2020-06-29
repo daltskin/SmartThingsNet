@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeviceHealthDetail
+# SmartThingsNet.Model.DeviceHealthDetail
 Details of a subscription of source type DEVICE_HEALTH. Only one of deviceIds or locationId should be supplied.
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.ModeEvent
+# SmartThingsNet.Model.ModeEvent
 ## Properties
 
 Name | Type | Description | Notes

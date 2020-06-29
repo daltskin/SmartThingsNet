@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CapabilitySubscriptionDetail
+# SmartThingsNet.Model.CapabilitySubscriptionDetail
 Details of a subscription of source type CAPABILITY. The combination of subscribed values must be unique per installed app.
 ## Properties
 

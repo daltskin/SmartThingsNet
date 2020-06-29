@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.RulesApi
+# SmartThingsNet.Api.RulesApi
 
 All URIs are relative to *https://api.smartthings.com/v1*
 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="createrule"></a>
 # **CreateRule**
-> Object CreateRule (string authorization, string locationId, RuleRequest request)
+> Object CreateRule (string locationId, RuleRequest request)
 
 Create a rule
 
@@ -24,9 +24,9 @@ Create a rule for the location and token principal
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -40,14 +40,14 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RulesApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var locationId = locationId_example;  // string | The ID of the location in which to create the rule in.
             var request = new RuleRequest(); // RuleRequest | The rule to be created.
 
             try
             {
                 // Create a rule
-                Object result = apiInstance.CreateRule(authorization, locationId, request);
+                Object result = apiInstance.CreateRule(locationId, request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 <a name="deleterule"></a>
 # **DeleteRule**
-> Rule DeleteRule (string authorization, string ruleId, string locationId)
+> Rule DeleteRule (string ruleId, string locationId)
 
 Delete a rule
 
@@ -104,9 +104,9 @@ Delete a rule
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -120,14 +120,14 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RulesApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var ruleId = ruleId_example;  // string | The rule ID
             var locationId = locationId_example;  // string | The ID of the location in which to delete the rule in.
 
             try
             {
                 // Delete a rule
-                Rule result = apiInstance.DeleteRule(authorization, ruleId, locationId);
+                Rule result = apiInstance.DeleteRule(ruleId, locationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 <a name="executerule"></a>
 # **ExecuteRule**
-> RuleExecutionResponse ExecuteRule (string authorization, string ruleId, string locationId)
+> RuleExecutionResponse ExecuteRule (string ruleId, string locationId)
 
 Execute a rule
 
@@ -184,9 +184,9 @@ Trigger Rule execution given a rule ID
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -200,14 +200,14 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RulesApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var ruleId = ruleId_example;  // string | The rule ID
             var locationId = locationId_example;  // string | The ID of the location that both the installed smart app and source are associated with.
 
             try
             {
                 // Execute a rule
-                RuleExecutionResponse result = apiInstance.ExecuteRule(authorization, ruleId, locationId);
+                RuleExecutionResponse result = apiInstance.ExecuteRule(ruleId, locationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 <a name="getrule"></a>
 # **GetRule**
-> Rule GetRule (string authorization, string ruleId, string locationId)
+> Rule GetRule (string ruleId, string locationId)
 
 Get a Rule
 
@@ -264,9 +264,9 @@ Get a rule
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -280,14 +280,14 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RulesApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var ruleId = ruleId_example;  // string | The rule ID
             var locationId = locationId_example;  // string | The ID of the location to list the rules for.
 
             try
             {
                 // Get a Rule
-                Rule result = apiInstance.GetRule(authorization, ruleId, locationId);
+                Rule result = apiInstance.GetRule(ruleId, locationId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -334,7 +334,7 @@ Name | Type | Description  | Notes
 
 <a name="listrules"></a>
 # **ListRules**
-> PagedRules ListRules (string authorization, string locationId, int? max = null, int? offset = null)
+> PagedRules ListRules (string locationId, int? max = null, int? offset = null)
 
 Rules list
 
@@ -344,9 +344,9 @@ List of rules for the location for the given token principal
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -360,7 +360,7 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RulesApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var locationId = locationId_example;  // string | The ID of the location to list the rules for.
             var max = 56;  // int? | The max number of rules to fetch (optional) 
             var offset = 56;  // int? | The start index of rules to fetch (optional) 
@@ -368,7 +368,7 @@ namespace Example
             try
             {
                 // Rules list
-                PagedRules result = apiInstance.ListRules(authorization, locationId, max, offset);
+                PagedRules result = apiInstance.ListRules(locationId, max, offset);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -417,7 +417,7 @@ Name | Type | Description  | Notes
 
 <a name="updaterule"></a>
 # **UpdateRule**
-> Rule UpdateRule (string authorization, string ruleId, string locationId, RuleRequest request)
+> Rule UpdateRule (string ruleId, string locationId, RuleRequest request)
 
 Update a rule
 
@@ -427,9 +427,9 @@ Update a rule
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -443,7 +443,7 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new RulesApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var ruleId = ruleId_example;  // string | The rule ID
             var locationId = locationId_example;  // string | The ID of the location in which to update the rule in.
             var request = new RuleRequest(); // RuleRequest | The rule to be updated.
@@ -451,7 +451,7 @@ namespace Example
             try
             {
                 // Update a rule
-                Rule result = apiInstance.UpdateRule(authorization, ruleId, locationId, request);
+                Rule result = apiInstance.UpdateRule(ruleId, locationId, request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.AppsApi
+# SmartThingsNet.Api.AppsApi
 
 All URIs are relative to *https://api.smartthings.com/v1*
 
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 <a name="createapp"></a>
 # **CreateApp**
-> CreateAppResponse CreateApp (string authorization, CreateAppRequest createOrUpdateAppRequest, string signatureType = null, bool? requireConfirmation = null)
+> CreateAppResponse CreateApp (CreateAppRequest createOrUpdateAppRequest, string signatureType = null, bool? requireConfirmation = null)
 
 Create an app.
 
@@ -30,9 +30,9 @@ Create an app integration.  A single developer account is allowed to contain a m
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -46,7 +46,7 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var createOrUpdateAppRequest = new CreateAppRequest(); // CreateAppRequest | 
             var signatureType = signatureType_example;  // string | The Signature Type of the application. For WEBHOOK_SMART_APP only.  (optional) 
             var requireConfirmation = true;  // bool? | Override default configuration to use either PING or CONFIRMATION lifecycle. For WEBHOOK_SMART_APP only.  (optional) 
@@ -54,7 +54,7 @@ namespace Example
             try
             {
                 // Create an app.
-                CreateAppResponse result = apiInstance.CreateApp(authorization, createOrUpdateAppRequest, signatureType, requireConfirmation);
+                CreateAppResponse result = apiInstance.CreateApp(createOrUpdateAppRequest, signatureType, requireConfirmation);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -72,7 +72,6 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **string**| OAuth token | 
  **createOrUpdateAppRequest** | [**CreateAppRequest**](CreateAppRequest.md)|  | 
  **signatureType** | **string**| The Signature Type of the application. For WEBHOOK_SMART_APP only.  | [optional] 
  **requireConfirmation** | **bool?**| Override default configuration to use either PING or CONFIRMATION lifecycle. For WEBHOOK_SMART_APP only.  | [optional] 
@@ -105,7 +104,7 @@ Name | Type | Description  | Notes
 
 <a name="deleteapp"></a>
 # **DeleteApp**
-> Object DeleteApp (string authorization, string appNameOrId)
+> Object DeleteApp (string appNameOrId)
 
 Delete an app.
 
@@ -115,9 +114,9 @@ Delete an app.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -131,13 +130,13 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var appNameOrId = appNameOrId_example;  // string | The appName or appId field of an app.
 
             try
             {
                 // Delete an app.
-                Object result = apiInstance.DeleteApp(authorization, appNameOrId);
+                Object result = apiInstance.DeleteApp(appNameOrId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -155,7 +154,6 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **string**| OAuth token | 
  **appNameOrId** | **string**| The appName or appId field of an app. | 
 
 ### Return type
@@ -185,7 +183,7 @@ Name | Type | Description  | Notes
 
 <a name="generateappoauth"></a>
 # **GenerateAppOauth**
-> GenerateAppOAuthResponse GenerateAppOauth (string authorization, string appNameOrId, GenerateAppOAuthRequest generateAppOAuthRequest)
+> GenerateAppOAuthResponse GenerateAppOauth (string appNameOrId, GenerateAppOAuthRequest generateAppOAuthRequest)
 
 Generate an app's oauth client/secret.
 
@@ -195,9 +193,9 @@ When an app is first created an OAuth client/secret are automatically generated 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -211,14 +209,14 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var appNameOrId = appNameOrId_example;  // string | The appName or appId field of an app.
             var generateAppOAuthRequest = new GenerateAppOAuthRequest(); // GenerateAppOAuthRequest | 
 
             try
             {
                 // Generate an app's oauth client/secret.
-                GenerateAppOAuthResponse result = apiInstance.GenerateAppOauth(authorization, appNameOrId, generateAppOAuthRequest);
+                GenerateAppOAuthResponse result = apiInstance.GenerateAppOauth(appNameOrId, generateAppOAuthRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -236,7 +234,6 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **string**| OAuth token | 
  **appNameOrId** | **string**| The appName or appId field of an app. | 
  **generateAppOAuthRequest** | [**GenerateAppOAuthRequest**](GenerateAppOAuthRequest.md)|  | 
 
@@ -267,7 +264,7 @@ Name | Type | Description  | Notes
 
 <a name="getapp"></a>
 # **GetApp**
-> App GetApp (string authorization, string appNameOrId)
+> App GetApp (string appNameOrId)
 
 Get an app.
 
@@ -277,9 +274,9 @@ Get a single app.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -293,13 +290,13 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var appNameOrId = appNameOrId_example;  // string | The appName or appId field of an app.
 
             try
             {
                 // Get an app.
-                App result = apiInstance.GetApp(authorization, appNameOrId);
+                App result = apiInstance.GetApp(appNameOrId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -317,7 +314,6 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **string**| OAuth token | 
  **appNameOrId** | **string**| The appName or appId field of an app. | 
 
 ### Return type
@@ -347,7 +343,7 @@ Name | Type | Description  | Notes
 
 <a name="getappoauth"></a>
 # **GetAppOauth**
-> AppOAuth GetAppOauth (string authorization, string appNameOrId)
+> AppOAuth GetAppOauth (string appNameOrId)
 
 Get an app's oauth settings.
 
@@ -357,9 +353,9 @@ Get an app's oauth settings.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -373,13 +369,13 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var appNameOrId = appNameOrId_example;  // string | The appName or appId field of an app.
 
             try
             {
                 // Get an app's oauth settings.
-                AppOAuth result = apiInstance.GetAppOauth(authorization, appNameOrId);
+                AppOAuth result = apiInstance.GetAppOauth(appNameOrId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -397,7 +393,6 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **string**| OAuth token | 
  **appNameOrId** | **string**| The appName or appId field of an app. | 
 
 ### Return type
@@ -427,7 +422,7 @@ Name | Type | Description  | Notes
 
 <a name="getappsettings"></a>
 # **GetAppSettings**
-> GetAppSettingsResponse GetAppSettings (string authorization, string appNameOrId)
+> GetAppSettingsResponse GetAppSettings (string appNameOrId)
 
 Get settings.
 
@@ -437,9 +432,9 @@ Get settings for an app.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -453,13 +448,13 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var appNameOrId = appNameOrId_example;  // string | The appName or appId field of an app.
 
             try
             {
                 // Get settings.
-                GetAppSettingsResponse result = apiInstance.GetAppSettings(authorization, appNameOrId);
+                GetAppSettingsResponse result = apiInstance.GetAppSettings(appNameOrId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -477,7 +472,6 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **string**| OAuth token | 
  **appNameOrId** | **string**| The appName or appId field of an app. | 
 
 ### Return type
@@ -507,7 +501,7 @@ Name | Type | Description  | Notes
 
 <a name="listapps"></a>
 # **ListApps**
-> PagedApps ListApps (string authorization, string appType = null, string classification = null, string tag = null)
+> PagedApps ListApps (string appType = null, string classification = null, string tag = null)
 
 List apps.
 
@@ -517,9 +511,9 @@ List all apps configured in an account.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -533,7 +527,7 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var appType = appType_example;  // string | The App Type of the application. (optional) 
             var classification = classification_example;  // string | An App maybe associated to many classifications.  A classification drives how the integration is presented to the user in the SmartThings mobile clients.  These classifications include: * AUTOMATION - Denotes an integration that should display under the \"Automation\" tab in mobile clients. * SERVICE - Denotes an integration that is classified as a \"Service\". * DEVICE - Denotes an integration that should display under the \"Device\" tab in mobile clients. * CONNECTED_SERVICE - Denotes an integration that should display under the \"Connected Services\" menu in mobile clients.  (optional) 
             var tag = tag_example;  // string | May be used to filter a resource by it's assigned user-tags.  Multiple tag query params are automatically joined with OR.  Example usage in query string: ``` ?tag:key_name=value1&tag:key_name=value2 ```  (optional) 
@@ -541,7 +535,7 @@ namespace Example
             try
             {
                 // List apps.
-                PagedApps result = apiInstance.ListApps(authorization, appType, classification, tag);
+                PagedApps result = apiInstance.ListApps(appType, classification, tag);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -559,7 +553,6 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **string**| OAuth token | 
  **appType** | **string**| The App Type of the application. | [optional] 
  **classification** | **string**| An App maybe associated to many classifications.  A classification drives how the integration is presented to the user in the SmartThings mobile clients.  These classifications include: * AUTOMATION - Denotes an integration that should display under the \&quot;Automation\&quot; tab in mobile clients. * SERVICE - Denotes an integration that is classified as a \&quot;Service\&quot;. * DEVICE - Denotes an integration that should display under the \&quot;Device\&quot; tab in mobile clients. * CONNECTED_SERVICE - Denotes an integration that should display under the \&quot;Connected Services\&quot; menu in mobile clients.  | [optional] 
  **tag** | **string**| May be used to filter a resource by it&#39;s assigned user-tags.  Multiple tag query params are automatically joined with OR.  Example usage in query string: &#x60;&#x60;&#x60; ?tag:key_name&#x3D;value1&amp;tag:key_name&#x3D;value2 &#x60;&#x60;&#x60;  | [optional] 
@@ -590,7 +583,7 @@ Name | Type | Description  | Notes
 
 <a name="register"></a>
 # **Register**
-> Object Register (string authorization, string appNameOrId, Object appRegisterRequest)
+> Object Register (string appNameOrId, Object appRegisterRequest)
 
 Sends a confirmation request to App.
 
@@ -600,9 +593,9 @@ Prepares to register an App by sending the endpoint a confirmation message.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -616,14 +609,14 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var appNameOrId = appNameOrId_example;  // string | The appName or appId field of an app.
             var appRegisterRequest = ;  // Object | 
 
             try
             {
                 // Sends a confirmation request to App.
-                Object result = apiInstance.Register(authorization, appNameOrId, appRegisterRequest);
+                Object result = apiInstance.Register(appNameOrId, appRegisterRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -641,7 +634,6 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **string**| OAuth token | 
  **appNameOrId** | **string**| The appName or appId field of an app. | 
  **appRegisterRequest** | **Object**|  | 
 
@@ -672,7 +664,7 @@ Name | Type | Description  | Notes
 
 <a name="updateapp"></a>
 # **UpdateApp**
-> App UpdateApp (string authorization, string appNameOrId, UpdateAppRequest updateAppRequest, string signatureType = null, bool? requireConfirmation = null)
+> App UpdateApp (string appNameOrId, UpdateAppRequest updateAppRequest, string signatureType = null, bool? requireConfirmation = null)
 
 Update an app.
 
@@ -682,9 +674,9 @@ Update an app.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -698,7 +690,7 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var appNameOrId = appNameOrId_example;  // string | The appName or appId field of an app.
             var updateAppRequest = new UpdateAppRequest(); // UpdateAppRequest | 
             var signatureType = signatureType_example;  // string | The Signature Type of the application. For WEBHOOK_SMART_APP only.  (optional) 
@@ -707,7 +699,7 @@ namespace Example
             try
             {
                 // Update an app.
-                App result = apiInstance.UpdateApp(authorization, appNameOrId, updateAppRequest, signatureType, requireConfirmation);
+                App result = apiInstance.UpdateApp(appNameOrId, updateAppRequest, signatureType, requireConfirmation);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -725,7 +717,6 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **string**| OAuth token | 
  **appNameOrId** | **string**| The appName or appId field of an app. | 
  **updateAppRequest** | [**UpdateAppRequest**](UpdateAppRequest.md)|  | 
  **signatureType** | **string**| The Signature Type of the application. For WEBHOOK_SMART_APP only.  | [optional] 
@@ -759,7 +750,7 @@ Name | Type | Description  | Notes
 
 <a name="updateappoauth"></a>
 # **UpdateAppOauth**
-> AppOAuth UpdateAppOauth (string authorization, string appNameOrId, UpdateAppOAuthRequest updateAppOAuthRequest)
+> AppOAuth UpdateAppOauth (string appNameOrId, UpdateAppOAuthRequest updateAppOAuthRequest)
 
 Update an app's oauth settings.
 
@@ -769,9 +760,9 @@ Update an app's oauth settings.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -785,14 +776,14 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var appNameOrId = appNameOrId_example;  // string | The appName or appId field of an app.
             var updateAppOAuthRequest = new UpdateAppOAuthRequest(); // UpdateAppOAuthRequest | 
 
             try
             {
                 // Update an app's oauth settings.
-                AppOAuth result = apiInstance.UpdateAppOauth(authorization, appNameOrId, updateAppOAuthRequest);
+                AppOAuth result = apiInstance.UpdateAppOauth(appNameOrId, updateAppOAuthRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -810,7 +801,6 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **string**| OAuth token | 
  **appNameOrId** | **string**| The appName or appId field of an app. | 
  **updateAppOAuthRequest** | [**UpdateAppOAuthRequest**](UpdateAppOAuthRequest.md)|  | 
 
@@ -842,7 +832,7 @@ Name | Type | Description  | Notes
 
 <a name="updateappsettings"></a>
 # **UpdateAppSettings**
-> UpdateAppSettingsResponse UpdateAppSettings (string authorization, string appNameOrId, UpdateAppSettingsRequest updateAppSettingsRequest)
+> UpdateAppSettingsResponse UpdateAppSettings (string appNameOrId, UpdateAppSettingsRequest updateAppSettingsRequest)
 
 Update settings.
 
@@ -852,9 +842,9 @@ Update settings for an app.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -868,14 +858,14 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var appNameOrId = appNameOrId_example;  // string | The appName or appId  field of an app.
             var updateAppSettingsRequest = new UpdateAppSettingsRequest(); // UpdateAppSettingsRequest | 
 
             try
             {
                 // Update settings.
-                UpdateAppSettingsResponse result = apiInstance.UpdateAppSettings(authorization, appNameOrId, updateAppSettingsRequest);
+                UpdateAppSettingsResponse result = apiInstance.UpdateAppSettings(appNameOrId, updateAppSettingsRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -893,7 +883,6 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **string**| OAuth token | 
  **appNameOrId** | **string**| The appName or appId  field of an app. | 
  **updateAppSettingsRequest** | [**UpdateAppSettingsRequest**](UpdateAppSettingsRequest.md)|  | 
 
@@ -925,7 +914,7 @@ Name | Type | Description  | Notes
 
 <a name="updatesignaturetype"></a>
 # **UpdateSignatureType**
-> Object UpdateSignatureType (string authorization, string appNameOrId, UpdateSignatureTypeRequest updateSignatureTypeRequest)
+> Object UpdateSignatureType (string appNameOrId, UpdateSignatureTypeRequest updateSignatureTypeRequest)
 
 Update an app's signature type.
 
@@ -935,9 +924,9 @@ Updates the signature type of an App.  Signature options:   * APP_RSA - Legacy s
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using SmartThingsNet.Api;
+using SmartThingsNet.Client;
+using SmartThingsNet.Model;
 
 namespace Example
 {
@@ -951,14 +940,14 @@ namespace Example
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AppsApi(config);
-            var authorization = authorization_example;  // string | OAuth token
+
             var appNameOrId = appNameOrId_example;  // string | The appName or appId field of an app.
             var updateSignatureTypeRequest = new UpdateSignatureTypeRequest(); // UpdateSignatureTypeRequest | 
 
             try
             {
                 // Update an app's signature type.
-                Object result = apiInstance.UpdateSignatureType(authorization, appNameOrId, updateSignatureTypeRequest);
+                Object result = apiInstance.UpdateSignatureType(appNameOrId, updateSignatureTypeRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -976,7 +965,6 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **string**| OAuth token | 
  **appNameOrId** | **string**| The appName or appId field of an app. | 
  **updateSignatureTypeRequest** | [**UpdateSignatureTypeRequest**](UpdateSignatureTypeRequest.md)|  | 
 

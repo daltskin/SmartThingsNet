@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.SceneConfig
+# SmartThingsNet.Model.SceneConfig
 A scene configuration.
 ## Properties
 

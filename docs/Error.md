@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.Error
+# SmartThingsNet.Model.Error
 Details about the error.
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.DeleteInstalledAppResponse
+# SmartThingsNet.Model.DeleteInstalledAppResponse
 The number of deleted installed apps.
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.Location
+# SmartThingsNet.Model.Location
 ## Properties
 
 Name | Type | Description | Notes

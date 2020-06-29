@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.ArrayOperand
+# SmartThingsNet.Model.ArrayOperand
 ## Properties
 
 Name | Type | Description | Notes
