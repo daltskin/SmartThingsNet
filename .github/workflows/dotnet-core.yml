@@ -57,11 +57,11 @@ jobs:
 
     - name: list some key files   
       run: ls -lrt
-      working-directory: src/SmartThingsNet
+      working-directory: src
    
     - name: Setup nuget config
       run: sed 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' .nuget.config > nuget.config   
-      working-directory: src/SmartThingsNet
+      working-directory: src
     
     #- name: Publish to github
     #  run: dotnet nuget push **/*.nupkg --source github -k ${{ secrets.GITHUB_TOKEN }} --skip-duplicate --no-symbols true
@@ -70,9 +70,9 @@ jobs:
 
     - name: list some key files   
       run: ls -lrt
-      working-directory: src/SmartThingsNet/bin/Release
+      working-directory: src/bin/Release
    
       
     - name: Publish to github
       run: dotnet nuget push SmartThingsNet.${{ env.GitVersion_SemVer}}.nupkg --source "github" --skip-duplicate --no-symbols true
-      working-directory: src/SmartThingsNet/bin/Release
+      working-directory: src/bin/Release
