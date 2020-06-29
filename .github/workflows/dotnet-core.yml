@@ -56,4 +56,10 @@ jobs:
     - name: Publish to nuget
       run: dotnet nuget push **/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}} --skip-duplicate
       
-
+    - name: Create Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ env.GitVersion_SemVer}}
+        release_name: Release ${{ env.GitVersion_SemVer}}
