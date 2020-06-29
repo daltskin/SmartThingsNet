@@ -60,7 +60,7 @@ jobs:
       working-directory: src
    
     - name: Setup nuget config
-      run: sed 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' .nuget.config > nuget.config   
+      run: sed 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' nuget.config > nuget.config   
       working-directory: src
     
     #- name: Publish to github
