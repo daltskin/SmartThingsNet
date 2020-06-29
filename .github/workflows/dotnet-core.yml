@@ -50,7 +50,7 @@ jobs:
       run: dotnet pack --configuration Release --no-build -p:PackageVersion=${{ env.GitVersion_SemVer}}
     
     - name: Publish to github
-      run: dotnet nuget push **/*.nupkg -s https://nuget.pkg.github.com/daltskin/index.json -k ${{secrets.GITHUB_TOKEN}} --skip-duplicate --no-symbols true
+      run: nuget push **/*.nupkg -s https://nuget.pkg.github.com/daltskin/index.json -k ${{secrets.GITHUB_TOKEN}} --skip-duplicate --no-symbols true
       working-directory: src
       
     - name: Publish to nuget
