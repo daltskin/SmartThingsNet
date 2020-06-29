@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v1
@@ -42,15 +42,12 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
 
-    - name: Setup nuget config
-      run: sed -i 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' nuget.config
-      working-directory: src
+#    - name: Setup nuget config
+#      run: sed -i 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' nuget.config
+#      working-directory: src
 
     - name: Package
       run: dotnet pack --configuration Release --no-build -p:PackageVersion=${{ env.GitVersion_SemVer}}
-    
-    - name: Install Nuget
-      run: sudo apt install nuget -f
     
     - name: Publish to github
       run: nuget push **/*.nupkg -s https://nuget.pkg.github.com/daltskin/index.json -k ${{secrets.GITHUB_TOKEN}} --skip-duplicate --no-symbols true
