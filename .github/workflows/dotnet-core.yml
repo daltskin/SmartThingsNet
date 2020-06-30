@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v1
@@ -49,10 +49,14 @@ jobs:
     - name: Package
       run: dotnet pack --configuration Release --no-build -p:PackageVersion=${{ env.GitVersion_SemVer}}
     
-    - name: Publish to github
-      run: nuget push **/*.nupkg -s https://nuget.pkg.github.com/daltskin/index.json -k ${{secrets.GITHUB_TOKEN}} --skip-duplicate --no-symbols true
-      working-directory: src
-      
+#    - name: Publish to github
+#      run: dotnet nuget push **/*.nupkg -s https://nuget.pkg.github.com/daltskin/index.json -k ${{ secrets.GITHUB_TOKEN }} --skip-duplicate --no-symbols true
+#      working-directory: src
+ 
+    - name: Publish to github (using curl)
+      run: curl -vX PUT -u "daltskin:${{ secrets.GITHUB_TOKEN }}" -F package=@SmartThingsNet.${{ env.GitVersion_SemVer}}.nupkg https://nuget.pkg.github.com/daltskin/
+      working-directory: src/bin/Release
+ 
     - name: Publish to nuget
       run: dotnet nuget push **/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}} --skip-duplicate
       
