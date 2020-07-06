@@ -37,7 +37,7 @@ namespace SmartThingsNet.Api
 
         /// <param name="createLocationRequest"></param>
         /// <returns>Location</returns>
-        Location CreateLocation (CreateLocationRequest createLocationRequest);
+        Location CreateLocation(CreateLocationRequest createLocationRequest);
 
         /// <summary>
         /// Create a Location.
@@ -49,7 +49,7 @@ namespace SmartThingsNet.Api
 
         /// <param name="createLocationRequest"></param>
         /// <returns>ApiResponse of Location</returns>
-        ApiResponse<Location> CreateLocationWithHttpInfo (CreateLocationRequest createLocationRequest);
+        ApiResponse<Location> CreateLocationWithHttpInfo(CreateLocationRequest createLocationRequest);
         /// <summary>
         /// Delete a Location.
         /// </summary>
@@ -60,7 +60,7 @@ namespace SmartThingsNet.Api
 
         /// <param name="locationId">The ID of the location.</param>
         /// <returns>Object</returns>
-        Object DeleteLocation (string locationId);
+        Object DeleteLocation(string locationId);
 
         /// <summary>
         /// Delete a Location.
@@ -72,7 +72,7 @@ namespace SmartThingsNet.Api
 
         /// <param name="locationId">The ID of the location.</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> DeleteLocationWithHttpInfo (string locationId);
+        ApiResponse<Object> DeleteLocationWithHttpInfo(string locationId);
         /// <summary>
         /// Get a Location.
         /// </summary>
@@ -83,7 +83,7 @@ namespace SmartThingsNet.Api
 
         /// <param name="locationId">The ID of the location.</param>
         /// <returns>Location</returns>
-        Location GetLocation (string locationId);
+        Location GetLocation(string locationId);
 
         /// <summary>
         /// Get a Location.
@@ -95,7 +95,7 @@ namespace SmartThingsNet.Api
 
         /// <param name="locationId">The ID of the location.</param>
         /// <returns>ApiResponse of Location</returns>
-        ApiResponse<Location> GetLocationWithHttpInfo (string locationId);
+        ApiResponse<Location> GetLocationWithHttpInfo(string locationId);
         /// <summary>
         /// List Locations.
         /// </summary>
@@ -105,7 +105,7 @@ namespace SmartThingsNet.Api
         /// <exception cref="SmartThingsNet.Client.ApiException">Thrown when fails to make API call</exception>
 
         /// <returns>PagedLocations</returns>
-        PagedLocations ListLocations ();
+        PagedLocations ListLocations();
 
         /// <summary>
         /// List Locations.
@@ -116,7 +116,7 @@ namespace SmartThingsNet.Api
         /// <exception cref="SmartThingsNet.Client.ApiException">Thrown when fails to make API call</exception>
 
         /// <returns>ApiResponse of PagedLocations</returns>
-        ApiResponse<PagedLocations> ListLocationsWithHttpInfo ();
+        ApiResponse<PagedLocations> ListLocationsWithHttpInfo();
         /// <summary>
         /// Update a Location.
         /// </summary>
@@ -128,7 +128,7 @@ namespace SmartThingsNet.Api
         /// <param name="locationId">The ID of the location.</param>
         /// <param name="updateLocationRequest"></param>
         /// <returns>Location</returns>
-        Location UpdateLocation (string locationId, UpdateLocationRequest updateLocationRequest);
+        Location UpdateLocation(string locationId, UpdateLocationRequest updateLocationRequest);
 
         /// <summary>
         /// Update a Location.
@@ -141,7 +141,7 @@ namespace SmartThingsNet.Api
         /// <param name="locationId">The ID of the location.</param>
         /// <param name="updateLocationRequest"></param>
         /// <returns>ApiResponse of Location</returns>
-        ApiResponse<Location> UpdateLocationWithHttpInfo (string locationId, UpdateLocationRequest updateLocationRequest);
+        ApiResponse<Location> UpdateLocationWithHttpInfo(string locationId, UpdateLocationRequest updateLocationRequest);
         #endregion Synchronous Operations
     }
 
@@ -161,7 +161,7 @@ namespace SmartThingsNet.Api
 
         /// <param name="createLocationRequest"></param>
         /// <returns>Task of Location</returns>
-        System.Threading.Tasks.Task<Location> CreateLocationAsync (CreateLocationRequest createLocationRequest);
+        System.Threading.Tasks.Task<Location> CreateLocationAsync(CreateLocationRequest createLocationRequest);
 
         /// <summary>
         /// Create a Location.
@@ -173,7 +173,7 @@ namespace SmartThingsNet.Api
 
         /// <param name="createLocationRequest"></param>
         /// <returns>Task of ApiResponse (Location)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Location>> CreateLocationAsyncWithHttpInfo (CreateLocationRequest createLocationRequest);
+        System.Threading.Tasks.Task<ApiResponse<Location>> CreateLocationAsyncWithHttpInfo(CreateLocationRequest createLocationRequest);
         /// <summary>
         /// Delete a Location.
         /// </summary>
@@ -184,7 +184,7 @@ namespace SmartThingsNet.Api
 
         /// <param name="locationId">The ID of the location.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> DeleteLocationAsync (string locationId);
+        System.Threading.Tasks.Task<Object> DeleteLocationAsync(string locationId);
 
         /// <summary>
         /// Delete a Location.
@@ -196,7 +196,7 @@ namespace SmartThingsNet.Api
 
         /// <param name="locationId">The ID of the location.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLocationAsyncWithHttpInfo (string locationId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLocationAsyncWithHttpInfo(string locationId);
         /// <summary>
         /// Get a Location.
         /// </summary>
@@ -207,7 +207,7 @@ namespace SmartThingsNet.Api
 
         /// <param name="locationId">The ID of the location.</param>
         /// <returns>Task of Location</returns>
-        System.Threading.Tasks.Task<Location> GetLocationAsync (string locationId);
+        System.Threading.Tasks.Task<Location> GetLocationAsync(string locationId);
 
         /// <summary>
         /// Get a Location.
@@ -219,7 +219,7 @@ namespace SmartThingsNet.Api
 
         /// <param name="locationId">The ID of the location.</param>
         /// <returns>Task of ApiResponse (Location)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Location>> GetLocationAsyncWithHttpInfo (string locationId);
+        System.Threading.Tasks.Task<ApiResponse<Location>> GetLocationAsyncWithHttpInfo(string locationId);
         /// <summary>
         /// List Locations.
         /// </summary>
@@ -229,7 +229,7 @@ namespace SmartThingsNet.Api
         /// <exception cref="SmartThingsNet.Client.ApiException">Thrown when fails to make API call</exception>
 
         /// <returns>Task of PagedLocations</returns>
-        System.Threading.Tasks.Task<PagedLocations> ListLocationsAsync ();
+        System.Threading.Tasks.Task<PagedLocations> ListLocationsAsync();
 
         /// <summary>
         /// List Locations.
@@ -240,7 +240,7 @@ namespace SmartThingsNet.Api
         /// <exception cref="SmartThingsNet.Client.ApiException">Thrown when fails to make API call</exception>
 
         /// <returns>Task of ApiResponse (PagedLocations)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PagedLocations>> ListLocationsAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<PagedLocations>> ListLocationsAsyncWithHttpInfo();
         /// <summary>
         /// Update a Location.
         /// </summary>
@@ -252,7 +252,7 @@ namespace SmartThingsNet.Api
         /// <param name="locationId">The ID of the location.</param>
         /// <param name="updateLocationRequest"></param>
         /// <returns>Task of Location</returns>
-        System.Threading.Tasks.Task<Location> UpdateLocationAsync (string locationId, UpdateLocationRequest updateLocationRequest);
+        System.Threading.Tasks.Task<Location> UpdateLocationAsync(string locationId, UpdateLocationRequest updateLocationRequest);
 
         /// <summary>
         /// Update a Location.
@@ -265,7 +265,7 @@ namespace SmartThingsNet.Api
         /// <param name="locationId">The ID of the location.</param>
         /// <param name="updateLocationRequest"></param>
         /// <returns>Task of ApiResponse (Location)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Location>> UpdateLocationAsyncWithHttpInfo (string locationId, UpdateLocationRequest updateLocationRequest);
+        System.Threading.Tasks.Task<ApiResponse<Location>> UpdateLocationAsyncWithHttpInfo(string locationId, UpdateLocationRequest updateLocationRequest);
         #endregion Asynchronous Operations
     }
 
@@ -288,7 +288,7 @@ namespace SmartThingsNet.Api
         /// Initializes a new instance of the <see cref="LocationsApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public LocationsApi() : this((string) null)
+        public LocationsApi() : this((string)null)
         {
         }
 
@@ -333,11 +333,11 @@ namespace SmartThingsNet.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public LocationsApi(SmartThingsNet.Client.ISynchronousClient client,SmartThingsNet.Client.IAsynchronousClient asyncClient, SmartThingsNet.Client.IReadableConfiguration configuration)
+        public LocationsApi(SmartThingsNet.Client.ISynchronousClient client, SmartThingsNet.Client.IAsynchronousClient asyncClient, SmartThingsNet.Client.IReadableConfiguration configuration)
         {
-            if(client == null) throw new ArgumentNullException("client");
-            if(asyncClient == null) throw new ArgumentNullException("asyncClient");
-            if(configuration == null) throw new ArgumentNullException("configuration");
+            if (client == null) throw new ArgumentNullException("client");
+            if (asyncClient == null) throw new ArgumentNullException("asyncClient");
+            if (configuration == null) throw new ArgumentNullException("configuration");
 
             this.Client = client;
             this.AsynchronousClient = asyncClient;
@@ -368,7 +368,7 @@ namespace SmartThingsNet.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public SmartThingsNet.Client.IReadableConfiguration Configuration {get; set;}
+        public SmartThingsNet.Client.IReadableConfiguration Configuration { get; set; }
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
@@ -393,10 +393,10 @@ namespace SmartThingsNet.Api
 
         /// <param name="createLocationRequest"></param>
         /// <returns>Location</returns>
-        public Location CreateLocation (CreateLocationRequest createLocationRequest)
+        public Location CreateLocation(CreateLocationRequest createLocationRequest)
         {
-             SmartThingsNet.Client.ApiResponse<Location> localVarResponse = CreateLocationWithHttpInfo(createLocationRequest);
-             return localVarResponse.Data;
+            SmartThingsNet.Client.ApiResponse<Location> localVarResponse = CreateLocationWithHttpInfo(createLocationRequest);
+            return localVarResponse.Data;
         }
 
         /// <summary>
@@ -406,7 +406,7 @@ namespace SmartThingsNet.Api
 
         /// <param name="createLocationRequest"></param>
         /// <returns>ApiResponse of Location</returns>
-        public SmartThingsNet.Client.ApiResponse< Location > CreateLocationWithHttpInfo (CreateLocationRequest createLocationRequest)
+        public SmartThingsNet.Client.ApiResponse<Location> CreateLocationWithHttpInfo(CreateLocationRequest createLocationRequest)
         {
             // verify the required parameter 'createLocationRequest' is set
             if (createLocationRequest == null)
@@ -415,6 +415,7 @@ namespace SmartThingsNet.Api
             SmartThingsNet.Client.RequestOptions localVarRequestOptions = new SmartThingsNet.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
+                "application/json"
             };
 
             // to determine the Accept header
@@ -428,7 +429,7 @@ namespace SmartThingsNet.Api
             var localVarAccept = SmartThingsNet.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            
+
             localVarRequestOptions.Data = createLocationRequest;
 
             // authentication (Bearer) required
@@ -439,7 +440,7 @@ namespace SmartThingsNet.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post< Location >("/locations", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Location>("/locations", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -457,10 +458,10 @@ namespace SmartThingsNet.Api
 
         /// <param name="createLocationRequest"></param>
         /// <returns>Task of Location</returns>
-        public async System.Threading.Tasks.Task<Location> CreateLocationAsync (CreateLocationRequest createLocationRequest)
+        public async System.Threading.Tasks.Task<Location> CreateLocationAsync(CreateLocationRequest createLocationRequest)
         {
-             SmartThingsNet.Client.ApiResponse<Location> localVarResponse = await CreateLocationAsyncWithHttpInfo(createLocationRequest);
-             return localVarResponse.Data;
+            SmartThingsNet.Client.ApiResponse<Location> localVarResponse = await CreateLocationAsyncWithHttpInfo(createLocationRequest);
+            return localVarResponse.Data;
 
         }
 
@@ -471,7 +472,7 @@ namespace SmartThingsNet.Api
 
         /// <param name="createLocationRequest"></param>
         /// <returns>Task of ApiResponse (Location)</returns>
-        public async System.Threading.Tasks.Task<SmartThingsNet.Client.ApiResponse<Location>> CreateLocationAsyncWithHttpInfo (CreateLocationRequest createLocationRequest)
+        public async System.Threading.Tasks.Task<SmartThingsNet.Client.ApiResponse<Location>> CreateLocationAsyncWithHttpInfo(CreateLocationRequest createLocationRequest)
         {
             // verify the required parameter 'createLocationRequest' is set
             if (createLocationRequest == null)
@@ -481,20 +482,21 @@ namespace SmartThingsNet.Api
             SmartThingsNet.Client.RequestOptions localVarRequestOptions = new SmartThingsNet.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "application/json"
             };
-            
+
             foreach (var _contentType in _contentTypes)
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", _contentType);
-            
+
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
-            
-            
+
+
             localVarRequestOptions.Data = createLocationRequest;
 
             // authentication (Bearer) required
@@ -524,10 +526,10 @@ namespace SmartThingsNet.Api
 
         /// <param name="locationId">The ID of the location.</param>
         /// <returns>Object</returns>
-        public Object DeleteLocation (string locationId)
+        public Object DeleteLocation(string locationId)
         {
-             SmartThingsNet.Client.ApiResponse<Object> localVarResponse = DeleteLocationWithHttpInfo(locationId);
-             return localVarResponse.Data;
+            SmartThingsNet.Client.ApiResponse<Object> localVarResponse = DeleteLocationWithHttpInfo(locationId);
+            return localVarResponse.Data;
         }
 
         /// <summary>
@@ -537,7 +539,7 @@ namespace SmartThingsNet.Api
 
         /// <param name="locationId">The ID of the location.</param>
         /// <returns>ApiResponse of Object</returns>
-        public SmartThingsNet.Client.ApiResponse< Object > DeleteLocationWithHttpInfo (string locationId)
+        public SmartThingsNet.Client.ApiResponse<Object> DeleteLocationWithHttpInfo(string locationId)
         {
             // verify the required parameter 'locationId' is set
             if (locationId == null)
@@ -546,6 +548,7 @@ namespace SmartThingsNet.Api
             SmartThingsNet.Client.RequestOptions localVarRequestOptions = new SmartThingsNet.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
+                "application/json"
             };
 
             // to determine the Accept header
@@ -560,7 +563,7 @@ namespace SmartThingsNet.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("locationId", SmartThingsNet.Client.ClientUtils.ParameterToString(locationId)); // path parameter
-            
+
 
             // authentication (Bearer) required
             // oauth required
@@ -570,7 +573,7 @@ namespace SmartThingsNet.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete< Object >("/locations/{locationId}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/locations/{locationId}", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -588,10 +591,10 @@ namespace SmartThingsNet.Api
 
         /// <param name="locationId">The ID of the location.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> DeleteLocationAsync (string locationId)
+        public async System.Threading.Tasks.Task<Object> DeleteLocationAsync(string locationId)
         {
-             SmartThingsNet.Client.ApiResponse<Object> localVarResponse = await DeleteLocationAsyncWithHttpInfo(locationId);
-             return localVarResponse.Data;
+            SmartThingsNet.Client.ApiResponse<Object> localVarResponse = await DeleteLocationAsyncWithHttpInfo(locationId);
+            return localVarResponse.Data;
 
         }
 
@@ -602,7 +605,7 @@ namespace SmartThingsNet.Api
 
         /// <param name="locationId">The ID of the location.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<SmartThingsNet.Client.ApiResponse<Object>> DeleteLocationAsyncWithHttpInfo (string locationId)
+        public async System.Threading.Tasks.Task<SmartThingsNet.Client.ApiResponse<Object>> DeleteLocationAsyncWithHttpInfo(string locationId)
         {
             // verify the required parameter 'locationId' is set
             if (locationId == null)
@@ -612,21 +615,22 @@ namespace SmartThingsNet.Api
             SmartThingsNet.Client.RequestOptions localVarRequestOptions = new SmartThingsNet.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "application/json"
             };
-            
+
             foreach (var _contentType in _contentTypes)
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", _contentType);
-            
+
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
-            
+
             localVarRequestOptions.PathParameters.Add("locationId", SmartThingsNet.Client.ClientUtils.ParameterToString(locationId)); // path parameter
-            
+
 
             // authentication (Bearer) required
             // oauth required
@@ -655,10 +659,10 @@ namespace SmartThingsNet.Api
 
         /// <param name="locationId">The ID of the location.</param>
         /// <returns>Location</returns>
-        public Location GetLocation (string locationId)
+        public Location GetLocation(string locationId)
         {
-             SmartThingsNet.Client.ApiResponse<Location> localVarResponse = GetLocationWithHttpInfo(locationId);
-             return localVarResponse.Data;
+            SmartThingsNet.Client.ApiResponse<Location> localVarResponse = GetLocationWithHttpInfo(locationId);
+            return localVarResponse.Data;
         }
 
         /// <summary>
@@ -668,7 +672,7 @@ namespace SmartThingsNet.Api
 
         /// <param name="locationId">The ID of the location.</param>
         /// <returns>ApiResponse of Location</returns>
-        public SmartThingsNet.Client.ApiResponse< Location > GetLocationWithHttpInfo (string locationId)
+        public SmartThingsNet.Client.ApiResponse<Location> GetLocationWithHttpInfo(string locationId)
         {
             // verify the required parameter 'locationId' is set
             if (locationId == null)
@@ -677,6 +681,7 @@ namespace SmartThingsNet.Api
             SmartThingsNet.Client.RequestOptions localVarRequestOptions = new SmartThingsNet.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
+                "application/json"
             };
 
             // to determine the Accept header
@@ -691,7 +696,7 @@ namespace SmartThingsNet.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("locationId", SmartThingsNet.Client.ClientUtils.ParameterToString(locationId)); // path parameter
-            
+
 
             // authentication (Bearer) required
             // oauth required
@@ -701,7 +706,7 @@ namespace SmartThingsNet.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get< Location >("/locations/{locationId}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Location>("/locations/{locationId}", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -719,10 +724,10 @@ namespace SmartThingsNet.Api
 
         /// <param name="locationId">The ID of the location.</param>
         /// <returns>Task of Location</returns>
-        public async System.Threading.Tasks.Task<Location> GetLocationAsync (string locationId)
+        public async System.Threading.Tasks.Task<Location> GetLocationAsync(string locationId)
         {
-             SmartThingsNet.Client.ApiResponse<Location> localVarResponse = await GetLocationAsyncWithHttpInfo(locationId);
-             return localVarResponse.Data;
+            SmartThingsNet.Client.ApiResponse<Location> localVarResponse = await GetLocationAsyncWithHttpInfo(locationId);
+            return localVarResponse.Data;
 
         }
 
@@ -733,7 +738,7 @@ namespace SmartThingsNet.Api
 
         /// <param name="locationId">The ID of the location.</param>
         /// <returns>Task of ApiResponse (Location)</returns>
-        public async System.Threading.Tasks.Task<SmartThingsNet.Client.ApiResponse<Location>> GetLocationAsyncWithHttpInfo (string locationId)
+        public async System.Threading.Tasks.Task<SmartThingsNet.Client.ApiResponse<Location>> GetLocationAsyncWithHttpInfo(string locationId)
         {
             // verify the required parameter 'locationId' is set
             if (locationId == null)
@@ -743,21 +748,22 @@ namespace SmartThingsNet.Api
             SmartThingsNet.Client.RequestOptions localVarRequestOptions = new SmartThingsNet.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "application/json"
             };
-            
+
             foreach (var _contentType in _contentTypes)
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", _contentType);
-            
+
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
-            
+
             localVarRequestOptions.PathParameters.Add("locationId", SmartThingsNet.Client.ClientUtils.ParameterToString(locationId)); // path parameter
-            
+
 
             // authentication (Bearer) required
             // oauth required
@@ -785,10 +791,10 @@ namespace SmartThingsNet.Api
         /// <exception cref="SmartThingsNet.Client.ApiException">Thrown when fails to make API call</exception>
 
         /// <returns>PagedLocations</returns>
-        public PagedLocations ListLocations ()
+        public PagedLocations ListLocations()
         {
-             SmartThingsNet.Client.ApiResponse<PagedLocations> localVarResponse = ListLocationsWithHttpInfo();
-             return localVarResponse.Data;
+            SmartThingsNet.Client.ApiResponse<PagedLocations> localVarResponse = ListLocationsWithHttpInfo();
+            return localVarResponse.Data;
         }
 
         /// <summary>
@@ -797,11 +803,12 @@ namespace SmartThingsNet.Api
         /// <exception cref="SmartThingsNet.Client.ApiException">Thrown when fails to make API call</exception>
 
         /// <returns>ApiResponse of PagedLocations</returns>
-        public SmartThingsNet.Client.ApiResponse< PagedLocations > ListLocationsWithHttpInfo ()
+        public SmartThingsNet.Client.ApiResponse<PagedLocations> ListLocationsWithHttpInfo()
         {
             SmartThingsNet.Client.RequestOptions localVarRequestOptions = new SmartThingsNet.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
+                "application/json"
             };
 
             // to determine the Accept header
@@ -814,7 +821,7 @@ namespace SmartThingsNet.Api
 
             var localVarAccept = SmartThingsNet.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            
+
 
             // authentication (Bearer) required
             // oauth required
@@ -824,7 +831,7 @@ namespace SmartThingsNet.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get< PagedLocations >("/locations", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PagedLocations>("/locations", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -841,10 +848,10 @@ namespace SmartThingsNet.Api
         /// <exception cref="SmartThingsNet.Client.ApiException">Thrown when fails to make API call</exception>
 
         /// <returns>Task of PagedLocations</returns>
-        public async System.Threading.Tasks.Task<PagedLocations> ListLocationsAsync ()
+        public async System.Threading.Tasks.Task<PagedLocations> ListLocationsAsync()
         {
-             SmartThingsNet.Client.ApiResponse<PagedLocations> localVarResponse = await ListLocationsAsyncWithHttpInfo();
-             return localVarResponse.Data;
+            SmartThingsNet.Client.ApiResponse<PagedLocations> localVarResponse = await ListLocationsAsyncWithHttpInfo();
+            return localVarResponse.Data;
 
         }
 
@@ -854,24 +861,25 @@ namespace SmartThingsNet.Api
         /// <exception cref="SmartThingsNet.Client.ApiException">Thrown when fails to make API call</exception>
 
         /// <returns>Task of ApiResponse (PagedLocations)</returns>
-        public async System.Threading.Tasks.Task<SmartThingsNet.Client.ApiResponse<PagedLocations>> ListLocationsAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<SmartThingsNet.Client.ApiResponse<PagedLocations>> ListLocationsAsyncWithHttpInfo()
         {
             SmartThingsNet.Client.RequestOptions localVarRequestOptions = new SmartThingsNet.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "application/json"
             };
-            
+
             foreach (var _contentType in _contentTypes)
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", _contentType);
-            
+
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
-            
+
             // authentication (Bearer) required
             // oauth required
             if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
@@ -899,10 +907,10 @@ namespace SmartThingsNet.Api
         /// <param name="locationId">The ID of the location.</param>
         /// <param name="updateLocationRequest"></param>
         /// <returns>Location</returns>
-        public Location UpdateLocation (string locationId, UpdateLocationRequest updateLocationRequest)
+        public Location UpdateLocation(string locationId, UpdateLocationRequest updateLocationRequest)
         {
-             SmartThingsNet.Client.ApiResponse<Location> localVarResponse = UpdateLocationWithHttpInfo(locationId, updateLocationRequest);
-             return localVarResponse.Data;
+            SmartThingsNet.Client.ApiResponse<Location> localVarResponse = UpdateLocationWithHttpInfo(locationId, updateLocationRequest);
+            return localVarResponse.Data;
         }
 
         /// <summary>
@@ -913,7 +921,7 @@ namespace SmartThingsNet.Api
         /// <param name="locationId">The ID of the location.</param>
         /// <param name="updateLocationRequest"></param>
         /// <returns>ApiResponse of Location</returns>
-        public SmartThingsNet.Client.ApiResponse< Location > UpdateLocationWithHttpInfo (string locationId, UpdateLocationRequest updateLocationRequest)
+        public SmartThingsNet.Client.ApiResponse<Location> UpdateLocationWithHttpInfo(string locationId, UpdateLocationRequest updateLocationRequest)
         {
             // verify the required parameter 'locationId' is set
             if (locationId == null)
@@ -926,6 +934,7 @@ namespace SmartThingsNet.Api
             SmartThingsNet.Client.RequestOptions localVarRequestOptions = new SmartThingsNet.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
+                "application/json"
             };
 
             // to determine the Accept header
@@ -940,7 +949,7 @@ namespace SmartThingsNet.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("locationId", SmartThingsNet.Client.ClientUtils.ParameterToString(locationId)); // path parameter
-            
+
             localVarRequestOptions.Data = updateLocationRequest;
 
             // authentication (Bearer) required
@@ -951,7 +960,7 @@ namespace SmartThingsNet.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put< Location >("/locations/{locationId}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<Location>("/locations/{locationId}", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -970,10 +979,10 @@ namespace SmartThingsNet.Api
         /// <param name="locationId">The ID of the location.</param>
         /// <param name="updateLocationRequest"></param>
         /// <returns>Task of Location</returns>
-        public async System.Threading.Tasks.Task<Location> UpdateLocationAsync (string locationId, UpdateLocationRequest updateLocationRequest)
+        public async System.Threading.Tasks.Task<Location> UpdateLocationAsync(string locationId, UpdateLocationRequest updateLocationRequest)
         {
-             SmartThingsNet.Client.ApiResponse<Location> localVarResponse = await UpdateLocationAsyncWithHttpInfo(locationId, updateLocationRequest);
-             return localVarResponse.Data;
+            SmartThingsNet.Client.ApiResponse<Location> localVarResponse = await UpdateLocationAsyncWithHttpInfo(locationId, updateLocationRequest);
+            return localVarResponse.Data;
         }
 
         /// <summary>
@@ -984,7 +993,7 @@ namespace SmartThingsNet.Api
         /// <param name="locationId">The ID of the location.</param>
         /// <param name="updateLocationRequest"></param>
         /// <returns>Task of ApiResponse (Location)</returns>
-        public async System.Threading.Tasks.Task<SmartThingsNet.Client.ApiResponse<Location>> UpdateLocationAsyncWithHttpInfo (string locationId, UpdateLocationRequest updateLocationRequest)
+        public async System.Threading.Tasks.Task<SmartThingsNet.Client.ApiResponse<Location>> UpdateLocationAsyncWithHttpInfo(string locationId, UpdateLocationRequest updateLocationRequest)
         {
             // verify the required parameter 'locationId' is set
             if (locationId == null)
@@ -998,21 +1007,22 @@ namespace SmartThingsNet.Api
             SmartThingsNet.Client.RequestOptions localVarRequestOptions = new SmartThingsNet.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "application/json"
             };
-            
+
             foreach (var _contentType in _contentTypes)
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", _contentType);
-            
+
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
-            
+
             localVarRequestOptions.PathParameters.Add("locationId", SmartThingsNet.Client.ClientUtils.ParameterToString(locationId)); // path parameter
-            
+
             localVarRequestOptions.Data = updateLocationRequest;
 
             // authentication (Bearer) required
