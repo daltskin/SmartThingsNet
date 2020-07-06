@@ -43,7 +43,7 @@ namespace SmartThingsNet.Model
         /// <param name="capability">Capability that this command relates to. This must be a capability of the component. (required).</param>
         /// <param name="command">Name of the command, this must be valid for the capability. (required).</param>
         /// <param name="arguments">Arguments of the command. All the required arguments defined in the capability&#39;s command argument definition must be provided. The type of the arguments are dependent on the type of the capability&#39;s command argument. Please refer to the capabilities definition at https://smartthings.developer.samsung.com/develop/api-ref/capabilities.html .</param>
-        public DeviceCommand(string component = "main", string capability = default(string), string command = default(string), List<Object> arguments = default(List<Object>))
+        public DeviceCommand(string component = "main", string capability = default(string), object command = default(object), List<Object> arguments = default(List<Object>))
         {
             // to ensure "capability" is required (not null)
             this.Capability = capability ?? throw new ArgumentNullException("capability is a required property for DeviceCommand and cannot be null");
@@ -73,7 +73,7 @@ namespace SmartThingsNet.Model
         /// </summary>
         /// <value>Name of the command, this must be valid for the capability.</value>
         [DataMember(Name="command", EmitDefaultValue=false)]
-        public string Command { get; set; }
+        public object Command { get; set; }
 
         /// <summary>
         /// Arguments of the command. All the required arguments defined in the capability&#39;s command argument definition must be provided. The type of the arguments are dependent on the type of the capability&#39;s command argument. Please refer to the capabilities definition at https://smartthings.developer.samsung.com/develop/api-ref/capabilities.html 
