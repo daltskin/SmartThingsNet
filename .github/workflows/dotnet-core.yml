@@ -3,8 +3,14 @@ name: .NET Core
 on:
   push:
     branches: [ master ]
+    paths-ignore: 
+        - 'docs/**'
+        - '**.md'
   pull_request:
     branches: [ master ]
+    paths-ignore: 
+        - 'docs/**'
+        - '**.md'
 
 jobs:
   build:
@@ -38,7 +44,7 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Build ${{ env.GitVersion_SemVer }}
-      run: dotnet build --configuration Release --no-restore /p:AssemblyVersion=${{ env.GitVersion_SemVer }} /p:FileVersion=${{ env.GitVersion_SemVer }} /p:InformationalVersion=${{ env.GitVersion_SemVer }}
+      run: dotnet build --configuration Release --no-restore /p:AssemblyVersion=${{ env.GitVersion_SemVer }} /p:FileVersion=${{ env.GitVersion_AssemblySemFileVer }} /p:InformationalVersion=${{ env.GitVersion_InformationalVersion  }}
     - name: Test
       run: dotnet test --no-restore --verbosity normal
 
