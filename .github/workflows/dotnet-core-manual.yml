@@ -1,11 +1,13 @@
 name: .NET Core
 
-on:
-  pull_request:
-    branches: [ master ]
-    paths-ignore: 
-        - 'docs/**'
-        - '**.md'
+on: 
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+
 jobs:
   build:
 
