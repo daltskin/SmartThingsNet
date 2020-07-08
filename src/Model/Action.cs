@@ -45,7 +45,10 @@ namespace SmartThingsNet.Model
             this.Every = every;
             this.Location = location;
         }
-        
+
+        [DataMember(Name = "if", EmitDefaultValue = false)]
+        public If _if { get; set; }
+
         /// <summary>
         /// Gets or Sets Sleep
         /// </summary>
@@ -78,6 +81,7 @@ namespace SmartThingsNet.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Action {\n");
+            sb.Append("  If: ").Append(_if).Append("\n");
             sb.Append("  Sleep: ").Append(Sleep).Append("\n");
             sb.Append("  Command: ").Append(Command).Append("\n");
             sb.Append("  Every: ").Append(Every).Append("\n");
