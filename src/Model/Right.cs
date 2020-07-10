@@ -6,20 +6,8 @@ using System.Text;
 
 namespace SmartThingsNet.Model
 {
-    public class Right
+    [DataContract]
+    public class Right: Operand
     {
-        [JsonProperty("string")]
-        [DataMember(Name = "string", EmitDefaultValue = false)]
-        public string _string { get; set; }
-
-        [DataMember(Name = "location", EmitDefaultValue = false)]
-        public Location? location { get; set; }
-
-        [DataMember(Name = "device", EmitDefaultValue = false)]
-        public Device device { get; set; }
-
-        [JsonProperty("integer")]
-        [DataMember(Name = "integer", EmitDefaultValue = false)]
-        public int? _integer { get; set; }
     }
 }
