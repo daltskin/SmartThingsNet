@@ -41,7 +41,7 @@ namespace SmartThingsNet.Model
         /// </summary>
         /// <param name="name">A name that is unique within the command. Used for i18n and named argument command execution. (required).</param>
         /// <param name="optional">Whether or not the argument must be supplied. If the argument is at the end of the arguments array then it can be completely ignored. If the argument is followed by another argument &#x60;null&#x60; must be supplied.  (default to false).</param>
-        /// <param name="schema">[JSON schema](http://json-schema.org/specification-links.html#draft-4) for the argument.  (required).</param>
+        /// <param name="schema">[JSON schema](http://json-schema.org/specification-links.html#draft-4) for the argument. The API implements JSON schema version 4. For more info regarding JSON schema, please read [Understanding JSON Schema](https://json-schema.org/understanding-json-schema/index.html).  (required).</param>
         public Argument(string name = default(string), bool optional = false, Object schema = default(Object))
         {
             // to ensure "name" is required (not null)
@@ -66,9 +66,9 @@ namespace SmartThingsNet.Model
         public bool Optional { get; set; }
 
         /// <summary>
-        /// [JSON schema](http://json-schema.org/specification-links.html#draft-4) for the argument. 
+        /// [JSON schema](http://json-schema.org/specification-links.html#draft-4) for the argument. The API implements JSON schema version 4. For more info regarding JSON schema, please read [Understanding JSON Schema](https://json-schema.org/understanding-json-schema/index.html). 
         /// </summary>
-        /// <value>[JSON schema](http://json-schema.org/specification-links.html#draft-4) for the argument. </value>
+        /// <value>[JSON schema](http://json-schema.org/specification-links.html#draft-4) for the argument. The API implements JSON schema version 4. For more info regarding JSON schema, please read [Understanding JSON Schema](https://json-schema.org/understanding-json-schema/index.html). </value>
         [DataMember(Name="schema", EmitDefaultValue=false)]
         public Object Schema { get; set; }
 

@@ -34,18 +34,26 @@ namespace SmartThingsNet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Action" /> class.
         /// </summary>
+        /// <param name="_if">_if.</param>
         /// <param name="sleep">sleep.</param>
         /// <param name="command">command.</param>
         /// <param name="every">every.</param>
         /// <param name="location">location.</param>
-        public Action(SleepAction sleep = default(SleepAction), CommandAction command = default(CommandAction), EveryAction every = default(EveryAction), LocationAction location = default(LocationAction))
+        public Action(IfAction _if = default(IfAction), SleepAction sleep = default(SleepAction), CommandAction command = default(CommandAction), EveryAction every = default(EveryAction), LocationAction location = default(LocationAction))
         {
+            this.If = _if;
             this.Sleep = sleep;
             this.Command = command;
             this.Every = every;
             this.Location = location;
         }
         
+        /// <summary>
+        /// Gets or Sets If
+        /// </summary>
+        [DataMember(Name="if", EmitDefaultValue=false)]
+        public IfAction If { get; set; }
+
         /// <summary>
         /// Gets or Sets Sleep
         /// </summary>
@@ -78,6 +86,7 @@ namespace SmartThingsNet.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Action {\n");
+            sb.Append("  If: ").Append(If).Append("\n");
             sb.Append("  Sleep: ").Append(Sleep).Append("\n");
             sb.Append("  Command: ").Append(Command).Append("\n");
             sb.Append("  Every: ").Append(Every).Append("\n");
@@ -117,6 +126,11 @@ namespace SmartThingsNet.Model
 
             return 
                 (
+                    this.If == input.If ||
+                    (this.If != null &&
+                    this.If.Equals(input.If))
+                ) && 
+                (
                     this.Sleep == input.Sleep ||
                     (this.Sleep != null &&
                     this.Sleep.Equals(input.Sleep))
@@ -147,6 +161,8 @@ namespace SmartThingsNet.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.If != null)
+                    hashCode = hashCode * 59 + this.If.GetHashCode();
                 if (this.Sleep != null)
                     hashCode = hashCode * 59 + this.Sleep.GetHashCode();
                 if (this.Command != null)

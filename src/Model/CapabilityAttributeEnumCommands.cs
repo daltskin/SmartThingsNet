@@ -34,12 +34,19 @@ namespace SmartThingsNet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CapabilityAttributeEnumCommands" /> class.
         /// </summary>
-        /// <param name="command">the command that sets this attribute to the associated value.</param>
-        /// <param name="value">the value that this command will set the attribute to.</param>
+        [JsonConstructorAttribute]
+        protected CapabilityAttributeEnumCommands() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CapabilityAttributeEnumCommands" /> class.
+        /// </summary>
+        /// <param name="command">the command that sets this attribute to the associated value (required).</param>
+        /// <param name="value">the value that this command will set the attribute to (required).</param>
         public CapabilityAttributeEnumCommands(string command = default(string), string value = default(string))
         {
-            this.Command = command;
-            this.Value = value;
+            // to ensure "command" is required (not null)
+            this.Command = command ?? throw new ArgumentNullException("command is a required property for CapabilityAttributeEnumCommands and cannot be null");
+            // to ensure "value" is required (not null)
+            this.Value = value ?? throw new ArgumentNullException("value is a required property for CapabilityAttributeEnumCommands and cannot be null");
         }
         
         /// <summary>

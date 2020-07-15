@@ -36,7 +36,7 @@ namespace SmartThingsNet.Model
         /// </summary>
         /// <param name="items">items.</param>
         /// <param name="links">links.</param>
-        public PagedDeviceProfiles(List<DeviceProfile> items = default(List<DeviceProfile>), Links links = default(Links))
+        public PagedDeviceProfiles(List<DeviceProfileResponse> items = default(List<DeviceProfileResponse>), Links links = default(Links))
         {
             this.Items = items;
             this.Links = links;
@@ -46,7 +46,7 @@ namespace SmartThingsNet.Model
         /// Gets or Sets Items
         /// </summary>
         [DataMember(Name="items", EmitDefaultValue=false)]
-        public List<DeviceProfile> Items { get; set; }
+        public List<DeviceProfileResponse> Items { get; set; }
 
         /// <summary>
         /// Gets or Sets Links

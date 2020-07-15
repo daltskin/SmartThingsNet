@@ -32,6 +32,11 @@ namespace SmartThingsNet.Model
     public partial class DateOperand :  IEquatable<DateOperand>, IValidatableObject
     {
         /// <summary>
+        /// Gets or Sets Reference
+        /// </summary>
+        [DataMember(Name="reference", EmitDefaultValue=false)]
+        public DateReference? Reference { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="DateOperand" /> class.
         /// </summary>
         /// <param name="timeZoneId">A java time zone ID reference.</param>
@@ -39,13 +44,15 @@ namespace SmartThingsNet.Model
         /// <param name="year">year.</param>
         /// <param name="month">month.</param>
         /// <param name="day">day.</param>
-        public DateOperand(string timeZoneId = default(string), List<DayOfWeek> daysOfWeek = default(List<DayOfWeek>), int year = default(int), int month = default(int), int day = default(int))
+        /// <param name="reference">reference.</param>
+        public DateOperand(string timeZoneId = default(string), List<DayOfWeek> daysOfWeek = default(List<DayOfWeek>), int year = default(int), int month = default(int), int day = default(int), DateReference? reference = default(DateReference?))
         {
             this.TimeZoneId = timeZoneId;
             this.DaysOfWeek = daysOfWeek;
             this.Year = year;
             this.Month = month;
             this.Day = day;
+            this.Reference = reference;
         }
         
         /// <summary>
@@ -92,6 +99,7 @@ namespace SmartThingsNet.Model
             sb.Append("  Year: ").Append(Year).Append("\n");
             sb.Append("  Month: ").Append(Month).Append("\n");
             sb.Append("  Day: ").Append(Day).Append("\n");
+            sb.Append("  Reference: ").Append(Reference).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -148,6 +156,10 @@ namespace SmartThingsNet.Model
                 (
                     this.Day == input.Day ||
                     this.Day.Equals(input.Day)
+                ) && 
+                (
+                    this.Reference == input.Reference ||
+                    this.Reference.Equals(input.Reference)
                 );
         }
 
@@ -167,6 +179,7 @@ namespace SmartThingsNet.Model
                 hashCode = hashCode * 59 + this.Year.GetHashCode();
                 hashCode = hashCode * 59 + this.Month.GetHashCode();
                 hashCode = hashCode * 59 + this.Day.GetHashCode();
+                hashCode = hashCode * 59 + this.Reference.GetHashCode();
                 return hashCode;
             }
         }

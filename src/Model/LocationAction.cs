@@ -34,17 +34,11 @@ namespace SmartThingsNet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LocationAction" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected LocationAction() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="LocationAction" /> class.
-        /// </summary>
-        /// <param name="id">Unique id for the action (required).</param>
+        /// <param name="id">Unique id for the action.</param>
         /// <param name="mode">mode.</param>
         public LocationAction(string id = default(string), string mode = default(string))
         {
-            // to ensure "id" is required (not null)
-            this.Id = id ?? throw new ArgumentNullException("id is a required property for LocationAction and cannot be null");
+            this.Id = id;
             this.Mode = mode;
         }
         

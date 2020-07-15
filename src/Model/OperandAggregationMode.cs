@@ -37,43 +37,7 @@ namespace SmartThingsNet.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
-
-        /// <summary>
-        /// Enum Avg for value: Avg
-        /// </summary>
-        [EnumMember(Value = "Avg")]
-        Avg = 2,
-
-        /// <summary>
-        /// Enum Sum for value: Sum
-        /// </summary>
-        [EnumMember(Value = "Sum")]
-        Sum = 3,
-
-        /// <summary>
-        /// Enum Min for value: Min
-        /// </summary>
-        [EnumMember(Value = "Min")]
-        Min = 4,
-
-        /// <summary>
-        /// Enum Max for value: Max
-        /// </summary>
-        [EnumMember(Value = "Max")]
-        Max = 5,
-
-        /// <summary>
-        /// Enum Least for value: Least
-        /// </summary>
-        [EnumMember(Value = "Least")]
-        Least = 6,
-
-        /// <summary>
-        /// Enum Most for value: Most
-        /// </summary>
-        [EnumMember(Value = "Most")]
-        Most = 7
+        None = 1
 
     }
 

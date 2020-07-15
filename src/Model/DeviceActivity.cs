@@ -52,7 +52,9 @@ namespace SmartThingsNet.Model
         /// <param name="value">attribute value.</param>
         /// <param name="unit">unit.</param>
         /// <param name="data">data.</param>
-        public DeviceActivity(string deviceId = default(string), string deviceName = default(string), string locationId = default(string), string locationName = default(string), DateTime time = default(DateTime), string text = default(string), string component = default(string), string componentLabel = default(string), string capability = default(string), string attribute = default(string), Object value = default(Object), string unit = default(string), Dictionary<string, Object> data = default(Dictionary<string, Object>))
+        /// <param name="translatedAttributeName">translated attribute name based on &#39;Accept-Language&#39; requested in header.</param>
+        /// <param name="translatedAttributeValue">translated attribute value based on &#39;Accept-Language&#39; requested in header.</param>
+        public DeviceActivity(string deviceId = default(string), string deviceName = default(string), string locationId = default(string), string locationName = default(string), DateTime time = default(DateTime), string text = default(string), string component = default(string), string componentLabel = default(string), string capability = default(string), string attribute = default(string), Object value = default(Object), string unit = default(string), Dictionary<string, Object> data = default(Dictionary<string, Object>), string translatedAttributeName = default(string), string translatedAttributeValue = default(string))
         {
             // to ensure "component" is required (not null)
             this.Component = component ?? throw new ArgumentNullException("component is a required property for DeviceActivity and cannot be null");
@@ -68,6 +70,8 @@ namespace SmartThingsNet.Model
             this.Value = value;
             this.Unit = unit;
             this.Data = data;
+            this.TranslatedAttributeName = translatedAttributeName;
+            this.TranslatedAttributeValue = translatedAttributeValue;
         }
         
         /// <summary>
@@ -160,6 +164,20 @@ namespace SmartThingsNet.Model
         public Dictionary<string, Object> Data { get; set; }
 
         /// <summary>
+        /// translated attribute name based on &#39;Accept-Language&#39; requested in header
+        /// </summary>
+        /// <value>translated attribute name based on &#39;Accept-Language&#39; requested in header</value>
+        [DataMember(Name="translatedAttributeName", EmitDefaultValue=false)]
+        public string TranslatedAttributeName { get; set; }
+
+        /// <summary>
+        /// translated attribute value based on &#39;Accept-Language&#39; requested in header
+        /// </summary>
+        /// <value>translated attribute value based on &#39;Accept-Language&#39; requested in header</value>
+        [DataMember(Name="translatedAttributeValue", EmitDefaultValue=false)]
+        public string TranslatedAttributeValue { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -180,6 +198,8 @@ namespace SmartThingsNet.Model
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Unit: ").Append(Unit).Append("\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
+            sb.Append("  TranslatedAttributeName: ").Append(TranslatedAttributeName).Append("\n");
+            sb.Append("  TranslatedAttributeValue: ").Append(TranslatedAttributeValue).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -279,6 +299,16 @@ namespace SmartThingsNet.Model
                     this.Data != null &&
                     input.Data != null &&
                     this.Data.SequenceEqual(input.Data)
+                ) && 
+                (
+                    this.TranslatedAttributeName == input.TranslatedAttributeName ||
+                    (this.TranslatedAttributeName != null &&
+                    this.TranslatedAttributeName.Equals(input.TranslatedAttributeName))
+                ) && 
+                (
+                    this.TranslatedAttributeValue == input.TranslatedAttributeValue ||
+                    (this.TranslatedAttributeValue != null &&
+                    this.TranslatedAttributeValue.Equals(input.TranslatedAttributeValue))
                 );
         }
 
@@ -317,6 +347,10 @@ namespace SmartThingsNet.Model
                     hashCode = hashCode * 59 + this.Unit.GetHashCode();
                 if (this.Data != null)
                     hashCode = hashCode * 59 + this.Data.GetHashCode();
+                if (this.TranslatedAttributeName != null)
+                    hashCode = hashCode * 59 + this.TranslatedAttributeName.GetHashCode();
+                if (this.TranslatedAttributeValue != null)
+                    hashCode = hashCode * 59 + this.TranslatedAttributeValue.GetHashCode();
                 return hashCode;
             }
         }

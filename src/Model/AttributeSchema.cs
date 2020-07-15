@@ -26,7 +26,7 @@ using OpenAPIDateConverter = SmartThingsNet.Client.OpenAPIDateConverter;
 namespace SmartThingsNet.Model
 {
     /// <summary>
-    /// [JSON schema](http://json-schema.org/specification-links.html#draft-4) for the attribute. 
+    /// [JSON schema](http://json-schema.org/specification-links.html#draft-4) for the attribute. The API implements JSON schema version 4. For more info regarding JSON schema, please read [Understanding JSON Schema](https://json-schema.org/understanding-json-schema/index.html). 
     /// </summary>
     [DataContract]
     public partial class AttributeSchema :  IEquatable<AttributeSchema>, IValidatableObject
@@ -49,7 +49,7 @@ namespace SmartThingsNet.Model
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum Type { get; set; }
+        public TypeEnum? Type { get; set; }
         /// <summary>
         /// Defines Required
         /// </summary>
@@ -91,17 +91,17 @@ namespace SmartThingsNet.Model
         /// Initializes a new instance of the <see cref="AttributeSchema" /> class.
         /// </summary>
         /// <param name="title">title.</param>
-        /// <param name="type">type (required) (default to TypeEnum.Object).</param>
+        /// <param name="type">type.</param>
         /// <param name="properties">properties (required).</param>
-        /// <param name="additionalProperties">additionalProperties (required).</param>
+        /// <param name="additionalProperties">additionalProperties.</param>
         /// <param name="required">required.</param>
-        public AttributeSchema(string title = default(string), TypeEnum type = TypeEnum.Object, AttributeProperties properties = default(AttributeProperties), bool additionalProperties = default(bool), List<RequiredEnum> required = default(List<RequiredEnum>))
+        public AttributeSchema(string title = default(string), TypeEnum? type = default(TypeEnum?), AttributeProperties properties = default(AttributeProperties), bool additionalProperties = default(bool), List<RequiredEnum> required = default(List<RequiredEnum>))
         {
-            this.Type = type;
             // to ensure "properties" is required (not null)
             this.Properties = properties ?? throw new ArgumentNullException("properties is a required property for AttributeSchema and cannot be null");
-            this.AdditionalProperties = additionalProperties;
             this.Title = title;
+            this.Type = type;
+            this.AdditionalProperties = additionalProperties;
             this.Required = required;
         }
         

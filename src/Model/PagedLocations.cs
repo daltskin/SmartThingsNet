@@ -36,7 +36,7 @@ namespace SmartThingsNet.Model
         /// </summary>
         /// <param name="items">items.</param>
         /// <param name="links">links.</param>
-        public PagedLocations(List<Location> items = default(List<Location>), Links links = default(Links))
+        public PagedLocations(List<PagedLocation> items = default(List<PagedLocation>), Links links = default(Links))
         {
             this.Items = items;
             this.Links = links;
@@ -46,7 +46,7 @@ namespace SmartThingsNet.Model
         /// Gets or Sets Items
         /// </summary>
         [DataMember(Name="items", EmitDefaultValue=false)]
-        public List<Location> Items { get; set; }
+        public List<PagedLocation> Items { get; set; }
 
         /// <summary>
         /// Gets or Sets Links

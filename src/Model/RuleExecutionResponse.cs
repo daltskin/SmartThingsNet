@@ -26,7 +26,7 @@ using OpenAPIDateConverter = SmartThingsNet.Client.OpenAPIDateConverter;
 namespace SmartThingsNet.Model
 {
     /// <summary>
-    /// The result of a rule execution
+    /// The result of a Rule execution
     /// </summary>
     [DataContract]
     public partial class RuleExecutionResponse :  IEquatable<RuleExecutionResponse>, IValidatableObject
@@ -44,20 +44,37 @@ namespace SmartThingsNet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RuleExecutionResponse" /> class.
         /// </summary>
-        /// <param name="ruleId">ruleId (required).</param>
+        /// <param name="executionId">executionId (required).</param>
+        /// <param name="behaviorId">behaviorId (required).</param>
         /// <param name="result">result (required).</param>
-        public RuleExecutionResponse(string ruleId = default(string), ExecutionResult result = default(ExecutionResult))
+        /// <param name="actions">actions.</param>
+        public RuleExecutionResponse(string executionId = default(string), string behaviorId = default(string), ExecutionResult result = default(ExecutionResult), List<ActionExecutionResult> actions = default(List<ActionExecutionResult>))
         {
-            // to ensure "ruleId" is required (not null)
-            this.RuleId = ruleId ?? throw new ArgumentNullException("ruleId is a required property for RuleExecutionResponse and cannot be null");
+            // to ensure "executionId" is required (not null)
+            this.ExecutionId = executionId ?? throw new ArgumentNullException("executionId is a required property for RuleExecutionResponse and cannot be null");
+            // to ensure "behaviorId" is required (not null)
+            this.BehaviorId = behaviorId ?? throw new ArgumentNullException("behaviorId is a required property for RuleExecutionResponse and cannot be null");
             this.Result = result;
+            this.Actions = actions;
         }
         
         /// <summary>
-        /// Gets or Sets RuleId
+        /// Gets or Sets ExecutionId
         /// </summary>
-        [DataMember(Name="ruleId", EmitDefaultValue=false)]
-        public string RuleId { get; set; }
+        [DataMember(Name="executionId", EmitDefaultValue=false)]
+        public string ExecutionId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets BehaviorId
+        /// </summary>
+        [DataMember(Name="behaviorId", EmitDefaultValue=false)]
+        public string BehaviorId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Actions
+        /// </summary>
+        [DataMember(Name="actions", EmitDefaultValue=false)]
+        public List<ActionExecutionResult> Actions { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -67,8 +84,10 @@ namespace SmartThingsNet.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RuleExecutionResponse {\n");
-            sb.Append("  RuleId: ").Append(RuleId).Append("\n");
+            sb.Append("  ExecutionId: ").Append(ExecutionId).Append("\n");
+            sb.Append("  BehaviorId: ").Append(BehaviorId).Append("\n");
             sb.Append("  Result: ").Append(Result).Append("\n");
+            sb.Append("  Actions: ").Append(Actions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -104,13 +123,24 @@ namespace SmartThingsNet.Model
 
             return 
                 (
-                    this.RuleId == input.RuleId ||
-                    (this.RuleId != null &&
-                    this.RuleId.Equals(input.RuleId))
+                    this.ExecutionId == input.ExecutionId ||
+                    (this.ExecutionId != null &&
+                    this.ExecutionId.Equals(input.ExecutionId))
+                ) && 
+                (
+                    this.BehaviorId == input.BehaviorId ||
+                    (this.BehaviorId != null &&
+                    this.BehaviorId.Equals(input.BehaviorId))
                 ) && 
                 (
                     this.Result == input.Result ||
                     this.Result.Equals(input.Result)
+                ) && 
+                (
+                    this.Actions == input.Actions ||
+                    this.Actions != null &&
+                    input.Actions != null &&
+                    this.Actions.SequenceEqual(input.Actions)
                 );
         }
 
@@ -123,9 +153,13 @@ namespace SmartThingsNet.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.RuleId != null)
-                    hashCode = hashCode * 59 + this.RuleId.GetHashCode();
+                if (this.ExecutionId != null)
+                    hashCode = hashCode * 59 + this.ExecutionId.GetHashCode();
+                if (this.BehaviorId != null)
+                    hashCode = hashCode * 59 + this.BehaviorId.GetHashCode();
                 hashCode = hashCode * 59 + this.Result.GetHashCode();
+                if (this.Actions != null)
+                    hashCode = hashCode * 59 + this.Actions.GetHashCode();
                 return hashCode;
             }
         }

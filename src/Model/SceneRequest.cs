@@ -47,7 +47,7 @@ namespace SmartThingsNet.Model
         /// <param name="mode">mode.</param>
         /// <param name="securityMode">securityMode.</param>
         /// <param name="devicegroups">List of device group actions.</param>
-        public SceneRequest(string sceneName = default(string), string sceneIcon = default(string), string sceneColor = default(string), List<SceneDeviceRequest> devices = default(List<SceneDeviceRequest>), List<List<string>> sequences = default(List<List<string>>), SceneModeRequest mode = default(SceneModeRequest), SceneSecurityModeRequest securityMode = default(SceneSecurityModeRequest), List<SceneDeviceGroupRequest> devicegroups = default(List<SceneDeviceGroupRequest>))
+        public SceneRequest(string sceneName = default(string), string sceneIcon = default(string), string sceneColor = default(string), List<SceneDeviceRequest> devices = default(List<SceneDeviceRequest>), List<SceneAction> sequences = default(List<SceneAction>), SceneModeRequest mode = default(SceneModeRequest), SceneSecurityModeRequest securityMode = default(SceneSecurityModeRequest), List<SceneDeviceGroupRequest> devicegroups = default(List<SceneDeviceGroupRequest>))
         {
             // to ensure "sceneName" is required (not null)
             this.SceneName = sceneName ?? throw new ArgumentNullException("sceneName is a required property for SceneRequest and cannot be null");
@@ -94,7 +94,7 @@ namespace SmartThingsNet.Model
         /// </summary>
         /// <value>List of parallel action sequences</value>
         [DataMember(Name="sequences", EmitDefaultValue=false)]
-        public List<List<string>> Sequences { get; set; }
+        public List<SceneAction> Sequences { get; set; }
 
         /// <summary>
         /// Gets or Sets Mode
