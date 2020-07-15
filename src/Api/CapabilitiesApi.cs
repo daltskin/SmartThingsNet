@@ -163,7 +163,7 @@ namespace SmartThingsNet.Api
         /// <exception cref="SmartThingsNet.Client.ApiException">Thrown when fails to make API call</exception>
 
         /// <returns>PagedCapabilities</returns>
-        PagedCapabilities ListCapabilities (string authorization);
+        PagedCapabilities ListCapabilities ();
 
         /// <summary>
         /// All capabilities.
@@ -174,7 +174,7 @@ namespace SmartThingsNet.Api
         /// <exception cref="SmartThingsNet.Client.ApiException">Thrown when fails to make API call</exception>
 
         /// <returns>ApiResponse of PagedCapabilities</returns>
-        ApiResponse<PagedCapabilities> ListCapabilitiesWithHttpInfo (string authorization);
+        ApiResponse<PagedCapabilities> ListCapabilitiesWithHttpInfo ();
         /// <summary>
         /// List capabilities by namespace.
         /// </summary>
@@ -397,7 +397,7 @@ namespace SmartThingsNet.Api
         /// <exception cref="SmartThingsNet.Client.ApiException">Thrown when fails to make API call</exception>
 
         /// <returns>Task of PagedCapabilities</returns>
-        System.Threading.Tasks.Task<PagedCapabilities> ListCapabilitiesAsync (string authorization);
+        System.Threading.Tasks.Task<PagedCapabilities> ListCapabilitiesAsync ();
 
         /// <summary>
         /// All capabilities.
@@ -408,7 +408,7 @@ namespace SmartThingsNet.Api
         /// <exception cref="SmartThingsNet.Client.ApiException">Thrown when fails to make API call</exception>
 
         /// <returns>Task of ApiResponse (PagedCapabilities)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PagedCapabilities>> ListCapabilitiesAsyncWithHttpInfo (string authorization);
+        System.Threading.Tasks.Task<ApiResponse<PagedCapabilities>> ListCapabilitiesAsyncWithHttpInfo ();
         /// <summary>
         /// List capabilities by namespace.
         /// </summary>
@@ -1314,9 +1314,9 @@ namespace SmartThingsNet.Api
         /// <exception cref="SmartThingsNet.Client.ApiException">Thrown when fails to make API call</exception>
 
         /// <returns>PagedCapabilities</returns>
-        public PagedCapabilities ListCapabilities (string authorization)
+        public PagedCapabilities ListCapabilities ()
         {
-             SmartThingsNet.Client.ApiResponse<PagedCapabilities> localVarResponse = ListCapabilitiesWithHttpInfo(authorization);
+             SmartThingsNet.Client.ApiResponse<PagedCapabilities> localVarResponse = ListCapabilitiesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -1326,15 +1326,12 @@ namespace SmartThingsNet.Api
         /// <exception cref="SmartThingsNet.Client.ApiException">Thrown when fails to make API call</exception>
 
         /// <returns>ApiResponse of PagedCapabilities</returns>
-        public SmartThingsNet.Client.ApiResponse< PagedCapabilities > ListCapabilitiesWithHttpInfo (string authorization)
+        public SmartThingsNet.Client.ApiResponse< PagedCapabilities > ListCapabilitiesWithHttpInfo ()
         {
-            // verify the required parameter 'authorization' is set
-            if (authorization == null)
-                throw new SmartThingsNet.Client.ApiException(400, "Missing required parameter 'authorization' when calling CapabilitiesApi->ListCapabilities");
-
             SmartThingsNet.Client.RequestOptions localVarRequestOptions = new SmartThingsNet.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
+                "application/json"
             };
 
             // to determine the Accept header
@@ -1373,9 +1370,9 @@ namespace SmartThingsNet.Api
         /// <exception cref="SmartThingsNet.Client.ApiException">Thrown when fails to make API call</exception>
 
         /// <returns>Task of PagedCapabilities</returns>
-        public async System.Threading.Tasks.Task<PagedCapabilities> ListCapabilitiesAsync (string authorization)
+        public async System.Threading.Tasks.Task<PagedCapabilities> ListCapabilitiesAsync ()
         {
-             SmartThingsNet.Client.ApiResponse<PagedCapabilities> localVarResponse = await ListCapabilitiesAsyncWithHttpInfo(authorization);
+             SmartThingsNet.Client.ApiResponse<PagedCapabilities> localVarResponse = await ListCapabilitiesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -1386,13 +1383,8 @@ namespace SmartThingsNet.Api
         /// <exception cref="SmartThingsNet.Client.ApiException">Thrown when fails to make API call</exception>
 
         /// <returns>Task of ApiResponse (PagedCapabilities)</returns>
-        public async System.Threading.Tasks.Task<SmartThingsNet.Client.ApiResponse<PagedCapabilities>> ListCapabilitiesAsyncWithHttpInfo (string authorization)
+        public async System.Threading.Tasks.Task<SmartThingsNet.Client.ApiResponse<PagedCapabilities>> ListCapabilitiesAsyncWithHttpInfo ()
         {
-            // verify the required parameter 'authorization' is set
-            if (authorization == null)
-                throw new SmartThingsNet.Client.ApiException(400, "Missing required parameter 'authorization' when calling CapabilitiesApi->ListCapabilities");
-
-
             SmartThingsNet.Client.RequestOptions localVarRequestOptions = new SmartThingsNet.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
