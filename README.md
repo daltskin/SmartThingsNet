@@ -6,6 +6,12 @@
 
 The SmartThings API supports [REST](https://en.wikipedia.org/wiki/Representational_state_transfer), resources are protected with [OAuth 2.0 Bearer Tokens](https://tools.ietf.org/html/rfc6750#section-2.1), and all responses are sent as [JSON](http://www.json.org/).
 
+For an example on how to use this SDK, please refer to the [SmartThings Terminal](https://github.com/daltskin/SmartThingsTerminal) cli tool.
+
+*Note: This SDK is mostly auto-generated from the public [SmartThings open-api definition](https://swagger.api.smartthings.com/public/st-api.yml)  but with necessary compilation fixes.  The underlying SmartThings API is currently in preview and has ongoing changes - so there are some discrepancies between what functionality is exposed and what is implemented.  Therefore if things don't work, please check the SmartThings API behaves in the way you expect first.*
+
+*Also, the documentation here is not kept up to date with the code base*
+
 # Authentication
 
 All SmartThings resources are protected with [OAuth 2.0 Bearer Tokens](https://tools.ietf.org/html/rfc6750#section-2.1) sent on the request as an `Authorization: Bearer <TOKEN>` header.
