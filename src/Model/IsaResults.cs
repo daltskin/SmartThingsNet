@@ -35,7 +35,7 @@ namespace SmartThingsNet.Model
         /// Initializes a new instance of the <see cref="IsaResults" /> class.
         /// </summary>
         /// <param name="isaId">isaId installed for the user.</param>
-        /// <param name="appName">Viper connector name given by partner in DevWorkspace eg Lifx (Connect).</param>
+        /// <param name="appName">Viper connector name given by partner eg Lifx (Connect).</param>
         /// <param name="partnerName">Parnter name eg Lifx Inc.</param>
         /// <param name="icon">url of partner icon.</param>
         /// <param name="icon2x">url of partner icon in 2x dimensions.</param>
@@ -60,9 +60,9 @@ namespace SmartThingsNet.Model
         public string IsaId { get; set; }
 
         /// <summary>
-        /// Viper connector name given by partner in DevWorkspace eg Lifx (Connect)
+        /// Viper connector name given by partner eg Lifx (Connect)
         /// </summary>
-        /// <value>Viper connector name given by partner in DevWorkspace eg Lifx (Connect)</value>
+        /// <value>Viper connector name given by partner eg Lifx (Connect)</value>
         [DataMember(Name="appName", EmitDefaultValue=false)]
         public string AppName { get; set; }
 

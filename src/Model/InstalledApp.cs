@@ -137,8 +137,9 @@ namespace SmartThingsNet.Model
         /// <param name="iconImage">iconImage.</param>
         /// <param name="classifications">An App maybe associated to many classifications.  A classification drives how the integration is presented to the user in the SmartThings mobile clients.  These classifications include: * AUTOMATION - Denotes an integration that should display under the \&quot;Automation\&quot; tab in mobile clients. * SERVICE - Denotes an integration that is classified as a \&quot;Service\&quot;. * DEVICE - Denotes an integration that should display under the \&quot;Device\&quot; tab in mobile clients. * CONNECTED_SERVICE - Denotes an integration that should display under the \&quot;Connected Services\&quot; menu in mobile clients. * HIDDEN - Denotes an integration that should not display in mobile clients  (required).</param>
         /// <param name="principalType">Denotes the principal type to be used with the app.  Default is LOCATION. (required).</param>
+        /// <param name="restrictionTier">Restriction tier of the install, if any..</param>
         /// <param name="singleInstance">Inform the installation systems that the associated app can only be installed once within a user&#39;s account.  (required) (default to false).</param>
-        public InstalledApp(Guid installedAppId = default(Guid), InstalledAppType installedAppType = default(InstalledAppType), InstalledAppStatus installedAppStatus = default(InstalledAppStatus), string displayName = default(string), string appId = default(string), string referenceId = default(string), Guid locationId = default(Guid), Owner owner = default(Owner), List<Notice> notices = default(List<Notice>), DateTime createdDate = default(DateTime), DateTime lastUpdatedDate = default(DateTime), InstalledAppUi ui = default(InstalledAppUi), InstalledAppIconImage iconImage = default(InstalledAppIconImage), List<ClassificationsEnum> classifications = default(List<ClassificationsEnum>), PrincipalTypeEnum principalType = default(PrincipalTypeEnum), bool singleInstance = false)
+        public InstalledApp(Guid installedAppId = default(Guid), InstalledAppType installedAppType = default(InstalledAppType), InstalledAppStatus installedAppStatus = default(InstalledAppStatus), string displayName = default(string), string appId = default(string), string referenceId = default(string), Guid locationId = default(Guid), Owner owner = default(Owner), List<Notice> notices = default(List<Notice>), DateTime createdDate = default(DateTime), DateTime lastUpdatedDate = default(DateTime), InstalledAppUi ui = default(InstalledAppUi), InstalledAppIconImage iconImage = default(InstalledAppIconImage), List<ClassificationsEnum> classifications = default(List<ClassificationsEnum>), PrincipalTypeEnum principalType = default(PrincipalTypeEnum), int restrictionTier = default(int), bool singleInstance = false)
         {
             this.InstalledAppId = installedAppId;
             this.InstalledAppType = installedAppType;
@@ -160,6 +161,7 @@ namespace SmartThingsNet.Model
             this.LocationId = locationId;
             this.Ui = ui;
             this.IconImage = iconImage;
+            this.RestrictionTier = restrictionTier;
         }
         
         /// <summary>
@@ -236,6 +238,13 @@ namespace SmartThingsNet.Model
         public InstalledAppIconImage IconImage { get; set; }
 
         /// <summary>
+        /// Restriction tier of the install, if any.
+        /// </summary>
+        /// <value>Restriction tier of the install, if any.</value>
+        [DataMember(Name="restrictionTier", EmitDefaultValue=false)]
+        public int RestrictionTier { get; set; }
+
+        /// <summary>
         /// Inform the installation systems that the associated app can only be installed once within a user&#39;s account. 
         /// </summary>
         /// <value>Inform the installation systems that the associated app can only be installed once within a user&#39;s account. </value>
@@ -265,6 +274,7 @@ namespace SmartThingsNet.Model
             sb.Append("  IconImage: ").Append(IconImage).Append("\n");
             sb.Append("  Classifications: ").Append(Classifications).Append("\n");
             sb.Append("  PrincipalType: ").Append(PrincipalType).Append("\n");
+            sb.Append("  RestrictionTier: ").Append(RestrictionTier).Append("\n");
             sb.Append("  SingleInstance: ").Append(SingleInstance).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -373,6 +383,10 @@ namespace SmartThingsNet.Model
                     this.PrincipalType.Equals(input.PrincipalType)
                 ) && 
                 (
+                    this.RestrictionTier == input.RestrictionTier ||
+                    this.RestrictionTier.Equals(input.RestrictionTier)
+                ) && 
+                (
                     this.SingleInstance == input.SingleInstance ||
                     this.SingleInstance.Equals(input.SingleInstance)
                 );
@@ -413,6 +427,7 @@ namespace SmartThingsNet.Model
                     hashCode = hashCode * 59 + this.IconImage.GetHashCode();
                 hashCode = hashCode * 59 + this.Classifications.GetHashCode();
                 hashCode = hashCode * 59 + this.PrincipalType.GetHashCode();
+                hashCode = hashCode * 59 + this.RestrictionTier.GetHashCode();
                 hashCode = hashCode * 59 + this.SingleInstance.GetHashCode();
                 return hashCode;
             }

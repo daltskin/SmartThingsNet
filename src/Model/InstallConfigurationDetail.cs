@@ -45,7 +45,7 @@ namespace SmartThingsNet.Model
         /// <param name="config">A multi-map of configurations for an Installed App.  The map &#39;key&#39; is the configuration name and the &#39;value&#39; is an array of ConfigEntry models each containing a value and associated permissions.  The config key is alpha-numeric, may contain dashes, underscores, periods, and must be less then 50 characters long. .</param>
         /// <param name="createdDate">A UTC ISO-8601 Date-Time String.</param>
         /// <param name="lastUpdatedDate">A UTC ISO-8601 Date-Time String.</param>
-        public InstallConfigurationDetail(Guid installedAppId = default(Guid), Guid configurationId = default(Guid), InstallConfigurationStatus? configurationStatus = default(InstallConfigurationStatus?), Dictionary<string, List<string>> config = default(Dictionary<string, List<string>>), DateTime createdDate = default(DateTime), DateTime lastUpdatedDate = default(DateTime))
+        public InstallConfigurationDetail(Guid installedAppId = default(Guid), Guid configurationId = default(Guid), InstallConfigurationStatus? configurationStatus = default(InstallConfigurationStatus?), Dictionary<string, ConfigEntry> config = default(Dictionary<string, ConfigEntry>), DateTime createdDate = default(DateTime), DateTime lastUpdatedDate = default(DateTime))
         {
             this.InstalledAppId = installedAppId;
             this.ConfigurationId = configurationId;
@@ -74,7 +74,7 @@ namespace SmartThingsNet.Model
         /// </summary>
         /// <value>A multi-map of configurations for an Installed App.  The map &#39;key&#39; is the configuration name and the &#39;value&#39; is an array of ConfigEntry models each containing a value and associated permissions.  The config key is alpha-numeric, may contain dashes, underscores, periods, and must be less then 50 characters long. </value>
         [DataMember(Name="config", EmitDefaultValue=false)]
-        public Dictionary<string, List<string>> Config { get; set; }
+        public Dictionary<string, ConfigEntry> Config { get; set; }
 
         /// <summary>
         /// A UTC ISO-8601 Date-Time String

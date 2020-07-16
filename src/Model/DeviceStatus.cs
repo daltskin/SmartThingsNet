@@ -35,9 +35,11 @@ namespace SmartThingsNet.Model
         /// Initializes a new instance of the <see cref="DeviceStatus" /> class.
         /// </summary>
         /// <param name="components">A map of componentId to Component status..</param>
-        public DeviceStatus(Dictionary<string, ComponentStatus> components = default(Dictionary<string, ComponentStatus>))
+        /// <param name="healthState">healthState.</param>
+        public DeviceStatus(Dictionary<string, ComponentStatus> components = default(Dictionary<string, ComponentStatus>), DeviceStatusHealthState healthState = default(DeviceStatusHealthState))
         {
             this.Components = components;
+            this.HealthState = healthState;
         }
         
         /// <summary>
@@ -48,6 +50,12 @@ namespace SmartThingsNet.Model
         public Dictionary<string, ComponentStatus> Components { get; set; }
 
         /// <summary>
+        /// Gets or Sets HealthState
+        /// </summary>
+        [DataMember(Name="healthState", EmitDefaultValue=false)]
+        public DeviceStatusHealthState HealthState { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -56,6 +64,7 @@ namespace SmartThingsNet.Model
             var sb = new StringBuilder();
             sb.Append("class DeviceStatus {\n");
             sb.Append("  Components: ").Append(Components).Append("\n");
+            sb.Append("  HealthState: ").Append(HealthState).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,6 +104,11 @@ namespace SmartThingsNet.Model
                     this.Components != null &&
                     input.Components != null &&
                     this.Components.SequenceEqual(input.Components)
+                ) && 
+                (
+                    this.HealthState == input.HealthState ||
+                    (this.HealthState != null &&
+                    this.HealthState.Equals(input.HealthState))
                 );
         }
 
@@ -109,6 +123,8 @@ namespace SmartThingsNet.Model
                 int hashCode = 41;
                 if (this.Components != null)
                     hashCode = hashCode * 59 + this.Components.GetHashCode();
+                if (this.HealthState != null)
+                    hashCode = hashCode * 59 + this.HealthState.GetHashCode();
                 return hashCode;
             }
         }

@@ -45,20 +45,11 @@ namespace SmartThingsNet.Model
         /// Initializes a new instance of the <see cref="LocationOperand" /> class.
         /// </summary>
         /// <param name="attribute">attribute (required).</param>
-        /// <param name="value">Optional value to allow UI to reference a location attribute by id. If value is provided, the operand resolves to this value rather than calling the backend API.</param>
-        public LocationOperand(LocationAttribute attribute = default(LocationAttribute), string value = default(string))
+        public LocationOperand(LocationAttribute attribute = default(LocationAttribute))
         {
             this.Attribute = attribute;
-            this.Value = value;
         }
         
-        /// <summary>
-        /// Optional value to allow UI to reference a location attribute by id. If value is provided, the operand resolves to this value rather than calling the backend API
-        /// </summary>
-        /// <value>Optional value to allow UI to reference a location attribute by id. If value is provided, the operand resolves to this value rather than calling the backend API</value>
-        [DataMember(Name="value", EmitDefaultValue=false)]
-        public string Value { get; set; }
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +59,6 @@ namespace SmartThingsNet.Model
             var sb = new StringBuilder();
             sb.Append("class LocationOperand {\n");
             sb.Append("  Attribute: ").Append(Attribute).Append("\n");
-            sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -106,11 +96,6 @@ namespace SmartThingsNet.Model
                 (
                     this.Attribute == input.Attribute ||
                     this.Attribute.Equals(input.Attribute)
-                ) && 
-                (
-                    this.Value == input.Value ||
-                    (this.Value != null &&
-                    this.Value.Equals(input.Value))
                 );
         }
 
@@ -124,8 +109,6 @@ namespace SmartThingsNet.Model
             {
                 int hashCode = 41;
                 hashCode = hashCode * 59 + this.Attribute.GetHashCode();
-                if (this.Value != null)
-                    hashCode = hashCode * 59 + this.Value.GetHashCode();
                 return hashCode;
             }
         }

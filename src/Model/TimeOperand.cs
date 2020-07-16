@@ -45,12 +45,14 @@ namespace SmartThingsNet.Model
         /// Initializes a new instance of the <see cref="TimeOperand" /> class.
         /// </summary>
         /// <param name="timeZoneId">A java time zone ID reference.</param>
+        /// <param name="daysOfWeek">daysOfWeek.</param>
         /// <param name="reference">reference (required).</param>
         /// <param name="offset">offset.</param>
-        public TimeOperand(string timeZoneId = default(string), TimeReference reference = default(TimeReference), Interval offset = default(Interval))
+        public TimeOperand(string timeZoneId = default(string), List<DayOfWeek> daysOfWeek = default(List<DayOfWeek>), TimeReference reference = default(TimeReference), Interval offset = default(Interval))
         {
             this.Reference = reference;
             this.TimeZoneId = timeZoneId;
+            this.DaysOfWeek = daysOfWeek;
             this.Offset = offset;
         }
         
@@ -60,6 +62,12 @@ namespace SmartThingsNet.Model
         /// <value>A java time zone ID reference</value>
         [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
         public string TimeZoneId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DaysOfWeek
+        /// </summary>
+        [DataMember(Name="daysOfWeek", EmitDefaultValue=false)]
+        public List<DayOfWeek> DaysOfWeek { get; set; }
 
         /// <summary>
         /// Gets or Sets Offset
@@ -76,6 +84,7 @@ namespace SmartThingsNet.Model
             var sb = new StringBuilder();
             sb.Append("class TimeOperand {\n");
             sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
+            sb.Append("  DaysOfWeek: ").Append(DaysOfWeek).Append("\n");
             sb.Append("  Reference: ").Append(Reference).Append("\n");
             sb.Append("  Offset: ").Append(Offset).Append("\n");
             sb.Append("}\n");
@@ -118,6 +127,12 @@ namespace SmartThingsNet.Model
                     this.TimeZoneId.Equals(input.TimeZoneId))
                 ) && 
                 (
+                    this.DaysOfWeek == input.DaysOfWeek ||
+                    this.DaysOfWeek != null &&
+                    input.DaysOfWeek != null &&
+                    this.DaysOfWeek.SequenceEqual(input.DaysOfWeek)
+                ) && 
+                (
                     this.Reference == input.Reference ||
                     this.Reference.Equals(input.Reference)
                 ) && 
@@ -139,6 +154,8 @@ namespace SmartThingsNet.Model
                 int hashCode = 41;
                 if (this.TimeZoneId != null)
                     hashCode = hashCode * 59 + this.TimeZoneId.GetHashCode();
+                if (this.DaysOfWeek != null)
+                    hashCode = hashCode * 59 + this.DaysOfWeek.GetHashCode();
                 hashCode = hashCode * 59 + this.Reference.GetHashCode();
                 if (this.Offset != null)
                     hashCode = hashCode * 59 + this.Offset.GetHashCode();
