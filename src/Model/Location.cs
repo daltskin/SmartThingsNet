@@ -75,6 +75,13 @@ namespace SmartThingsNet.Model
         public string Name { get; set; }
 
         /// <summary>
+        /// location attribute mode
+        /// </summary>
+        /// <value>attribute mode</value>
+        [DataMember(Name = "attribute", EmitDefaultValue = false)]
+        public string attribute { get; set; }
+
+        /// <summary>
         /// An ISO Alpha-3 country code.  (i.e. GBR, USA)
         /// </summary>
         /// <value>An ISO Alpha-3 country code.  (i.e. GBR, USA)</value>
