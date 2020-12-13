@@ -28,7 +28,7 @@ jobs:
     - name: Determine version
       uses: gittools/actions/gitversion/execute@v0.9.7
        
-    - name: Display version
+    - name: Display version ${{ GITVERSION_SEMVER }}
       run: |
        echo "SemVer: $GITVERSION_SEMVER"
 
