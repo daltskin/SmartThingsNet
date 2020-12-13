@@ -23,11 +23,13 @@ jobs:
       uses: gittools/actions/gitversion/setup@v0.9.7
       with:
           versionSpec: '5.5.0'
-    
-    - name: GitVersion
-      uses: docker://gittools/gitversion:5.5.0-linux-ubuntu.16.04-x64-netcoreapp3.1
-      with:
-        args: /github/workspace /nofetch /output buildserver
+
+    - name: Determine version
+      uses: gittools/actions/gitversion/execute@v0.9.7
+       
+    - name: Display version
+      run: |
+       echo "SemVer: $GITVERSION_SEMVER"
 
     - uses: actions/checkout@v2
     - name: Setup .NET Core
@@ -37,8 +39,8 @@ jobs:
     
     - name: Install dependencies
       run: dotnet restore
-    - name: Build ${{ env.GitVersion_SemVer }}
-      run: dotnet build --configuration Release --no-restore /p:AssemblyVersion=${{ env.GitVersion_SemVer }} /p:FileVersion=${{ env.GitVersion_AssemblySemFileVer }} /p:InformationalVersion=${{ env.GitVersion_InformationalVersion  }}
+    - name: Build
+      run: dotnet build --configuration Release --no-restore /p:AssemblyVersion=$GITVERSION_SEMVER /p:FileVersion=$GITVERSION_ASSEMBLYSEMFILEVER /p:InformationalVersion=$GITVERSION_INFORMATIONALVERSION
     - name: Test
       run: dotnet test --no-restore --verbosity normal
 
