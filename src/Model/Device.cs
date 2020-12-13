@@ -57,7 +57,8 @@ namespace SmartThingsNet.Model
         /// <param name="irOcf">irOcf.</param>
         /// <param name="viper">viper.</param>
         /// <param name="type">type.</param>
-        public Device(string deviceId = default(string), string name = default(string), string label = default(string), string deviceManufacturerCode = default(string), string locationId = default(string), string roomId = default(string), string deviceTypeId = default(string), string deviceTypeName = default(string), string deviceNetworkType = default(string), List<DeviceComponent> components = default(List<DeviceComponent>), List<Device> childDevices = default(List<Device>), DeviceProfileReference profile = default(DeviceProfileReference), AppDeviceDetails app = default(AppDeviceDetails), DthDeviceDetails dth = default(DthDeviceDetails), IrDeviceDetails ir = default(IrDeviceDetails), IrDeviceDetails irOcf = default(IrDeviceDetails), ViperDeviceDetails viper = default(ViperDeviceDetails), DeviceIntegrationType? type = default(DeviceIntegrationType?))
+        /// <param name="restrictionTier">Restriction tier of the device, if any..</param>
+        public Device(string deviceId = default(string), string name = default(string), string label = default(string), string deviceManufacturerCode = default(string), string locationId = default(string), string roomId = default(string), string deviceTypeId = default(string), string deviceTypeName = default(string), string deviceNetworkType = default(string), List<DeviceComponent> components = default(List<DeviceComponent>), List<Device> childDevices = default(List<Device>), DeviceProfileReference profile = default(DeviceProfileReference), AppDeviceDetails app = default(AppDeviceDetails), DthDeviceDetails dth = default(DthDeviceDetails), IrDeviceDetails ir = default(IrDeviceDetails), IrDeviceDetails irOcf = default(IrDeviceDetails), ViperDeviceDetails viper = default(ViperDeviceDetails), DeviceIntegrationType? type = default(DeviceIntegrationType?), int restrictionTier = default(int))
         {
             this.DeviceId = deviceId;
             this.Name = name;
@@ -77,6 +78,7 @@ namespace SmartThingsNet.Model
             this.IrOcf = irOcf;
             this.Viper = viper;
             this.Type = type;
+            this.RestrictionTier = restrictionTier;
         }
         
         /// <summary>
@@ -193,6 +195,13 @@ namespace SmartThingsNet.Model
         public ViperDeviceDetails Viper { get; set; }
 
         /// <summary>
+        /// Restriction tier of the device, if any.
+        /// </summary>
+        /// <value>Restriction tier of the device, if any.</value>
+        [DataMember(Name="restrictionTier", EmitDefaultValue=false)]
+        public int RestrictionTier { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -218,6 +227,7 @@ namespace SmartThingsNet.Model
             sb.Append("  IrOcf: ").Append(IrOcf).Append("\n");
             sb.Append("  Viper: ").Append(Viper).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  RestrictionTier: ").Append(RestrictionTier).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -342,6 +352,10 @@ namespace SmartThingsNet.Model
                 (
                     this.Type == input.Type ||
                     this.Type.Equals(input.Type)
+                ) && 
+                (
+                    this.RestrictionTier == input.RestrictionTier ||
+                    this.RestrictionTier.Equals(input.RestrictionTier)
                 );
         }
 
@@ -389,6 +403,7 @@ namespace SmartThingsNet.Model
                 if (this.Viper != null)
                     hashCode = hashCode * 59 + this.Viper.GetHashCode();
                 hashCode = hashCode * 59 + this.Type.GetHashCode();
+                hashCode = hashCode * 59 + this.RestrictionTier.GetHashCode();
                 return hashCode;
             }
         }

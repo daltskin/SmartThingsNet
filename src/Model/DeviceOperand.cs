@@ -37,11 +37,6 @@ namespace SmartThingsNet.Model
         [DataMember(Name="aggregation", EmitDefaultValue=false)]
         public OperandAggregationMode? Aggregation { get; set; }
         /// <summary>
-        /// Gets or Sets SubscriptionMode
-        /// </summary>
-        [DataMember(Name="subscriptionMode", EmitDefaultValue=false)]
-        public SubscriptionMode? SubscriptionMode { get; set; }
-        /// <summary>
         /// Initializes a new instance of the <see cref="DeviceOperand" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -49,25 +44,22 @@ namespace SmartThingsNet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DeviceOperand" /> class.
         /// </summary>
-        /// <param name="devices">devices.</param>
+        /// <param name="devices">devices (required).</param>
         /// <param name="component">component (required).</param>
         /// <param name="capability">capability (required).</param>
         /// <param name="attribute">attribute (required).</param>
-        /// <param name="path">path.</param>
         /// <param name="aggregation">aggregation.</param>
-        /// <param name="subscriptionMode">subscriptionMode.</param>
-        public DeviceOperand(List<string> devices = default(List<string>), string component = default(string), string capability = default(string), string attribute = default(string), string path = default(string), OperandAggregationMode? aggregation = default(OperandAggregationMode?), SubscriptionMode? subscriptionMode = default(SubscriptionMode?))
+        public DeviceOperand(List<string> devices = default(List<string>), string component = default(string), string capability = default(string), string attribute = default(string), OperandAggregationMode? aggregation = default(OperandAggregationMode?))
         {
+            // to ensure "devices" is required (not null)
+            this.Devices = devices ?? throw new ArgumentNullException("devices is a required property for DeviceOperand and cannot be null");
             // to ensure "component" is required (not null)
             this.Component = component ?? throw new ArgumentNullException("component is a required property for DeviceOperand and cannot be null");
             // to ensure "capability" is required (not null)
             this.Capability = capability ?? throw new ArgumentNullException("capability is a required property for DeviceOperand and cannot be null");
             // to ensure "attribute" is required (not null)
             this.Attribute = attribute ?? throw new ArgumentNullException("attribute is a required property for DeviceOperand and cannot be null");
-            this.Devices = devices;
-            this.Path = path;
             this.Aggregation = aggregation;
-            this.SubscriptionMode = subscriptionMode;
         }
         
         /// <summary>
@@ -95,12 +87,6 @@ namespace SmartThingsNet.Model
         public string Attribute { get; set; }
 
         /// <summary>
-        /// Gets or Sets Path
-        /// </summary>
-        [DataMember(Name="path", EmitDefaultValue=false)]
-        public string Path { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -112,9 +98,7 @@ namespace SmartThingsNet.Model
             sb.Append("  Component: ").Append(Component).Append("\n");
             sb.Append("  Capability: ").Append(Capability).Append("\n");
             sb.Append("  Attribute: ").Append(Attribute).Append("\n");
-            sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  Aggregation: ").Append(Aggregation).Append("\n");
-            sb.Append("  SubscriptionMode: ").Append(SubscriptionMode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -171,17 +155,8 @@ namespace SmartThingsNet.Model
                     this.Attribute.Equals(input.Attribute))
                 ) && 
                 (
-                    this.Path == input.Path ||
-                    (this.Path != null &&
-                    this.Path.Equals(input.Path))
-                ) && 
-                (
                     this.Aggregation == input.Aggregation ||
                     this.Aggregation.Equals(input.Aggregation)
-                ) && 
-                (
-                    this.SubscriptionMode == input.SubscriptionMode ||
-                    this.SubscriptionMode.Equals(input.SubscriptionMode)
                 );
         }
 
@@ -202,10 +177,7 @@ namespace SmartThingsNet.Model
                     hashCode = hashCode * 59 + this.Capability.GetHashCode();
                 if (this.Attribute != null)
                     hashCode = hashCode * 59 + this.Attribute.GetHashCode();
-                if (this.Path != null)
-                    hashCode = hashCode * 59 + this.Path.GetHashCode();
                 hashCode = hashCode * 59 + this.Aggregation.GetHashCode();
-                hashCode = hashCode * 59 + this.SubscriptionMode.GetHashCode();
                 return hashCode;
             }
         }

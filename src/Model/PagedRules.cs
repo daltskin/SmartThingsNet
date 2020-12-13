@@ -26,7 +26,7 @@ using OpenAPIDateConverter = SmartThingsNet.Client.OpenAPIDateConverter;
 namespace SmartThingsNet.Model
 {
     /// <summary>
-    /// An array of rules
+    /// An array of Rules
     /// </summary>
     [DataContract]
     public partial class PagedRules :  IEquatable<PagedRules>, IValidatableObject

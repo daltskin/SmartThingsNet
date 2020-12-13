@@ -53,8 +53,9 @@ namespace SmartThingsNet.Model
         /// <param name="hostingType">Possible values - \&quot;lambda\&quot; or \&quot;webhook\&quot;.</param>
         /// <param name="schemaType">Possible values - \&quot;alexa-schema\&quot;, \&quot;st-schema\&quot;, \&quot;google-schema\&quot;.</param>
         /// <param name="webhookUrl">webhook url for the partner.</param>
-        /// <param name="certificationStatus">Possible values - \&quot;\&quot;, \&quot;cst\&quot;, \&quot;wwst\&quot;.</param>
-        public EndpointApp(string appName = default(string), string partnerName = default(string), string oAuthAuthorizationUrl = default(string), string lambdaArn = default(string), string lambdaArnEU = default(string), string lambdaArnAP = default(string), string lambdaArnCN = default(string), string icon = default(string), string icon2x = default(string), string icon3x = default(string), string endpointAppId = default(string), string oAuthClientId = default(string), string oAuthClientSecret = default(string), string oAuthTokenUrl = default(string), string oAuthScope = default(string), string userId = default(string), string hostingType = default(string), string schemaType = default(string), string webhookUrl = default(string), string certificationStatus = default(string))
+        /// <param name="certificationStatus">Possible values - \&quot;\&quot;, \&quot;cst\&quot;, \&quot;wwst\&quot;, \&quot;review\&quot;.</param>
+        /// <param name="userEmail">Email for the partner.</param>
+        public EndpointApp(string appName = default(string), string partnerName = default(string), string oAuthAuthorizationUrl = default(string), string lambdaArn = default(string), string lambdaArnEU = default(string), string lambdaArnAP = default(string), string lambdaArnCN = default(string), string icon = default(string), string icon2x = default(string), string icon3x = default(string), string endpointAppId = default(string), string oAuthClientId = default(string), string oAuthClientSecret = default(string), string oAuthTokenUrl = default(string), string oAuthScope = default(string), string userId = default(string), string hostingType = default(string), string schemaType = default(string), string webhookUrl = default(string), string certificationStatus = default(string), string userEmail = default(string))
         {
             this.AppName = appName;
             this.PartnerName = partnerName;
@@ -76,6 +77,7 @@ namespace SmartThingsNet.Model
             this.SchemaType = schemaType;
             this.WebhookUrl = webhookUrl;
             this.CertificationStatus = certificationStatus;
+            this.UserEmail = userEmail;
         }
         
         /// <summary>
@@ -212,11 +214,18 @@ namespace SmartThingsNet.Model
         public string WebhookUrl { get; set; }
 
         /// <summary>
-        /// Possible values - \&quot;\&quot;, \&quot;cst\&quot;, \&quot;wwst\&quot;
+        /// Possible values - \&quot;\&quot;, \&quot;cst\&quot;, \&quot;wwst\&quot;, \&quot;review\&quot;
         /// </summary>
-        /// <value>Possible values - \&quot;\&quot;, \&quot;cst\&quot;, \&quot;wwst\&quot;</value>
+        /// <value>Possible values - \&quot;\&quot;, \&quot;cst\&quot;, \&quot;wwst\&quot;, \&quot;review\&quot;</value>
         [DataMember(Name="certificationStatus", EmitDefaultValue=false)]
         public string CertificationStatus { get; set; }
+
+        /// <summary>
+        /// Email for the partner
+        /// </summary>
+        /// <value>Email for the partner</value>
+        [DataMember(Name="userEmail", EmitDefaultValue=false)]
+        public string UserEmail { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -246,6 +255,7 @@ namespace SmartThingsNet.Model
             sb.Append("  SchemaType: ").Append(SchemaType).Append("\n");
             sb.Append("  WebhookUrl: ").Append(WebhookUrl).Append("\n");
             sb.Append("  CertificationStatus: ").Append(CertificationStatus).Append("\n");
+            sb.Append("  UserEmail: ").Append(UserEmail).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -379,6 +389,11 @@ namespace SmartThingsNet.Model
                     this.CertificationStatus == input.CertificationStatus ||
                     (this.CertificationStatus != null &&
                     this.CertificationStatus.Equals(input.CertificationStatus))
+                ) && 
+                (
+                    this.UserEmail == input.UserEmail ||
+                    (this.UserEmail != null &&
+                    this.UserEmail.Equals(input.UserEmail))
                 );
         }
 
@@ -431,6 +446,8 @@ namespace SmartThingsNet.Model
                     hashCode = hashCode * 59 + this.WebhookUrl.GetHashCode();
                 if (this.CertificationStatus != null)
                     hashCode = hashCode * 59 + this.CertificationStatus.GetHashCode();
+                if (this.UserEmail != null)
+                    hashCode = hashCode * 59 + this.UserEmail.GetHashCode();
                 return hashCode;
             }
         }

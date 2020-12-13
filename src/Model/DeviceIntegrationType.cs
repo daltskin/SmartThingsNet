@@ -104,7 +104,13 @@ namespace SmartThingsNet.Model
         /// Enum VIPER for value: VIPER
         /// </summary>
         [EnumMember(Value = "VIPER")]
-        VIPER = 12
+        VIPER = 12,
+
+        /// <summary>
+        /// Enum WATCH for value: WATCH
+        /// </summary>
+        [EnumMember(Value = "WATCH")]
+        WATCH = 13
 
     }
 
