@@ -68,5 +68,5 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ GITVERSION_SEMVER }}
-        release_name: Release ${{ GITVERSION_SEMVER }}
+        tag_name: ${{ env.GITVERSION_SEMVER }}
+        release_name: Release ${{ env.GITVERSION_SEMVER }}
