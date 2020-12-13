@@ -41,7 +41,7 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --configuration Release --no-restore /p:AssemblyVersion=${{ GITVERSION_SEMVER }} /p:FileVersion=${{ GITVERSION_ASSEMBLYSEMFILEVER }} /p:InformationalVersion=${{ GITVERSION_INFORMATIONALVERSION }}
+      run: dotnet build --configuration Release --no-restore /p:AssemblyVersion=$GITVERSION_SEMVER /p:FileVersion=$GITVERSION_ASSEMBLYSEMFILEVER /p:InformationalVersion=$GITVERSION_INFORMATIONALVERSION
     - name: Test
       run: dotnet test --no-restore --verbosity normal
 
