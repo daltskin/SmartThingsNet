@@ -46,7 +46,7 @@ namespace SmartThingsNet.Model
         /// <param name="temperatureScale">The desired temperature scale used within location. Value can be F or C..</param>
         /// <param name="locale">An IETF BCP 47 language tag representing the chosen locale for this location..</param>
         /// <param name="additionalProperties">Additional information about the location that allows SmartThings to further define your location..</param>
-        public UpdateLocationRequest(string name = default(string), decimal latitude = default(decimal), decimal longitude = default(decimal), int regionRadius = default(int), string temperatureScale = default(string), string locale = default(string), Dictionary<string, string> additionalProperties = default(Dictionary<string, string>))
+        public UpdateLocationRequest(string name = default(string), decimal? latitude = default(decimal), decimal? longitude = default(decimal), int? regionRadius = default(int), string temperatureScale = default(string), string locale = default(string), Dictionary<string, string> additionalProperties = default(Dictionary<string, string>))
         {
             // to ensure "name" is required (not null)
             this.Name = name ?? throw new ArgumentNullException("name is a required property for UpdateLocationRequest and cannot be null");
@@ -70,21 +70,21 @@ namespace SmartThingsNet.Model
         /// </summary>
         /// <value>A geographical latitude.</value>
         [DataMember(Name="latitude", EmitDefaultValue=false)]
-        public decimal Latitude { get; set; }
+        public decimal? Latitude { get; set; }
 
         /// <summary>
         /// A geographical longitude.
         /// </summary>
         /// <value>A geographical longitude.</value>
         [DataMember(Name="longitude", EmitDefaultValue=false)]
-        public decimal Longitude { get; set; }
+        public decimal? Longitude { get; set; }
 
         /// <summary>
         /// The radius in meters around latitude and longitude which defines this location.
         /// </summary>
         /// <value>The radius in meters around latitude and longitude which defines this location.</value>
         [DataMember(Name="regionRadius", EmitDefaultValue=false)]
-        public int RegionRadius { get; set; }
+        public int? RegionRadius { get; set; }
 
         /// <summary>
         /// The desired temperature scale used within location. Value can be F or C.

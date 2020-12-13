@@ -83,7 +83,7 @@ namespace SmartThingsNet.Client
         /// <returns>Object representation of the JSON string.</returns>
         internal object Deserialize(IRestResponse response, Type type)
         {
-            IList<Parameter> headers = response.Headers;
+            var headers = response.Headers;
             if (type == typeof(byte[])) // return byte array
             {
                 return response.RawBytes;
@@ -391,14 +391,16 @@ namespace SmartThingsNet.Client
             var existingDeserializer = req.JsonSerializer as IDeserializer;
             if (existingDeserializer != null)
             {
-                client.AddHandler(() => existingDeserializer, "application/json", "text/json", "text/x-json", "text/javascript", "*+json");
+                AddHandlerHelper(client, existingDeserializer, new string[] { "application/json", "text/json", "text/x-json", "text/javascript", "*+json" });
             }
             else
             {
-                client.AddHandler(() => new CustomJsonCodec(configuration), "application/json", "text/json", "text/x-json", "text/javascript", "*+json");
+                var customJsonHandler = new CustomJsonCodec(configuration);
+                AddHandlerHelper(client, customJsonHandler, new string[] { "application/json", "text/json", "text/x-json", "text/javascript", "*+json" });
             }
 
-            client.AddHandler(() => new XmlDeserializer(), "application/xml", "text/xml", "*+xml", "*");
+            var xmlDeserializer = new XmlDeserializer();
+            AddHandlerHelper(client, xmlDeserializer, new string[] { "application/xml", "text/xml", "*+xml", "*" });
 
             client.Timeout = configuration.Timeout;
 
@@ -461,14 +463,16 @@ namespace SmartThingsNet.Client
             var existingDeserializer = req.JsonSerializer as IDeserializer;
             if (existingDeserializer != null)
             {
-                client.AddHandler(() => existingDeserializer, "application/json", "text/json", "text/x-json", "text/javascript", "*+json");
+                AddHandlerHelper(client, existingDeserializer, new string[] { "application/json", "text/json", "text/x-json", "text/javascript", "*+json" });
             }
             else
             {
-                client.AddHandler(() => new CustomJsonCodec(configuration), "application/json", "text/json", "text/x-json", "text/javascript", "*+json");
+                var customJsonHandler = new CustomJsonCodec(configuration);
+                AddHandlerHelper(client, customJsonHandler, new string[] { "application/json", "text/json", "text/x-json", "text/javascript", "*+json" });
             }
 
-            client.AddHandler(() => new XmlDeserializer(), "application/xml", "text/xml", "*+xml", "*");
+            var xmlDeserializer = new XmlDeserializer();
+            AddHandlerHelper(client, xmlDeserializer, new string[] { "application/xml", "text/xml", "*+xml", "*" });
 
             client.Timeout = configuration.Timeout;
 
@@ -521,6 +525,14 @@ namespace SmartThingsNet.Client
                 }
             }
             return result;
+        }
+
+        private void AddHandlerHelper(RestClient client, IDeserializer deserializerFactory, string[] contextTypes)
+        {
+            foreach (var contextType in contextTypes)
+            {
+                client.AddHandler(contextType, () => deserializerFactory);
+            }
         }
 
         #region IAsynchronousClient
