@@ -41,7 +41,7 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --configuration Release --no-restore /p:AssemblyVersion=${{ $GITVERSION_SEMVER }} /p:FileVersion=${{ $GITVERSION_ASSEMBLYSEMFILEVER }} /p:InformationalVersion=${{ $GITVERSION_INFORMATIONALVERSION }}
+      run: dotnet build --configuration Release --no-restore /p:AssemblyVersion=${{ GITVERSION_SEMVER }} /p:FileVersion=${{ GITVERSION_ASSEMBLYSEMFILEVER }} /p:InformationalVersion=${{ GITVERSION_INFORMATIONALVERSION }}
     - name: Test
       run: dotnet test --no-restore --verbosity normal
 
@@ -50,14 +50,14 @@ jobs:
 #      working-directory: src
 
     - name: Package
-      run: dotnet pack --configuration Release --no-build -p:PackageVersion=${{ $GITVERSION_SEMVER }}
+      run: dotnet pack --configuration Release --no-build -p:PackageVersion=${{ GITVERSION_SEMVER }}
     
 #    - name: Publish to github
 #      run: dotnet nuget push **/*.nupkg -s https://nuget.pkg.github.com/daltskin/index.json -k ${{ secrets.GITHUB_TOKEN }} --skip-duplicate --no-symbols true
 #      working-directory: src
  
     - name: Publish to github (using curl)
-      run: curl -vX PUT -u "daltskin:${{ secrets.GITHUB_TOKEN }}" -F package=@SmartThingsNet.${{ $GITVERSION_SEMVER }}.nupkg https://nuget.pkg.github.com/daltskin/
+      run: curl -vX PUT -u "daltskin:${{ secrets.GITHUB_TOKEN }}" -F package=@SmartThingsNet.${{ GITVERSION_SEMVER }}.nupkg https://nuget.pkg.github.com/daltskin/
       working-directory: src/bin/Release
  
     - name: Publish to nuget
@@ -69,4 +69,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: ${{ $GITVERSION_SEMVER }}
-        release_name: Release ${{ $GITVERSION_SEMVER }}
+        release_name: Release ${{ GITVERSION_SEMVER }}
