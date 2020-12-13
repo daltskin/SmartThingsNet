@@ -28,7 +28,7 @@ jobs:
     - name: Determine version
       uses: gittools/actions/gitversion/execute@v0.9.7
        
-    - name: Display version
+    - name: Display version ${{ GITVERSION_SEMVER }}
       run: |
        echo "SemVer: $GITVERSION_SEMVER"
 
@@ -68,5 +68,5 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: $$GITVERSION_SEMVER
-        release_name: Release $GITVERSION_SEMVER
+        tag_name: ${{ GITVERSION_SEMVER }}
+        release_name: Release ${{ GITVERSION_SEMVER }}
