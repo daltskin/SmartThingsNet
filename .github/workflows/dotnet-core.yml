@@ -30,7 +30,7 @@ jobs:
        
     - name: Display SemVer $GITVERSION_SEMVER
       run: |
-       echo "SemVer: $GITVERSION_SEMVER
+       echo "SemVer: $GITVERSION_SEMVER"
 
     - uses: actions/checkout@v2
     - name: Setup .NET Core
