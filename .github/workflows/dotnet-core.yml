@@ -25,10 +25,10 @@ jobs:
       with:
           versionSpec: '5.5.0'
     
-    - name: Get SemVer
+    - name: Determine version
       uses: gittools/actions/gitversion/execute@v0.9.7
        
-    - name: Display SemVer $GITVERSION_SEMVER
+    - name: Display version
       run: |
        echo "SemVer: $GITVERSION_SEMVER"
 
@@ -40,8 +40,8 @@ jobs:
     
     - name: Install dependencies
       run: dotnet restore
-    - name: Build ${{ env.GitVersion_SemVer }} Docker ${{ env.GITVERSION_SEMVER }} Lower ${{ env.GITVERSION_semVer }}
-      run: dotnet build --configuration Release --no-restore /p:AssemblyVersion=${{ env.GitVersion_SemVer }} /p:FileVersion=${{ env.GitVersion_AssemblySemFileVer }} /p:InformationalVersion=${{ env.GitVersion_InformationalVersion  }}
+    - name: Build ${{ $GITVERSION_SEMVER }} Docker ${{ $GITVERSION_SEMVER }} Lower ${{ $GITVERSION_SEMVER }}
+      run: dotnet build --configuration Release --no-restore /p:AssemblyVersion=${{ $GITVERSION_SEMVER }} /p:FileVersion=${{ $GITVERSION_ASSEMBLYSEMFILEVER }} /p:InformationalVersion=${{ $GITVERSION_INFORMATIONALVERSION }}
     - name: Test
       run: dotnet test --no-restore --verbosity normal
 
@@ -50,14 +50,14 @@ jobs:
 #      working-directory: src
 
     - name: Package
-      run: dotnet pack --configuration Release --no-build -p:PackageVersion=${{ env.GitVersion_SemVer}}
+      run: dotnet pack --configuration Release --no-build -p:PackageVersion=${{ $GITVERSION_SEMVER }}
     
 #    - name: Publish to github
 #      run: dotnet nuget push **/*.nupkg -s https://nuget.pkg.github.com/daltskin/index.json -k ${{ secrets.GITHUB_TOKEN }} --skip-duplicate --no-symbols true
 #      working-directory: src
  
     - name: Publish to github (using curl)
-      run: curl -vX PUT -u "daltskin:${{ secrets.GITHUB_TOKEN }}" -F package=@SmartThingsNet.${{ env.GitVersion_SemVer}}.nupkg https://nuget.pkg.github.com/daltskin/
+      run: curl -vX PUT -u "daltskin:${{ secrets.GITHUB_TOKEN }}" -F package=@SmartThingsNet.${{ $GITVERSION_SEMVER }}.nupkg https://nuget.pkg.github.com/daltskin/
       working-directory: src/bin/Release
  
     - name: Publish to nuget
@@ -68,5 +68,5 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ env.GitVersion_SemVer}}
-        release_name: Release ${{ env.GitVersion_SemVer}}
+        tag_name: ${{ $GITVERSION_SEMVER }}
+        release_name: Release ${{ $GITVERSION_SEMVER }}
