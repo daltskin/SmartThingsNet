@@ -25,17 +25,12 @@ jobs:
       with:
           versionSpec: '5.5.0'
     
-    - name: GitVersion
-      uses: docker://gittools/gitversion:5.5.0-linux-ubuntu.16.04-x64-netcoreapp3.1
-      with:
-        args: /github/workspace /nofetch /output buildserver
-        
     - name: Get SemVer
       uses: gittools/actions/gitversion/execute@v0.9.7
        
-    - name: Display SemVer
+    - name: Display SemVer $GITVERSION_SEMVER
       run: |
-       echo "SemVer: ${{ steps.gitversion.outputs.semVer }}"
+       echo "SemVer: $GITVERSION_SEMVER
 
     - uses: actions/checkout@v2
     - name: Setup .NET Core
