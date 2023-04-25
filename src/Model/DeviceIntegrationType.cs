@@ -156,7 +156,13 @@ namespace SmartThingsNet.Model
         /// Enum ZWAVE for value: ZWAVE
         /// </summary>
         [EnumMember(Value = "ZWAVE")]
-        ZWAVE = 21
+        ZWAVE = 21,
+
+        /// <summary>
+        /// Enum EDGE_CHILD for value: EDGE_CHILD
+        /// </summary>
+        [EnumMember(Value = "EDGE_CHILD")]
+        EDGE_CHILD = 22,
 
     }
 
