@@ -13,7 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: | 
+          3.1.x
+          5.0.x    
       
     - name: Checkout
       uses: actions/checkout@v2
@@ -31,13 +37,7 @@ jobs:
     - name: Display version
       run: |
        echo "SemVer: $GITVERSION_SEMVER"
-
-    - uses: actions/checkout@v2
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 3.1.*   
-    
+   
     - name: Install dependencies
       run: dotnet restore
     - name: Build
