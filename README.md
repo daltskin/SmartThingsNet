@@ -11,4 +11,3 @@ For an example on how to use this SDK, please refer to the [SmartThings Terminal
 *Note: This SDK is mostly auto-generated from the public [SmartThings open-api definition](https://swagger.api.smartthings.com/public/st-api.yml) but with necessary compilation fixes.  
 The underlying SmartThings API is currently in preview and has ongoing changes - there are some discrepancies between what functionality is exposed and what is implemented.  
 Therefore if things don't work, please check the SmartThings API behaves in the way you expect first.*
-
